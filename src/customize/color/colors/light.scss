@@ -1,0 +1,15 @@
+
+/* WuX-UI Customize-Color-Light */
+
+$color-light: #787878;
+$color-light-map: (
+	"100": func-tint-color($color-light, 80%),
+	"200": func-tint-color($color-light, 60%),
+	"300": func-tint-color($color-light, 40%),
+	"400": func-tint-color($color-light, 20%),
+	"500": $color-light,
+	"600": func-shade-color($color-light, 20%),
+	"700": func-shade-color($color-light, 40%),
+	"800": func-shade-color($color-light, 60%),
+	"900": func-shade-color($color-light, 80%)
+);

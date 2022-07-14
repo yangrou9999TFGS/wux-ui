@@ -1,0 +1,15 @@
+
+/* WuX-UI Customize-Color-Warning */
+
+$color-warning: #b9a03c;
+$color-warning-map: (
+	"100": func-tint-color($color-warning, 80%),
+	"200": func-tint-color($color-warning, 60%),
+	"300": func-tint-color($color-warning, 40%),
+	"400": func-tint-color($color-warning, 20%),
+	"500": $color-warning,
+	"600": func-shade-color($color-warning, 20%),
+	"700": func-shade-color($color-warning, 40%),
+	"800": func-shade-color($color-warning, 60%),
+	"900": func-shade-color($color-warning, 80%)
+);

@@ -1,0 +1,14 @@
+
+/* WuX-UI SASS-Function for color */
+
+@function func-tint-color($color, $weight) {
+	@return mix(white, $color, $weight)
+}
+
+@function func-shade-color($color, $weight) {
+	@return mix(black, $color, $weight)
+}
+
+@function func-text-color($background-degree) {
+	@return if($background-degree < 300, black, white);
+}

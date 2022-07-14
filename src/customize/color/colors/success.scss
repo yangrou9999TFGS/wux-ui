@@ -1,0 +1,15 @@
+
+/* WuX-UI Customize-Color-Success */
+
+$color-success: #3cb9a0;
+$color-success-map: (
+	"100": func-tint-color($color-success, 80%),
+	"200": func-tint-color($color-success, 60%),
+	"300": func-tint-color($color-success, 40%),
+	"400": func-tint-color($color-success, 20%),
+	"500": $color-success,
+	"600": func-shade-color($color-success, 20%),
+	"700": func-shade-color($color-success, 40%),
+	"800": func-shade-color($color-success, 60%),
+	"900": func-shade-color($color-success, 80%)
+);

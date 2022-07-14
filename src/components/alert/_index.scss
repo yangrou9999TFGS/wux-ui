@@ -1,0 +1,19 @@
+
+/* WuX-UI Components-Alert */
+
+
+.#{$prefix}-alert {
+	border-radius: $alert-border-radius;
+	border-width: $alert-border-width;
+	width: 100%;
+	padding: $alert-padding;
+	margin: $alert-margin;	
+}
+
+@each $color-name in $imported-colors {
+  .#{$prefix}-alert-#{$color-name} {
+	  background-color: map-get($alert-background-color-map, "#{$color-name}");
+	  color: map-get($alert-text-color-map, "#{$color-name}");
+	  border-color: map-get($alert-border-color-map, "#{$color-name}");
+	}
+};

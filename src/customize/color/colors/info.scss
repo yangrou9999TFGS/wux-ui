@@ -1,0 +1,15 @@
+
+/* WuX-UI Customize-Color-Info */
+
+$color-info: #3c93b9;
+$color-info-map: (
+	"100": func-tint-color($color-info, 80%),
+	"200": func-tint-color($color-info, 60%),
+	"300": func-tint-color($color-info, 40%),
+	"400": func-tint-color($color-info, 20%),
+	"500": $color-info,
+	"600": func-shade-color($color-info, 20%),
+	"700": func-shade-color($color-info, 40%),
+	"800": func-shade-color($color-info, 60%),
+	"900": func-shade-color($color-info, 80%)
+);
