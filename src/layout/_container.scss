@@ -1,0 +1,24 @@
+
+/* WuX-UI Layout-Container */
+
+.#{$prefix}container {
+	box-sizing: border-box;
+	max-width: $container-max-width;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0;
+	margin-bottom: 2px;
+	padding: 0 8px;
+}
+
+.#{$prefix}container-fluid {
+	margin: 2px;
+	padding: 0 8px;
+}
+
+.#{$prefix}container::after,
+.#{$prefix}container-fluid::after {
+  display: table;
+  clear: both;
+  content: '';
+}

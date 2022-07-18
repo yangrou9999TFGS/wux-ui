@@ -1,0 +1,28 @@
+
+/* WuX-UI Components-Breadcrumb */
+
+.#{$prefix}breadcrumb {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;// No List-Dot
+	background-color: $breadcrumb-background-color;
+	border-radius: $breadcrumb-border-radius;
+	padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+	margin-bottom: $breadcrumb-margin-bottom;
+}
+
+.#{$prefix}breadcrumb-item {
+	font-size: $breadcrumb-font-size;
+
+  + .#{$prefix}breadcrumb-item {
+  	padding-left: $breadcrumb-padding-item-x;
+    &::before {
+    	float: left;
+    	padding-right: $breadcrumb-padding-item-x;
+    	content: $breadcrumb-content;
+    }
+    & a {
+    	text-decoration: none;
+    }
+  }
+}

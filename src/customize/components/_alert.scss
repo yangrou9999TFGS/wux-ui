@@ -3,14 +3,15 @@
 
 /*Layout*/
 $alert-border-radius: 8px;
-$alert-border-width: 4px;
+$alert-border-width: 8px;
+$alert-font-size: 16px;
 $alert-padding: 16px;
-$alert-margin: 2px;
+$alert-margin-bottom: 4px;
 
-/*Solid*/
 /*Color-Degree*/
-$alert-background-degree: 500;
-$alert-border-degree: 600;
+$alert-background-degree: 200;
+$alert-border-degree: 400;
+$alert-icon-degree: 500;
 
 $alert-background-color-map: (
 	primary: map.get($color-primary-map, #{$alert-background-degree}),
@@ -33,11 +34,21 @@ $alert-border-color-map: (
 );
 
 $alert-text-color-map: (
-	primary: func-text-color($alert-background-degree),
- 	secondary: func-text-color($alert-background-degree),
- 	success: func-text-color($alert-background-degree),
- 	info: func-text-color($alert-background-degree),
- 	warning: func-text-color($alert-background-degree),
- 	error: func-text-color($alert-background-degree),
- 	light: func-text-color($alert-background-degree)
+	primary: func-text-color(primary,$alert-background-degree),
+ 	secondary: func-text-color(secondary,$alert-background-degree),
+ 	success: func-text-color(success,$alert-background-degree),
+ 	info: func-text-color(info,$alert-background-degree),
+ 	warning: func-text-color(warning,$alert-background-degree),
+ 	error: func-text-color(error,$alert-background-degree),
+ 	light: func-text-color(light,$alert-background-degree)
+);
+
+$alert-icon-color-map: (
+	primary: map.get($color-primary-map, #{$alert-icon-degree}),
+ 	secondary: map.get($color-secondary-map, #{$alert-icon-degree}),
+ 	success: map.get($color-success-map, #{$alert-icon-degree}),
+ 	info: map.get($color-info-map, #{$alert-icon-degree}),
+ 	warning: map.get($color-warning-map, #{$alert-icon-degree}),
+ 	error: map.get($color-error-map, #{$alert-icon-degree}),
+ 	light: map.get($color-light-map, #{$alert-icon-degree})
 );

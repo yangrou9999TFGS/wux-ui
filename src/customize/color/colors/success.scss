@@ -1,7 +1,7 @@
 
 /* WuX-UI Customize-Color-Success */
 
-$color-success: #3cb9a0;
+$color-success: rgb(60,215,135);
 $color-success-map: (
 	"100": func-tint-color($color-success, 80%),
 	"200": func-tint-color($color-success, 60%),

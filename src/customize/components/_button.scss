@@ -1,0 +1,75 @@
+
+/* WuX-UI Components-Button [Customize] */
+
+/*Layout*/
+$button-border-width: 1px;
+$button-margin-right: 2px;
+$button-margin-bottom: 4px;
+
+$button-imported-size: xs, sm, md, lg, xl;
+/*Size*/
+// 纵
+$button-padding-y-map: (
+	xs: 4px,
+	sm: 8px,
+	md: 10px,
+	lg: 14px,
+	xl: 18px
+);
+// 横
+$button-padding-x-map: (
+	xs: 6px,
+	sm: 10px,
+	md: 12px,
+	lg: 16px,
+	xl: 20px
+);
+
+$button-size-map: (
+	xs: 8px,
+	sm: 11px,
+	md: 14px,
+	lg: 17px,
+  xl: 20px
+);
+
+/*Color-Degree*/
+$button-background-degree: 400;
+$button-border-degree: 600;
+
+$button-background-color-map: (
+	primary: map.get($color-primary-map, #{$button-background-degree}),
+ 	secondary: map.get($color-secondary-map, #{$button-background-degree}),
+ 	success: map.get($color-success-map, #{$button-background-degree}),
+ 	info: map.get($color-info-map, #{$button-background-degree}),
+ 	warning: map.get($color-warning-map, #{$button-background-degree}),
+ 	error: map.get($color-error-map, #{$button-background-degree}),
+ 	light: map.get($color-light-map, #{$button-background-degree})
+);
+
+$button-border-color-map: (
+	primary: map.get($color-primary-map, #{$button-border-degree}),
+ 	secondary: map.get($color-secondary-map, #{$button-border-degree}),
+ 	success: map.get($color-success-map, #{$button-border-degree}),
+ 	info: map.get($color-info-map, #{$button-border-degree}),
+ 	warning: map.get($color-warning-map, #{$button-border-degree}),
+ 	error: map.get($color-error-map, #{$button-border-degree}),
+ 	light: map.get($color-light-map, #{$button-border-degree})
+);
+
+$button-text-color-map: (
+	primary: func-text-color(primary,$button-background-degree),
+ 	secondary: func-text-color(secondary,$button-background-degree),
+ 	success: func-text-color(success,$button-background-degree),
+ 	info: func-text-color(info,$button-background-degree),
+ 	warning: func-text-color(warning,$button-background-degree),
+ 	error: func-text-color(error,$button-background-degree),
+ 	light: func-text-color(light,$button-background-degree)
+);
+
+$button-imported-border: square, default, round;
+$button-border-map: (
+  square: 0,
+  default: 8px,
+  round: 9999px,
+);

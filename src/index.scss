@@ -11,12 +11,14 @@
 /*SCSS*/
 @use "sass:map";
 
+/*Functions*/
+  @import "functions/func-color";
+
 /*Customize*/
   /*Color*/
     @import "customize/color/colors";
   /*Components*/
     @import "customize/components/alert";
-    @import "customize/components/avatar";
     @import "customize/components/badge";
     @import "customize/components/breadcrumb";
     @import "customize/components/button";
@@ -53,9 +55,6 @@
     @import "customize/utilities/padding";  
     @import "customize/utilities/shadows";
 
-/*Functions*/
-  @import "functions/func-color";
-
 /*Global*/
   /*Fonts*/
     @import "global/fonts";
@@ -83,28 +82,27 @@
   @import "utilities/visibility";
 
 /*Components*/
-  @import "components/alert/index";
-  @import "components/avatar/index";
-  @import "components/badge/index";
-  @import "components/breadcrumb/index";
-  @import "components/button/index";
-  @import "components/card/index";
-  @import "components/dialog/index";
-  @import "components/dropdown/index";
-  @import "components/footer/index";
-  @import "components/form-checks/index";
-  @import "components/form-input/index";
-  @import "components/form-picker/index";
-  @import "components/form-radios/index";
-  @import "components/form-select/index";
-  @import "components/form-slider/index";
-  @import "components/form-upload/index";
-  @import "components/header/index";
-  @import "components/jumbotron/index";
-  @import "components/list/index";
-  @import "components/loading/index";
-  @import "components/progress/index";
-  @import "components/tables/index";
-  @import "components/tooltip/index";
+  @import "components/alert";
+  @import "components/badge";
+  @import "components/breadcrumb";
+  @import "components/button";
+  @import "components/card";
+  @import "components/dialog";
+  @import "components/dropdown";
+  @import "components/footer";
+  @import "components/form-checks";
+  @import "components/form-input";
+  @import "components/form-picker";
+  @import "components/form-radios";
+  @import "components/form-select";
+  @import "components/form-slider";
+  @import "components/form-upload";
+  @import "components/header";
+  @import "components/jumbotron";
+  @import "components/list";
+  @import "components/loading";
+  @import "components/progress";
+  @import "components/tables";
+  @import "components/tooltip";
 
 // 老式写法，即将弃用。

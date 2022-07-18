@@ -1,0 +1,63 @@
+
+/* WuX-UI Components-Card */
+
+.#{$prefix}card {
+	position: relative;
+	box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
+	overflow: hidden;
+	border-radius: $card-border-radius;
+	border: $card-border-width solid $card-border-color;
+	background-color: $card-background-color;
+	color: $card-text-color;
+	padding: 0;
+	margin: $card-margin;
+
+	.#{$prefix}card-header {
+ 	 	position: relative;
+ 	 	text-overflow: ellipsis;
+
+  	img,
+  	video {
+   	  display: block;
+    	width: 100%;
+  	}
+	}
+
+	.#{$prefix}card-body {
+		position: relative;
+		padding: $card-body-padding;
+		font-size: $card-body-font-size;
+	}
+
+  .#{$prefix}card-footer {
+  	overflow: hidden;
+  	padding: 0;
+  	margin: 0;
+  	float: right;
+
+  	&::before,
+  	&::after {
+  		display: table;
+  		clear: both;
+  	}
+
+  	&::after {
+  		content: '';
+  	}
+
+  	.#{$prefix}btn {
+  		display: inline-block;
+  		padding: map.get($button-padding-y-map, sm) map.get($button-padding-x-map, sm);
+  		font-size: map.get($button-size-map, sm);
+  		margin-bottom: 0;
+  		margin-right: 0;
+  		border-radius: 0;
+
+  		&:focus {
+  			box-shadow: none;
+  		}
+  	}
+	}
+}
+

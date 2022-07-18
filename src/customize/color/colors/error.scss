@@ -1,7 +1,7 @@
 
 /* WuX-UI Customize-Color-Error */
 
-$color-error: #b93c55;
+$color-error: rgb(255,85,65);
 $color-error-map: (
 	"100": func-tint-color($color-error, 80%),
 	"200": func-tint-color($color-error, 60%),

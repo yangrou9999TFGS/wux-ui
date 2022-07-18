@@ -1,7 +1,7 @@
 
 /* WuX-UI Customize-Color-Secondary */
 
-$color-secondary: #7d7d7d;
+$color-secondary: rgb(160,100,240);
 $color-secondary-map: (
 	"100": func-tint-color($color-secondary, 80%),
 	"200": func-tint-color($color-secondary, 60%),

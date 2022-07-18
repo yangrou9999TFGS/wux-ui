@@ -1,0 +1,134 @@
+
+/* WuX-UI Components-Button */
+
+.#{$prefix}btn,
+.#{$prefix}btn.#{$prefix}solid {
+	text-decoration: none;
+	box-shadow: none;
+	margin: 0;
+	margin-right: $button-margin-right;
+	margin-bottom: $button-margin-bottom;
+	cursor: pointer;
+	user-select: none;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+  transition: 0.2s;
+	  -webkit-transition: 0.2s; /* Safari */
+
+	/*Default*/
+  background-color: map.get($button-background-color-map,"primary");
+	color: map.get($button-text-color-map,"primary");
+	border: $button-border-width solid map.get($button-border-color-map,"primary");
+	border-radius: map.get($button-border-map,"default");
+  padding: map.get($button-padding-y-map,"md") map.get($button-padding-x-map,"md");
+	font-size: map.get($button-size-map,"md");
+
+	&:hover:not(:disabled) {
+		background-color: map.get($button-border-color-map,"primary");
+	}
+
+	&:disabled {
+		opacity: 30% !important;
+	}
+
+  &.#{$prefix}btn-outline {
+  	background: transparent;
+	  color: map.get($button-background-color-map, "primary");
+
+  	&:hover:not(:disabled) {
+    	background: map.get($button-border-color-map, "primary");
+    	color: map.get($button-text-color-map, "primary");
+  	}
+	}
+
+	&.#{$prefix}btn-text {
+  	background: transparent;
+	  color: map.get($button-background-color-map, "primary");
+	  border: none;
+
+  	&:hover:not(:disabled) {
+  		background: transparent;
+    	color: map.get($button-border-color-map, "primary");
+  	}
+	}
+
+	&:focus:not(:disabled) {
+  	background-color: map.get($button-border-color-map, "primary");
+  	color: map.get($button-text-color-map, "primary");
+  	box-shadow: 0px 0px 1px 2px #{map.get($button-background-color-map, "primary")};
+	}
+
+	/*Block*/
+	&.#{$prefix}btn-block {
+		width: 100%;
+	}
+}
+
+@each $color-name in $imported-colors {
+  .#{$prefix}btn-solid.#{$prefix}btn-#{$color-name},
+  .#{$prefix}btn-#{$color-name} {
+	  background-color: map.get($button-background-color-map, "#{$color-name}");
+	  color: map.get($button-text-color-map, "#{$color-name}");
+	  border-color: map.get($button-border-color-map, "#{$color-name}");
+
+	  &:hover:not(:disabled){
+      background-color: map.get($button-border-color-map,"#{$color-name}");
+      color: map.get($button-text-color-map, "#{$color-name}");
+	  }
+
+	  &:focus:not(:disabled) {
+   	  background-color: map.get($button-border-color-map, "#{$color-name}");
+   	  color: map.get($button-text-color-map, "#{$color-name}");
+      box-shadow: 0px 0px 1px 2px #{map.get($button-background-color-map, "#{$color-name}")};
+  	}
+	}
+
+  .#{$prefix}btn.#{$prefix}btn-outline.#{$prefix}btn-#{$color-name} {
+  	/* Default */
+  	background: transparent;
+  	color: map.get($button-border-color-map, "#{$color-name}");
+  	border-color: map.get($button-border-color-map, "#{$color-name}");
+
+  	&:hover:not(:disabled) {
+   	  background: map.get($button-border-color-map, "#{$color-name}");
+   	  color: map.get($button-text-color-map, "#{$color-name}");
+  	}
+
+  	&:focus:not(:disabled) {
+   	  background: map.get($button-border-color-map, "#{$color-name}");
+   	  color: map.get($button-text-color-map, "#{$color-name}");
+      box-shadow: 0px 0px 1px 2px #{map.get($button-background-color-map, "#{$color-name}")};
+  	}
+  }
+
+  .#{$prefix}btn.#{$prefix}btn-text.#{$prefix}btn-#{$color-name} {
+  	/* Default */
+  	background: transparent;
+  	color: map.get($button-background-color-map, "#{$color-name}");
+  	border: none;
+
+  	&:hover:not(:disabled) {
+  		background: transparent;
+   	  color: map.get($button-border-color-map, "#{$color-name}");
+  	}
+
+  	&:focus:not(:disabled) {
+  		background: transparent;
+   	  color: map.get($button-border-color-map, "#{$color-name}");
+   	  box-shadow: none;
+  	}
+  }
+};
+
+@each $size-name in $button-imported-size {
+  .#{$prefix}btn-#{$size-name} {
+	  padding: map.get($button-padding-y-map,"#{$size-name}") map.get($button-padding-x-map,"#{$size-name}");
+	  font-size: map.get($button-size-map,"#{$size-name}");
+	}
+};
+
+@each $border-name in $button-imported-border {
+  .#{$prefix}btn-#{$border-name} {
+    border-radius: map.get($button-border-map,"#{$border-name}");
+  }
+};

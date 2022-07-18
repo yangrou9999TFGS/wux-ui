@@ -1,0 +1,38 @@
+
+/* WuX-UI Components-Alert */
+
+.#{$prefix}alert {
+	position: relative;
+	border-radius: $alert-border-radius;
+	border-left-width: $alert-border-width;
+	border-left-style: solid;
+	font-size: $alert-font-size;
+	padding: $alert-padding;
+	margin-bottom: $alert-margin-bottom;	
+
+	/*Default*/
+	background-color: map-get($alert-background-color-map, "primary");
+	color: map-get($alert-text-color-map, "primary");
+	border-left-color: map-get($alert-border-color-map, "primary");
+
+	.#{$prefix}alert-icon {
+ 	  color: map-get($alert-icon-color-map, "primary");
+ 	  margin-right: 2px;
+ 	  user-select: none;
+ 	    -webkit-user-select: none; 
+ 	    -moz-user-select: none; 
+  }
+}
+
+@each $color-name in $imported-colors {
+  .#{$prefix}alert-#{$color-name} {
+	  background-color: map-get($alert-background-color-map, "#{$color-name}");
+	  color: map-get($alert-text-color-map, "#{$color-name}");
+	  border-left-color: map-get($alert-border-color-map, "#{$color-name}");
+	  
+	  .#{$prefix}alert-icon {
+	  	color: map-get($alert-icon-color-map, "#{$color-name}");
+	  	margin-right: 2px;
+	  }
+	}
+};

@@ -1,7 +1,7 @@
 
 /* WuX-UI Customize-Color-Primary */
 
-$color-primary: #3c55b9;
+$color-primary: rgb(80,100,225);
 $color-primary-map: (
 	"100": func-tint-color($color-primary, 80%),
 	"200": func-tint-color($color-primary, 60%),
