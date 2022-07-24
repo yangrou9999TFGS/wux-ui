@@ -1,0 +1,11 @@
+
+/* WuX-UI Components-Form-Radios */
+
+$form-radios-border-width: 1px;
+$form-radios-border-color: #ABABAB;
+$form-radios-border-radius: 9999px;
+$form-radios-hover-background-color: map.get($color-primary-map, "300");
+$form-radios-checked-background-color: white;
+$form-radios-checked-border-width: 5px;
+$form-radios-checked-border-color: map.get($color-primary-map, "500");
+$form-radios-checked-shadow: none;

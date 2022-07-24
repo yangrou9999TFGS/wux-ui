@@ -2,10 +2,11 @@
 /* WuX-UI Components-Header */
 
 .#{$prefix}header {
-  background: transparent;
+  background: $header-background;
   color: $header-text-color;
-  margin: 0 $header-padding-x;
-  padding: $header-padding-y $header-padding-x;
+  margin: 0;
+  padding: $header-padding-y 0;
+  font-size: $header-font-size;
 
   &:after {
   	content: '';
@@ -14,31 +15,43 @@
   }
 
   &.#{$prefix}header-fixed {
-  	background: white;
+  	background: $header-fixed-background;
+    color: $header-fixed-text-color;
+    box-shadow: $header-fixed-shadow;
   	position: fixed;
   	top: 0;
   	left: 0;
   	z-index: 99999;
+    width: 100%;
   }
 
   .#{$prefix}header-title {
   	float: left;
+    margin-left: $header-padding-x; 
   }
 
   .#{$prefix}header-option-group {
-  	float: right;
+    float: right;
+    margin-right: $header-padding-x;
 
   	.#{$prefix}header-option {
   		text-decoration: none;
   		color: $header-text-color;
   		white-space: nowrap;
   		transition: 0.2s;
-  		padding: $header-option-padding;
-  		margin-right: $header-option-space;
+  		padding: $header-option-padding-y $header-option-padding-x;
+
+      + #{$prefix}header-option {
+  	    margin-left: $header-option-space;
+      }
 
   		&:hover {
   			background: rgb(240,240,240);
   		}
   	}
   }
+}
+
+.#{$prefix}header-fixed-margin {
+  margin-top: $header-padding-y * 2 + $header-font-size + $header-option-padding-y * 2;
 }

@@ -5,19 +5,19 @@
   License: MIT
 */
 
-/*Charset*/
+// Charset
 @charset "UTF-8";
 
-/*SCSS*/
+// SCSS
 @use "sass:map";
 
-/*Functions*/
+// Functions
   @import "functions/func-color";
 
-/*Customize*/
-  /*Color*/
+// Customize
+  // Color
     @import "customize/color/colors";
-  /*Components*/
+  // Components
     @import "customize/components/alert";
     @import "customize/components/badge";
     @import "customize/components/breadcrumb";
@@ -25,13 +25,11 @@
     @import "customize/components/card";
     @import "customize/components/dialog";
     @import "customize/components/dropdown";
-    @import "customize/components/footer";
     @import "customize/components/form-checks";
     @import "customize/components/form-input";
-    @import "customize/components/form-picker";
     @import "customize/components/form-radios";
+    @import "customize/components/form-range";
     @import "customize/components/form-select";
-    @import "customize/components/form-slider";
     @import "customize/components/form-upload";
     @import "customize/components/header";
     @import "customize/components/jumbotron";
@@ -40,13 +38,13 @@
     @import "customize/components/progress";
     @import "customize/components/tables";
     @import "customize/components/tooltip";
-  /*Prefix*/
+  // Prefix
     @import "customize/prefix/prefix";
-  /*Layout*/
+  // Layout
     @import "customize/layout/container";
     @import "customize/layout/grid";
     @import "customize/layout/space";
-  /*Utilities*/  
+  // Utilities  
     @import "customize/utilities/borders";
     @import "customize/utilities/filter";
     @import "customize/utilities/float";
@@ -55,20 +53,20 @@
     @import "customize/utilities/padding";  
     @import "customize/utilities/shadows";
 
-/*Global*/
-  /*Fonts*/
+// Global
+  // Fonts
     @import "global/fonts";
-  /*Normalize.CSS*/
+  // Normalize.CSS
     @import "../node_modules/normalize.css/normalize";
-  /*Typography*/
+  // Typography
     @import "global/typography";
 
-/*Layout*/
+// Layout
   @import "layout/container";
   @import "layout/grid";
   @import "layout/space";
   
-/*Utilities*/
+// Utilities
   @import "utilities/borders";
   @import "utilities/colors";
   @import "utilities/filter";
@@ -81,7 +79,7 @@
   @import "utilities/shadows";
   @import "utilities/visibility";
 
-/*Components*/
+// Components
   @import "components/alert";
   @import "components/badge";
   @import "components/breadcrumb";
@@ -89,13 +87,11 @@
   @import "components/card";
   @import "components/dialog";
   @import "components/dropdown";
-  @import "components/footer";
   @import "components/form-checks";
   @import "components/form-input";
-  @import "components/form-picker";
   @import "components/form-radios";
+  @import "components/form-range";
   @import "components/form-select";
-  @import "components/form-slider";
   @import "components/form-upload";
   @import "components/header";
   @import "components/jumbotron";

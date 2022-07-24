@@ -1,0 +1,11 @@
+
+/* WuX-UI Components-Form-Checks */
+
+$form-checks-border-width: 1px;
+$form-checks-border-color: #ABABAB;
+$form-checks-border-radius: 4px;
+$form-checks-hover-background-color: map.get($color-primary-map, "300");
+$form-checks-checked-background-color: map.get($color-primary-map, "500");
+$form-checks-checked-border-width: 1px;
+$form-checks-checked-border-color: map.get($color-primary-map, "500");
+$form-checks-checked-shadow: none;

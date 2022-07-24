@@ -1,3 +1,58 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Form-Input */
 
+.#{$prefix}form-input {
+	position: relative;
+	width: 100%;
+	display: block;
+	
+	appearance: none;
+	background: $form-input-background;
+	border: $form-input-border-width solid $form-input-border-color;
+	border-radius: $form-input-border-radius;
+	-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+	color: $form-input-text-color;
+	margin: 0;
+	margin-bottom: $form-input-margin-bottom;
+	resize: none;
+	max-width: auto;
+	transition: 0.2s;
+	  -webkit-transition: 0.2s;
+
+  // Default
+	padding: map.get($form-input-padding-x-map, "md") map.get($form-input-padding-x-map, "md");
+
+	&:hover {
+		box-shadow: $form-input-hover-shadow;
+		background: $form-input-hover-background;
+		color: $form-input-hover-text-color;
+		outline: none;
+	}
+
+	&:focus {
+		box-shadow: $form-input-focus-shadow;
+		background: $form-input-focus-background;
+		color: $form-input-focus-text-color;
+		outline: none;
+	}
+
+	&:invalid {
+		box-shadow: $form-input-invalid-shadow;
+		background: $form-input-invalid-background;
+		color: $form-input-invalid-text-color;
+		outline: none;
+	}
+
+	&:disabled {
+		opacity: $form-input-disabled-opacity;
+	}
+}
+
+@each $size-name in $imported-size {
+	.#{$prefix}form-input-#{$size-name} {
+		padding: map.get($form-input-padding-y-map, #{$size-name}) map.get($form-input-padding-x-map, #{$size-name});
+		font-size: map.get($form-input-font-size-map, #{$size-name});
+	}
+}

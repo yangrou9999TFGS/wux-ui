@@ -1,8 +1,14 @@
 
 /* WuX-UI Components-Header [Customize]*/
 
+$header-background: transparent;
 $header-text-color: $color-primary;
-$header-option-space: 4px;
-$header-option-padding: 2px;
-$header-padding-x: 12px;
+$header-padding-x: 16px;
 $header-padding-y: 20px;
+$header-font-size: 16px;
+$header-option-space: 4px;
+$header-option-padding-x: 8px;
+$header-option-padding-y: 4px;
+$header-fixed-background: white;
+$header-fixed-text-color: $color-primary;
+$header-fixed-shadow: 0 2px 4px #CCCCCC;

@@ -1,2 +1,32 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Form-Checks */
+
+.#{$prefix}form-checks {
+	appearance: none;
+	border: $form-checks-border-width solid $form-checks-border-color;
+	border-radius: $form-checks-border-radius;
+	cursor: pointer;
+	width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  vertical-align: middle;
+  transition: 0.2s;
+
+  &:not(:disabled):not(:checked):hover {
+  	background-color: $form-checks-hover-background-color;
+  }
+	
+	&:checked {
+		background-color: $form-checks-checked-background-color;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none' stroke='%23FFF' stroke-width='2' stroke-linecap='butt' stroke-linejoin='round'%3E%3Cpolyline points='14 5 8 13 4 9'%3E%3C/polyline%3E%3C/svg%3E");
+		border: $form-checks-checked-border-width solid $form-checks-checked-border-color;
+		box-shadow: $form-checks-checked-shadow;
+    background-repeat: no-repeat;
+	}
+
+	&:disabled {
+		cursor: default;
+		filter: grayscale(1);
+		opacity: 30%;
+	}
+}

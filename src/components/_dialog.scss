@@ -1,3 +1,51 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Dialog */
 
+.#{$prefix}dialog {
+	border: $dialog-border;
+	border-radius: $dialog-border-radius;
+	box-shadow: $dialog-shadow;
+	width: 400px;
+  overflow: auto;
+  padding: $dialog-padding;
+
+	&::backdrop {
+		background-color: $dialog-backdrop-color;
+		backdrop-filter: blur($dialog-backdrop-blur);
+	}
+
+	.#{$prefix}dialog-header {
+		color: $dialog-header-text-color;
+
+		.#{$prefix}dialog-header-title {
+			margin: 0;
+		}
+	}
+
+	.#{$prefix}dialog-body {
+		font-size: $dialog-body-font-size;
+		min-height: 120px;
+		padding: $dialog-body-padding-y $dialog-body-padding-x;
+		display: block;
+		overflow: auto;
+	}
+
+	.#{$prefix}dialog-footer {
+
+		&:after {
+			display: table;
+			clear: both;
+			content: '';
+		}
+
+		.#{$prefix}dialog-footer-group {
+			float: $dialog-footer-group-float;
+
+			.#{$prefix}btn {
+				font-size: map.get($button-size-map, sm);
+				margin-bottom: 0;
+				padding: map.get($button-padding-y-map, sm) map.get($button-padding-x-map, sm);
+			}
+		}
+	}
+}

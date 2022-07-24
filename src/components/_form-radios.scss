@@ -1,3 +1,31 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Form-Radios */
 
+.#{$prefix}form-radios {
+	appearance: none;
+	border: $form-radios-border-width solid $form-radios-border-color;
+	border-radius: $form-radios-border-radius;
+	cursor: pointer;
+	width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  vertical-align: middle;
+  transition: 0.2s;
+
+  &:not(:disabled):not(:checked):hover {
+  	background-color: $form-radios-hover-background-color;
+  }
+	
+	&:checked {
+		background-color: $form-radios-checked-background-color;
+    background-repeat: no-repeat;
+		border: $form-radios-checked-border-width solid $form-radios-checked-border-color;
+		box-shadow: $form-radios-checked-shadow;
+	}
+
+	&:disabled {
+		cursor: default;
+		filter: grayscale(1);
+		opacity: 30%;
+	}
+}

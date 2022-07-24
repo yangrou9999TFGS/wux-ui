@@ -1,0 +1,11 @@
+
+/* WuX-UI Components-Form-Select [Customize] */
+
+$form-select-border-color: #CCCCCC;
+$form-select-border-width: 1px;
+$form-select-border-radius: 4px;
+$form-select-padding-x: 6px;
+$form-select-padding-y: 4px;
+$form-select-hover-shadow: 0 0 6px #DDDDDD;
+$form-select-focus-border: 1px solid map.get($color-primary-map , "500");
+$form-select-focus-shadow: none;

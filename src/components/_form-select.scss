@@ -1,3 +1,27 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Form-Select */
 
+.#{$prefix}form-select {
+	appearance: none;
+	border: $form-select-border-width solid $form-select-border-color;
+	border-radius: $form-select-border-radius;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' fill='none' stroke='%23AAA' stroke-width='2' stroke-linecap='butt' stroke-linejoin='round'%3E%3Cpolyline points='15 5 10 10 5 5 '%3E%3C/polyline%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right $form-select-padding-x center;
+	box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
+	padding: $form-select-padding-y $form-select-padding-x;
+	outline: none;
+	transition: box-shadow 0.2s;
+	width: 100%;
+
+	&:hover {
+		box-shadow: $form-select-hover-shadow;
+	}
+
+	&:focus {
+		box-shadow: $form-select-focus-shadow;
+		border: $form-select-focus-border;
+		outline: none;
+	}
+}

@@ -2,9 +2,11 @@
 /* WuX-UI Components-Card [Customize] */
 
 $card-border-color: rgb(200,200,200);
-$card-border-radius: 8px;
-$card-border-width: 1px;
+$card-border-radius: 12px;
+$card-border-width: 0px;
 $card-background-color: white;
+$card-shadow: 1px 1px 6px #DDDDDD;
+$card-hover-shadow: 2px 2px 8px #CCCCCC;
 $card-text-color: rgb(25,25,25);
 $card-margin: 2px;
 $card-body-padding: 4px;

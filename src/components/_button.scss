@@ -3,12 +3,15 @@
 
 .#{$prefix}btn,
 .#{$prefix}btn.#{$prefix}solid {
+	position: relative;
 	text-decoration: none;
 	box-shadow: none;
 	margin: 0;
 	margin-right: $button-margin-right;
 	margin-bottom: $button-margin-bottom;
 	cursor: pointer;
+	white-space: nowrap;
+  vertical-align: middle;
 	user-select: none;
 	  -webkit-user-select: none;
 	  -moz-user-select: none;
@@ -18,7 +21,7 @@
 	/*Default*/
   background-color: map.get($button-background-color-map,"primary");
 	color: map.get($button-text-color-map,"primary");
-	border: $button-border-width solid map.get($button-border-color-map,"primary");
+	border: $button-solid-border-width solid map.get($button-border-color-map,"primary");
 	border-radius: map.get($button-border-map,"default");
   padding: map.get($button-padding-y-map,"md") map.get($button-padding-x-map,"md");
 	font-size: map.get($button-size-map,"md");
@@ -34,6 +37,7 @@
   &.#{$prefix}btn-outline {
   	background: transparent;
 	  color: map.get($button-background-color-map, "primary");
+	  border: $button-outline-border-width solid map.get($button-border-color-map,"primary");
 
   	&:hover:not(:disabled) {
     	background: map.get($button-border-color-map, "primary");
@@ -55,7 +59,6 @@
 	&:focus:not(:disabled) {
   	background-color: map.get($button-border-color-map, "primary");
   	color: map.get($button-text-color-map, "primary");
-  	box-shadow: 0px 0px 1px 2px #{map.get($button-background-color-map, "primary")};
 	}
 
 	/*Block*/
@@ -79,7 +82,6 @@
 	  &:focus:not(:disabled) {
    	  background-color: map.get($button-border-color-map, "#{$color-name}");
    	  color: map.get($button-text-color-map, "#{$color-name}");
-      box-shadow: 0px 0px 1px 2px #{map.get($button-background-color-map, "#{$color-name}")};
   	}
 	}
 
@@ -97,7 +99,6 @@
   	&:focus:not(:disabled) {
    	  background: map.get($button-border-color-map, "#{$color-name}");
    	  color: map.get($button-text-color-map, "#{$color-name}");
-      box-shadow: 0px 0px 1px 2px #{map.get($button-background-color-map, "#{$color-name}")};
   	}
   }
 

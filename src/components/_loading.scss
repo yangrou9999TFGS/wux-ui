@@ -1,3 +1,23 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Loading */
 
+.#{$prefix}loading {
+
+	&:before {
+    animation: spinner 2s ease infinite;
+    border: 2px solid currentColor;
+    border-radius: 9999px;
+    border-right-color: transparent;
+		content: '';
+	  display: inline-block;
+    height: 1em;
+    vertical-align: text-bottom;
+    width: 1em;
+  }
+}
+
+@keyframes spinner {
+	to {
+		transform: rotate(1440deg);
+	}
+}

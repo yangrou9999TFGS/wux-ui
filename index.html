@@ -5,12 +5,9 @@
     <link href="dist/wux.css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
-    <meta name="renderer" content="webkit"/>
-    <meta name="force-rendering" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   </head>
-  <body>
-    <nav class="wux-header">
+  <body class="wux-header-fixed-margin">
+    <nav class="wux-header wux-header-fixed">
       <span class="wux-header-title">WuX-UI Debug Page</span>
       <span class="wux-header-option-group">
         <a class="wux-header-option" href="https://wux-ui.tk/">Offical Page</a>
@@ -32,44 +29,50 @@
         </div>
         <div class="wux-col">
           <h1>Button</h1>
-          <button class="wux-btn wux-btn-primary">Primary</button>
-          <button class="wux-btn wux-btn-secondary">Secondary</button>
-          <button class="wux-btn wux-btn-success">Success</button>
-          <button class="wux-btn wux-btn-info">Info</button>
-          <button class="wux-btn wux-btn-warning">Warning</button>
-          <button class="wux-btn wux-btn-error">Error</button>
-          <button class="wux-btn wux-btn-light">Light</button>
-          <br>
-          <button class="wux-btn wux-btn-primary wux-btn-outline">Primary</button>
-          <button class="wux-btn wux-btn-secondary wux-btn-outline">Secondary</button>
-          <button class="wux-btn wux-btn-success wux-btn-outline">Success</button>
-          <button class="wux-btn wux-btn-info wux-btn-outline">Info</button>
-          <button class="wux-btn wux-btn-warning wux-btn-outline">Warning</button>
-          <button class="wux-btn wux-btn-error wux-btn-outline">Error</button>
-          <button class="wux-btn wux-btn-light wux-btn-outline">Light</button>
-          <br>
-          <button class="wux-btn wux-btn-primary wux-btn-text">Primary</button>
-          <button class="wux-btn wux-btn-secondary wux-btn-text">Secondary</button>
-          <button class="wux-btn wux-btn-success wux-btn-text">Success</button>
-          <button class="wux-btn wux-btn-info wux-btn-text">Info</button>
-          <button class="wux-btn wux-btn-warning wux-btn-text">Warning</button>
-          <button class="wux-btn wux-btn-error wux-btn-text">Error</button>
-          <button class="wux-btn wux-btn-light wux-btn-text">Light</button>
-          <br>
-          <button class="wux-btn wux-btn-primary wux-btn-xs">SuperSmall</button>
-          <button class="wux-btn wux-btn-secondary wux-btn-sm">Small</button>
-          <button class="wux-btn wux-btn-success wux-btn-md">Medium</button>
-          <button class="wux-btn wux-btn-info wux-btn-lg">Large</button>
-          <button class="wux-btn wux-btn-warning wux-btn-xl">SuperLarge</button>
-          <button class="wux-btn" disabled>Disabled</button>
-          <button class="wux-btn wux-btn-square">Square</button>
-          <button class="wux-btn wux-btn-default">Default</button>
-          <button class="wux-btn wux-btn-round">Round</button>
-          <br>
-          <button class="wux-btn wux-btn-round wux-btn-block">Block</button>
+          <div>
+            <button class="wux-btn wux-btn-primary">Primary</button>
+            <button class="wux-btn wux-btn-secondary">Secondary</button>
+            <button class="wux-btn wux-btn-success">Success</button>
+            <button class="wux-btn wux-btn-info">Info</button>
+            <button class="wux-btn wux-btn-warning">Warning</button>
+            <button class="wux-btn wux-btn-error">Error</button>
+            <button class="wux-btn wux-btn-light">Light</button>
+          </div>
+          <div>
+            <button class="wux-btn wux-btn-primary wux-btn-outline">Primary</button>
+            <button class="wux-btn wux-btn-secondary wux-btn-outline">Secondary</button>
+            <button class="wux-btn wux-btn-success wux-btn-outline">Success</button>
+            <button class="wux-btn wux-btn-info wux-btn-outline">Info</button>
+            <button class="wux-btn wux-btn-warning wux-btn-outline">Warning</button>
+            <button class="wux-btn wux-btn-error wux-btn-outline">Error</button>
+            <button class="wux-btn wux-btn-light wux-btn-outline">Light</button>
+          </div>
+          <div>
+            <button class="wux-btn wux-btn-primary wux-btn-text">Primary</button>
+            <button class="wux-btn wux-btn-secondary wux-btn-text">Secondary</button>
+            <button class="wux-btn wux-btn-success wux-btn-text">Success</button>
+            <button class="wux-btn wux-btn-info wux-btn-text">Info</button>
+            <button class="wux-btn wux-btn-warning wux-btn-text">Warning</button>
+            <button class="wux-btn wux-btn-error wux-btn-text">Error</button>
+            <button class="wux-btn wux-btn-light wux-btn-text">Light</button>
+          </div>
+          <div>
+            <button class="wux-btn wux-btn-primary wux-btn-xs">SuperSmall</button>
+            <button class="wux-btn wux-btn-secondary wux-btn-sm">Small</button>
+            <button class="wux-btn wux-btn-success wux-btn-md">Medium</button>
+            <button class="wux-btn wux-btn-info wux-btn-lg">Large</button>
+            <button class="wux-btn wux-btn-warning wux-btn-xl">SuperLarge</button>
+            <button class="wux-btn" disabled>Disabled</button>
+            <button class="wux-btn wux-btn-square">Square</button>
+            <button class="wux-btn wux-btn-default">Default</button>
+            <button class="wux-btn wux-btn-round">Round</button>
+          </div>
+          <div>
+            <button class="wux-btn wux-btn-round wux-btn-block">Block</button>
+          </div>
         </div>
       </div>
-      <div class="wux-row-md-3">
+      <div class="wux-row-md-4 wux-row-sm-2">
         <div class="wux-col">
           <h1>Breadcrumb</h1>
           <ul class="wux-breadcrumb">
@@ -81,7 +84,7 @@
         </div>
         <div class="wux-col">
           <h1>Card</h1>
-          <div class="wux-card">
+          <div class="wux-card wux-card-hover">
             <div class="wux-card-header">
               <img src="https://image.moeblog.gq/i/2022/07/16/nsdzkk.svg">
             </div>
@@ -89,11 +92,114 @@
               Hello!
             </div>
             <div class="wux-card-footer">
-              <button class="wux-btn wux-btn-primary">Test</button><button class="wux-btn wux-btn-secondary">Test</button>
+              <button class="wux-btn wux-btn-primary wux-btn-text">Test</button>
+              <button class="wux-btn wux-btn-secondary wux-btn-text">Test</button>
             </div>
           </div>
         </div>
+        <div class="wux-col">
+          <h1>Dialog</h1>
+          <button class="wux-btn" onclick="testDialog.showModal()">OpenDialog</button>
+          <dialog class="wux-dialog" id="testDialog">
+            <div class="wux-dialog-header">
+              <h1 class="wux-dialog-header-title">Test!</h1>
+            </div>
+            <div class="wux-dialog-body">
+              Test!
+            </div>
+            <div class="wux-dialog-footer">
+              <div class="wux-dialog-footer-group">
+                <form method="dialog">
+                  <button class="wux-btn wux-btn-secondary wux-btn-text" onclick="testDialog.close()">Cancel</button>
+                  <button class="wux-btn" type="submit">Send</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+        </div>
+        <div class="wux-col">
+          <h1>Dropdown</h1>
+          <details class="wux-dropdown">
+            <summary class="wux-btn">
+              Dropdown!
+            </summary>
+            <ul class="wux-dropdown-menu">
+              <li class="wux-dropdown-item">阿巴阿巴</li>
+              <li class="wux-dropdown-item">阿巴阿巴</li>
+              <li class="wux-dropdown-item">阿巴阿巴</li>
+            </ul>
+          </details>
+        </div>
       </div>
+      <div class="wux-row-md-1">
+        <div class="wux-col">
+          <h1>Form</h1>
+          <div class="wux-row-md-4 wux-row-sm-2">
+            <div class="wux-col">
+              <h2>Input</h2>
+              <input class="wux-form-input wux-form-input-xs" placeholder="xs" type="url" />
+              <input class="wux-form-input wux-form-input-sm" placeholder="sm" type="url"/>
+              <input class="wux-form-input wux-form-input-md" placeholder="md" type="url"/>
+              <input class="wux-form-input wux-form-input-lg" placeholder="lg" type="url"/>
+              <input class="wux-form-input wux-form-input-xl" placeholder="xl" type="url"/>
+              <input class="wux-form-input wux-form-input-xl" placeholder="xl" type="url" disabled />
+            </div>
+            <div class="wux-col">
+              <h2>Textarea</h2>
+              <textarea class="wux-form-input wux-form-input-md" rows="4"></textarea>
+              <textarea class="wux-form-input wux-form-input-md" placeholder="Disabled" rows="4" disabled></textarea>
+            </div>
+            <div class="wux-col">
+              <h2>Checks</h2>
+              <label>
+                <input class="wux-form-checks" type="checkbox" />
+                Test!
+              </label>
+              <br>
+              <label>
+                <input class="wux-form-checks" type="checkbox" checked="checked" />
+                Test!
+              </label>
+              <br>
+              <label>
+                <input class="wux-form-checks" type="checkbox" checked="checked" disabled />
+                abab!
+              </label>
+              <h2>Radios</h2>
+              <form>
+                <label>
+                  <input class="wux-form-radios" type="radio" name="contact" />
+                  Test!
+                </label>
+                <br>
+                <label>
+                  <input class="wux-form-radios" type="radio" name="contact" />
+                  Test!
+                </label>
+              </form>
+            </div>
+            <div class="wux-col">
+              <h2>Range</h2>
+              <input class="wux-form-range" type="range" />
+              <h2>Select</h2>
+              <select class="wux-form-select">
+                <option>我是</option>
+                <option>一个一个</option>
+                <option>Homo啊</option>
+              </select>
+              <h2>Upload</h2>
+              <input class="wux-form-upload" type="file" />
+            </div>
+          </div>
+          <div class="wux-row-xs-1">
+            <div class="wux-col">
+              <h2>Loading</h2>
+              <div style="text-align: center;">
+                <button class="wux-btn wux-loading"></button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   </body>
 </html>

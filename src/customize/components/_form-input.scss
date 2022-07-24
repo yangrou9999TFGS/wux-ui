@@ -1,0 +1,49 @@
+
+/* WuX-UI Components-Form-Input [Customize] */
+
+$form-input-background: #FFFFFF;
+$form-input-text-color: #000000;
+$form-input-border-color: #CCCCCC;
+$form-input-border-width: 1px;
+$form-input-border-radius: 12px;
+$form-input-margin-bottom: 4px;
+
+$form-input-hover-background: #FFFFFF;
+$form-input-hover-text-color: #000000;
+$form-input-hover-shadow: 0 0 6px #DDDDDD;
+
+$form-input-focus-background: #FFFFFF;
+$form-input-focus-text-color: #000000;
+$form-input-focus-shadow: 0 0 1px 1px map.get($color-primary-map , "500");
+
+$form-input-invalid-background: #FFFFFF;
+$form-input-invalid-text-color: map.get($color-error-map , "500");
+$form-input-invalid-shadow: 0 0 2px 2px map.get($color-error-map , "500");
+
+$form-input-disabled-opacity: 30%;
+
+$imported-size: xs, sm, md, lg, xl;
+
+$form-input-padding-x-map: (
+	xs: 4px,
+	sm: 6px,
+	md: 8px,
+	lg: 10px,
+	xl: 12px,
+);
+
+$form-input-padding-y-map: (
+	xs: 4px,
+	sm: 8px,
+	md: 10px,
+	lg: 14px,
+	xl: 18px,
+);
+
+$form-input-font-size-map: (
+	xs: 8px,
+	sm: 11px,
+	md: 14px,
+	lg: 17px,
+	xl: 20px,
+);

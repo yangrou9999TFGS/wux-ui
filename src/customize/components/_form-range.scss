@@ -1,0 +1,13 @@
+
+/* WuX-UI Components-Form-Range [Customize] */
+
+$form-range-thumb-background: map.get($color-primary-map, "500");
+$form-range-thumb-border: none;
+$form-range-thumb-shadow: 0 0 0 4px map.get($color-primary-map, "500");
+$form-range-thumb-height: 12px;
+$form-range-thumb-width: 12px;
+$form-range-track-background: map.get($color-primary-map, "100");
+$form-range-track-border-radius: 9999px;
+$form-range-track-height: 4px;
+$form-range-thumb-focus-background: map.get($color-primary-map, "600");
+$form-range-thumb-focus-shadow: 0 0 0 4px map.get($color-primary-map, "600");

@@ -1,3 +1,39 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Form-Upload */
 
+.#{$prefix}form-upload {
+	position: relative;
+	width: 100%;
+	display: block;
+	
+	appearance: none;
+	border: 1px dashed #CCCCCC;
+	border-radius: $form-upload-border-radius;
+	box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	cursor: pointer;
+	padding: $form-upload-padding-y $form-upload-padding-x;
+	margin: 0;
+	max-width: auto;
+	text-align: center;
+  vertical-align: middle;
+	user-select: none;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+  transition: 0.2s;
+	  -webkit-transition: 0.2s; /* Safari */
+	white-space: nowrap;
+
+	&:hover {
+		box-shadow: $form-upload-hover-shadow;
+	}
+
+	&::file-selector-button {
+    display: none;
+  }
+
+  &::-webkit-file-upload-button {
+    display: none;
+  }
+}

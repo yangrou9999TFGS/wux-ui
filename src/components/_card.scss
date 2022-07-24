@@ -1,17 +1,21 @@
 
 /* WuX-UI Components-Card */
 
-.#{$prefix}card {
+.#{$prefix}card{
 	position: relative;
 	box-sizing: border-box;
 	  -webkit-box-sizing: border-box;
+	display: block;
 	overflow: hidden;
 	border-radius: $card-border-radius;
 	border: $card-border-width solid $card-border-color;
+	box-shadow: $card-shadow;
 	background-color: $card-background-color;
 	color: $card-text-color;
 	padding: 0;
 	margin: $card-margin;
+	transition: box-shadow 0.2s;
+	  -webkit-transition: box-shadow 0.2s;
 
 	.#{$prefix}card-header {
  	 	position: relative;
@@ -61,3 +65,6 @@
 	}
 }
 
+.#{$prefix}card-hover:hover {
+	box-shadow: $card-hover-shadow;
+}
