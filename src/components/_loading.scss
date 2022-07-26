@@ -2,10 +2,11 @@
 /* WuX-UI Components-Loading */
 
 .#{$prefix}loading {
+  pointer-events: none;
 
 	&:before {
-    animation: spinner 2s ease infinite;
-    border: 2px solid currentColor;
+    animation: spinner $loading-speed linear infinite;
+    border: $loading-circle-width solid currentColor;
     border-radius: 9999px;
     border-right-color: transparent;
 		content: '';
@@ -13,11 +14,12 @@
     height: 1em;
     vertical-align: text-bottom;
     width: 1em;
+    pointer-events: none;
   }
 }
 
 @keyframes spinner {
 	to {
-		transform: rotate(1440deg);
+		transform: rotate(360deg);
 	}
 }

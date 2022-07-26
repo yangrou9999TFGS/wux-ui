@@ -1,3 +1,31 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Jumbotron */
 
+.#{$prefix}jumbotron {
+	background: $jumbotron-background;
+	box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: $jumbotron-padding;
+
+	.#{$prefix}jumbotron-title {
+		font-size: $jumbotron-title-font-size;
+		font-weight: 700;
+		margin: $jumbotron-title-margin-y 0;
+	}
+
+	.#{$prefix}jumbotron-subtitle {
+		font-size: $jumbotron-subtitle-font-size;
+    margin: $jumbotron-subtitle-margin-y 0;
+	}
+
+	.#{$prefix}jumbotron-btn-group {
+		position: relative;
+		box-sizing: border-box;
+		  -webkit-box-sizing: border-box;
+		display: block;
+		margin: $jumbotron-button-group-margin-y 0;
+	}
+}
