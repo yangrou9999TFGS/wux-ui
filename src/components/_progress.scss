@@ -1,3 +1,29 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Progress */
 
+.#{$prefix}progress {
+	appearance: none;
+	  -webkit-appearance: none;
+    -moz-appearance: none;
+
+  background-color: $progress-background-color;
+  border: $progress-border-width solid $progress-border-color;
+  border-radius: $progress-border-radius;
+  display: inline-block;
+  overflow: hidden;
+  height: $progress-height;
+  width: 100%;
+
+  &::-webkit-progress-bar {
+    border-radius: $progress-border-radius;
+    background: none;
+  }
+
+  &[value]::-webkit-progress-value {
+    background-color: $progress-line-color;
+  }
+  
+  &::-moz-progress-bar {
+    background-color: $progress-line-color;
+  }
+}

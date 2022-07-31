@@ -1,3 +1,53 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-List */
 
+.#{$prefix}list-group {
+	border-radius: $list-border-radius;
+	padding: 0;
+
+	.#{$prefix}list-item {
+		background-color: $list-item-background;
+	  border: $list-item-border-width solid $list-item-border-color;
+	  border-radius: none;
+	  box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	  list-style: none;
+	  margin: 0 !important;
+	  margin-top: #{"-"}#{$list-item-border-width + 1};
+	  padding: $list-item-padding;
+	  width: 100%;
+
+	  transition: 0.2s;
+
+	  + .#{$prefix}list-item {
+	  	border-top: none;
+	  }
+
+	  &:first-child {
+	  	border-top-right-radius: $list-border-radius;
+	  	border-top-left-radius: $list-border-radius;
+	  }
+
+	  &:last-child {
+	  	border-bottom-right-radius: $list-border-radius;
+	  	border-bottom-left-radius: $list-border-radius;
+	  }
+  }
+
+  .#{$prefix}list-item-action {
+  	cursor: pointer;
+  	
+  	&:hover {
+  	  background-color: $list-item-hover-background;
+  	  border-color: $list-item-hover-background;
+  	  color: $list-item-hover-text-color;
+    }
+
+    &:active,
+    &.#{$prefix}list-item-focus {
+    	background-color: $list-item-focus-background;
+  	  border-color: $list-item-focus-background;
+  	  color: $list-item-focus-text-color;
+    }
+  }
+}

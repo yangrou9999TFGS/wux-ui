@@ -14,6 +14,10 @@
 		font-size: $jumbotron-title-font-size;
 		font-weight: 700;
 		margin: $jumbotron-title-margin-y 0;
+
+		.#{$prefix}jumbotron-title-bold {
+			color: $jumbotron-title-bold-color;
+		}
 	}
 
 	.#{$prefix}jumbotron-subtitle {
@@ -22,7 +26,7 @@
 	}
 
 	.#{$prefix}jumbotron-btn-group {
-		position: relative;
+		position: static;
 		box-sizing: border-box;
 		  -webkit-box-sizing: border-box;
 		display: block;

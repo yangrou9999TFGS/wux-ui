@@ -1,3 +1,44 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Tooltip */
 
+.#{$prefix}tooltip {
+
+	.#{$prefix}tooltip-item {
+		border-radius: $tooltip-border-radius;
+		background-color: #000000;
+		backdrop-filter: blur(4px);
+		opacity: 0;
+		padding: $tooltip-padding;
+	  position: absolute;
+    visibility: hidden;
+    transition: 0.2s;
+    z-index: 1;
+	}
+
+	&:hover {
+	  .#{$prefix}tooltip-item {
+	  	opacity: 80%;
+		  visibility: visible;
+	  }
+	}
+
+	.#{$prefix}tooltip-item-top {
+		bottom: 110%;
+		left: 0; 	
+	}
+
+	.#{$prefix}tooltip-item-bottom {
+		top: 110%;
+		left: 0; 	
+	}
+
+	.#{$prefix}tooltip-item-right {
+		bottom: 50%;
+		left: 105%; 	
+	}
+
+	.#{$prefix}tooltip-item-left {
+		bottom: 50%;
+		right: 105%; 	
+	}
+}

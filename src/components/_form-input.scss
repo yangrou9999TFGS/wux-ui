@@ -27,6 +27,7 @@
 	&:hover {
 		box-shadow: $form-input-hover-shadow;
 		background: $form-input-hover-background;
+		border: $form-input-hover-border-width solid $form-input-hover-border-color;
 		color: $form-input-hover-text-color;
 		outline: none;
 	}
@@ -34,6 +35,7 @@
 	&:focus {
 		box-shadow: $form-input-focus-shadow;
 		background: $form-input-focus-background;
+		border: $form-input-focus-border-width solid $form-input-focus-border-color;
 		color: $form-input-focus-text-color;
 		outline: none;
 	}
@@ -41,6 +43,7 @@
 	&:invalid {
 		box-shadow: $form-input-invalid-shadow;
 		background: $form-input-invalid-background;
+		border: $form-input-invalid-border-width solid $form-input-invalid-border-color;
 		color: $form-input-invalid-text-color;
 		outline: none;
 	}

@@ -14,6 +14,7 @@
 
   &:not(:disabled):not(:checked):hover {
   	background-color: $form-radios-hover-background-color;
+  	box-shadow: $form-radios-hover-shadow;
   }
 	
 	&:checked {

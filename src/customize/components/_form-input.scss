@@ -4,21 +4,27 @@
 $form-input-background: #FFFFFF;
 $form-input-text-color: #000000;
 $form-input-border-color: #CCCCCC;
-$form-input-border-width: 1px;
+$form-input-border-width: 2px;
 $form-input-border-radius: 12px;
 $form-input-margin-bottom: 4px;
 
 $form-input-hover-background: #FFFFFF;
+$form-input-hover-border-color: #CCCCCC;
+$form-input-hover-border-width: 2px;
 $form-input-hover-text-color: #000000;
 $form-input-hover-shadow: 0 0 6px #DDDDDD;
 
 $form-input-focus-background: #FFFFFF;
+$form-input-focus-border-color: map.get($color-primary-map, "500");
+$form-input-focus-border-width: 2px;
 $form-input-focus-text-color: #000000;
-$form-input-focus-shadow: 0 0 1px 1px map.get($color-primary-map , "500");
+$form-input-focus-shadow: 0 0 6px #DDDDDD;
 
 $form-input-invalid-background: #FFFFFF;
+$form-input-invalid-border-color: map.get($color-error-map, "500");
+$form-input-invalid-border-width: 2px;
 $form-input-invalid-text-color: map.get($color-error-map , "500");
-$form-input-invalid-shadow: 0 0 2px 2px map.get($color-error-map , "500");
+$form-input-invalid-shadow: 0 0 6px map.get($color-error-map , "200");
 
 $form-input-disabled-opacity: 30%;
 
