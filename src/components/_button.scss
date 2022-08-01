@@ -22,7 +22,7 @@
   background-color: map.get($button-background-color-map,"primary");
 	color: map.get($button-text-color-map,"primary");
 	border: $button-solid-border-width solid map.get($button-border-color-map,"primary");
-	border-radius: map.get($button-border-map,"default");
+	border-radius: map.get($button-border-map,"default-md");
   padding: map.get($button-padding-y-map,"md") map.get($button-padding-x-map,"md");
 	font-size: map.get($button-size-map,"md");
 
@@ -125,6 +125,7 @@
   .#{$prefix}btn-#{$size-name} {
 	  padding: map.get($button-padding-y-map,"#{$size-name}") map.get($button-padding-x-map,"#{$size-name}");
 	  font-size: map.get($button-size-map,"#{$size-name}");
+	  border-radius: map.get($button-border-map,"default-#{$size-name}");
 	}
 };
 

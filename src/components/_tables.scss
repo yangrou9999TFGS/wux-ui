@@ -1,3 +1,27 @@
 
-/* WuX-UI Components-Alert */
+/* WuX-UI Components-Tables */
 
+.#{$prefix}table {
+	background-color: $tables-background-color;
+	border-radius: $tables-border-radius;
+	box-shadow: $tables-shadow;
+	padding: $tables-padding;
+
+	.#{$prefix}table-head {
+		background-color: $tables-head-background-color;
+		margin-bottom: $tables-head-margin;
+
+		th {
+			border-radius: $tables-head-border-radius;
+			padding: $tables-head-item-padding;
+		}
+	}
+
+	.#{$prefix}table-row {
+		margin-bottom: $tables-row-margin;
+
+		td {
+			padding: $tables-item-padding;
+		}
+	}
+}

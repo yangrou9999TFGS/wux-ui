@@ -57,5 +57,6 @@
 	.#{$prefix}form-input-#{$size-name} {
 		padding: map.get($form-input-padding-y-map, #{$size-name}) map.get($form-input-padding-x-map, #{$size-name});
 		font-size: map.get($form-input-font-size-map, #{$size-name});
+		border-radius: map.get($form-input-border-map, #{$size-name});
 	}
 }

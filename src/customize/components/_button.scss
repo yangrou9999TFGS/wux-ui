@@ -71,6 +71,10 @@ $button-text-color-map: (
 $button-imported-border: square, default, round;
 $button-border-map: (
   square: 0,
-  default: 8px,
+  default-xs: 6px,
+  default-sm: 6px,
+  default-md: 8px,
+  default-lg: 10px,
+  default-xl: 12px,
   round: 9999px,
 );
