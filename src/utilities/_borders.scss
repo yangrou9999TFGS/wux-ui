@@ -1,0 +1,9 @@
+
+/* WuX-UI Utilities-Borders */
+
+// Border-Bolder
+@for $count from 1 through $borders-count {
+	.#{$prefix}border-#{$count} {
+		border-width: 4 * $count;
+	}
+}

@@ -2,10 +2,11 @@
 /* WuX-UI Components-Dropdown [Customize] */
 
 $dropdown-menu-background: #FFFFFF;
+$dropdown-menu-border: 2px solid #CCCCCC;
 $dropdown-menu-border-radius: 12px;
-$dropdown-menu-shadow: 2px 2px 10px #DDDDDD;
-$dropdown-menu-padding-x: 6px;
-$dropdown-menu-padding-y: 12px;
+$dropdown-menu-shadow: none;
+$dropdown-menu-padding-x: 0;
+$dropdown-menu-padding-y: 8px;
 
 $dropdown-item-border-radius: 8px;
 $dropdown-item-padding-x: 6px;

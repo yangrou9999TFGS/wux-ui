@@ -2,27 +2,69 @@
 /* WuX-UI Components-Tables */
 
 .#{$prefix}table {
+	position: relative;
+
 	background-color: $tables-background-color;
 	border-radius: $tables-border-radius;
+	border-spacing: 0;
 	box-shadow: $tables-shadow;
 	padding: $tables-padding;
 
-	.#{$prefix}table-head {
+	thead {
 		background-color: $tables-head-background-color;
 		margin-bottom: $tables-head-margin;
 
 		th {
-			border-radius: $tables-head-border-radius;
+			position: relative;
 			padding: $tables-head-item-padding;
-			min-width: 24px;
+			min-width: 36px;
+
+			&:first-child {
+				border-radius: $tables-border-radius 0 0 0;
+			}
+
+			&:last-child {
+				border-radius: 0 $tables-border-radius 0 0;
+			}
 		}
 	}
 
-	.#{$prefix}table-row {
-		margin-bottom: $tables-row-margin;
+	tbody {
+		tr {
+			position: relative;
+			margin-bottom: $tables-row-margin;
+
+			&:first-child {
+				td {
+					border-top: none;
+				}
+			}
+
+			&:last-child {
+				td {
+					border-bottom: none;
+				}
+			}
+		}
+
+		th {
+			position: relative;
+			background-color: $tables-row-header-background-color;
+
+			&:last-child {
+				border-radius: 0 0 0 $tables-border-radius;
+			}
+		}
 
 		td {
-			padding: $tables-item-padding;
+			position: relative;
+
+			border: $tables-row-item-border;
+			padding: $tables-row-item-padding;
+
+			&:last-child {
+				border-right: none;
+			}
 		}
 	}
 }

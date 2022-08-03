@@ -2,12 +2,13 @@
 /* WuX-UI Components-Tables [Customize] */
 
 $tables-background-color: #FFFFFF;
-$tables-border-radius: 12px;
-$tables-padding: 12px;
-$tables-shadow: 2px 2px 6px #DDDDDD;
-$tables-head-background-color: #EEEEEE;
-$tables-head-border-radius: 4px;
+$tables-border-radius: 8px;
+$tables-padding: 0;
+$tables-shadow: none;
+$tables-head-background-color: #DDDDDD;
 $tables-head-margin: 8px;
 $tables-head-item-padding: 8px;
+$tables-row-header-background-color: #EEEEEE;
+$tables-row-item-border: 1px solid #CCCCCC;
+$tables-row-item-padding: 8px;
 $tables-row-margin: 4px;
-$tables-item-padding: 8px;
