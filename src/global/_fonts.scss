@@ -2,8 +2,9 @@
 /* WuX-UI Import-Fonts */
 
 // Default:NotoSansSC
-@import url('http://fonts.lug.ustc.edu.cn/css2?family=Ubuntu%20Mono&display=swap');
+@import url("http://fonts.lug.ustc.edu.cn/css2?family=Ubuntu%20Mono&family=Noto%20Sans%20SC:wght@400;700&display=swap");
 
 body {
-	font-family: "Ubuntu Mono", Arial;
+	font-family: "Ubuntu Mono", "Noto Sans SC", "Sans Serif", Arial;
+	font-weight: 400;
 }

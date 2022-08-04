@@ -6,6 +6,8 @@
 	
 	& > summary {
 		list-style: none;
+			-webkit-list-style: none;
+			-moz-list-style: none;
 	}
 
 	.#{$prefix}dropdown-menu {

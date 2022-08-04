@@ -3,14 +3,17 @@
 
 .#{$prefix}list-group {
 	border-radius: $list-border-radius;
+	border-collapse: collapse;
 	padding: 0;
 
 	.#{$prefix}list-item {
 		background-color: $list-item-background;
 	  border: $list-item-border-width solid $list-item-border-color;
+	  border-collapse: collapse;
 	  border-radius: none;
 	  box-sizing: border-box;
 	    -webkit-box-sizing: border-box;
+	  display: block;
 	  list-style: none;
 	  margin: 0 !important;
 	  margin-top: #{"-"}#{$list-item-border-width + 1};
@@ -46,7 +49,7 @@
     &:active,
     &.#{$prefix}list-item-focus {
     	background-color: $list-item-focus-background;
-  	  border-color: $list-item-focus-background;
+    	border-color: $list-item-focus-background;
   	  color: $list-item-focus-text-color;
     }
   }

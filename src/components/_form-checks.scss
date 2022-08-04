@@ -3,6 +3,9 @@
 
 .#{$prefix}form-checks {
 	appearance: none;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+
 	border: $form-checks-border-width solid $form-checks-border-color;
 	border-radius: $form-checks-border-radius;
 	cursor: pointer;

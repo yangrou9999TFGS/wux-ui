@@ -6,7 +6,10 @@
 
 	background-color: $tables-background-color;
 	border-radius: $tables-border-radius;
+	border-collapse: collapse;
 	border-spacing: 0;
+	box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
 	box-shadow: $tables-shadow;
 	padding: $tables-padding;
 
@@ -24,7 +27,7 @@
 			}
 
 			&:last-child {
-				border-radius: 0 $tables-border-radius 0 0;
+				border-radius: 0 $tables-border-radius 0 0 !important;
 			}
 		}
 	}
@@ -41,8 +44,14 @@
 			}
 
 			&:last-child {
-				td {
-					border-bottom: none;
+				td:first-child, 
+				th:first-child {
+					border-radius: 0 0 0 $tables-border-radius;
+				}
+
+				td:last-child, 
+				th:last-child {
+					border-radius: 0 0 $tables-border-radius 0;
 				}
 			}
 		}
@@ -50,10 +59,6 @@
 		th {
 			position: relative;
 			background-color: $tables-row-header-background-color;
-
-			&:last-child {
-				border-radius: 0 0 0 $tables-border-radius;
-			}
 		}
 
 		td {
@@ -61,10 +66,12 @@
 
 			border: $tables-row-item-border;
 			padding: $tables-row-item-padding;
-
-			&:last-child {
-				border-right: none;
-			}
 		}
 	}
+}
+
+.#{$prefix}table-fluid {
+	margin-right: 0;
+	margin-left: 0;
+	width: 100%;
 }

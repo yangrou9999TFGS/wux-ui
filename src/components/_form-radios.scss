@@ -3,6 +3,9 @@
 
 .#{$prefix}form-radios {
 	appearance: none;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	
 	border: $form-radios-border-width solid $form-radios-border-color;
 	border-radius: $form-radios-border-radius;
 	cursor: pointer;
