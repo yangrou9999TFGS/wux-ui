@@ -11,7 +11,8 @@
 		padding: $tooltip-padding;
 	  position: absolute;
     visibility: hidden;
-    transition: 0.2s;
+    transition: 0.5s;
+      -webkit-transition: 0.5s;
     z-index: 1;
 	}
 

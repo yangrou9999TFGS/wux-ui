@@ -1,24 +1,24 @@
 
 /* WuX-UI Components-Alert [Customize] */
 
-/*Layout*/
+// Layout
 $alert-border-radius: 12px;
 $alert-border-width: 12px;
 $alert-font-size: 16px;
 $alert-padding: 16px;
 $alert-margin-bottom: 4px;
 
-/*Color-Degree*/
+// Color-Degree
 $alert-background-degree: 200;
 $alert-border-degree: 400;
 $alert-icon-degree: 500;
 
 $alert-background-color-map: (
 	primary: map.get($color-primary-map, #{$alert-background-degree}),
- 	secondary: map.get($color-secondary-map, #{$alert-background-degree}),
+	secondary: map.get($color-secondary-map, #{$alert-background-degree}),
  	success: map.get($color-success-map, #{$alert-background-degree}),
  	info: map.get($color-info-map, #{$alert-background-degree}),
- 	warning: map.get($color-warning-map, #{$alert-background-degree}),
+	warning: map.get($color-warning-map, #{$alert-background-degree}),
  	error: map.get($color-error-map, #{$alert-background-degree}),
  	light: map.get($color-light-map, #{$alert-background-degree})
 );

@@ -4,19 +4,20 @@
 .#{$prefix}btn,
 .#{$prefix}btn.#{$prefix}solid {
 	position: relative;
-	text-decoration: none;
 	box-shadow: none;
+	cursor: pointer;
+	font-weight: 400;
 	margin: 0;
 	margin-right: $button-margin-right;
 	margin-bottom: $button-margin-bottom;
-	cursor: pointer;
 	white-space: nowrap;
   vertical-align: middle;
+  transition: 0.5s;
+	  -webkit-transition: 0.5s; /* Safari */
+	text-decoration: none;
 	user-select: none;
 	  -webkit-user-select: none;
 	  -moz-user-select: none;
-  transition: 0.2s;
-	  -webkit-transition: 0.2s; /* Safari */
 
 	/*Default*/
   background-color: map.get($button-background-color-map,"primary");

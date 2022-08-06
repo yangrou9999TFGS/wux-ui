@@ -13,7 +13,8 @@
   height: 20px;
   margin-right: 4px;
   vertical-align: middle;
-  transition: 0.2s;
+  transition: 0.5s;
+    -webkit-transition: 0.5s;
 
   &:not(:disabled):not(:checked):hover {
   	background-color: $form-radios-hover-background-color;

@@ -14,8 +14,8 @@
 	color: $card-text-color;
 	padding: 0;
 	margin: $card-margin;
-	transition: box-shadow 0.2s;
-	  -webkit-transition: box-shadow 0.2s;
+	transition: box-shadow 0.5s;
+	  -webkit-transition: box-shadow 0.5s;
 
 	.#{$prefix}card-header {
  	 	position: relative;

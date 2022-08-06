@@ -2,3 +2,15 @@
 /* WuX-UI Utilities-Borders [Customize] */
 
 $borders-count: 12;
+$borders-radius-count: 12;
+
+$borders-degree: 500;
+$borders-color-map: (
+	"primary": map.get($color-primary-map, "$borders-degree"),
+	"secondary": map.get($color-secondary-map, "$borders-degree"),
+	"success": map.get($color-success-map, "$borders-degree"),
+	"info": map.get($color-info-map, "$borders-degree"),
+	"warning": map.get($color-warning-map, "$borders-degree"),
+	"error": map.get($color-error-map, "$borders-degree"),
+	"light": map.get($color-light-map, "$borders-degree")
+)

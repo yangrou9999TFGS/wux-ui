@@ -2,12 +2,5 @@
 /* WuX-UI Customize-Color */
 
 // Variable
-$imported-colors: primary,secondary,success,info,warning,error,light;
-
-@import "./colors/primary";
-@import "./colors/secondary";
-@import "./colors/success";
-@import "./colors/info";
-@import "./colors/warning";
-@import "./colors/error";
-@import "./colors/light";
+$imported-colors: primary, secondary, success, info, warning, error, light;
+$imported-degrees: 100, 200, 300, 400, 500, 600, 700, 800, 900;

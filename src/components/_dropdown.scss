@@ -2,13 +2,9 @@
 /* WuX-UI Components-Dropdown */
 
 .#{$prefix}dropdown {
-	display: inline-block;
-	
-	& > summary {
-		list-style: none;
-			-webkit-list-style: none;
-			-moz-list-style: none;
-	}
+	box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	display: block;
 
 	.#{$prefix}dropdown-menu {
 		position: absolute;
@@ -18,19 +14,31 @@
 		border: $dropdown-menu-border;
 		border-radius: $dropdown-menu-border-radius;
 		box-shadow: $dropdown-menu-shadow;
+		display: none;
 		margin-top: 2px;
 		padding: $dropdown-menu-padding-y $dropdown-menu-padding-x;
+		opacity: 0;
+		transition: 0.5s;
+		  -webkit-transition: 0.5s;
+		z-index: 1;
 
 		.#{$prefix}dropdown-item {
 			border-radius: $dropdown-item-border-radius;
 			list-style: none;
 			padding: $dropdown-item-padding-y $dropdown-item-padding-x;
-			transition: 0.2s;
+			transition: 0.5s;
 
 			&:hover {
 				background-color: $dropdown-item-hover-background;
 	      color: $dropdown-item-hover-text-color;
 			}
+		}
+	}
+
+	.#{$prefix}dropdown-trigger:focus {
+		& + .#{$prefix}dropdown-menu {
+			display: block;
+			opacity: 1;
 		}
 	}
 }

@@ -4,7 +4,7 @@
 $grid-size-name: xs, sm, md, lg, xl;
 $grid-col-count: 12;
 
-/* Ex. row col-xs-6 col-xs-6 */
+// Ex. row col-xs-6 col-xs-6
 $grid-col-map: (
   "1": 8.333333%,
   "2": 16.666667%,
@@ -20,7 +20,7 @@ $grid-col-map: (
   "12": 100%
 );
 
-/* Ex. row-xs-2 col col */
+// Ex. row-xs-2 col col
 $grid-row-map: (
   "1": 100%,
   "2": 50%,

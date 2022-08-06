@@ -1,0 +1,27 @@
+
+/* WuX-UI Components-Tag [Customize] */
+
+$tag-border-radius: 4px;
+$tag-margin: 2px;
+$tag-padding: 6px 8px;
+
+$tag-background-degree: 200;
+$tag-background-map: (
+	"primary": map.get($color-primary-map, #{$tag-background-degree}),
+	"secondary": map.get($color-secondary-map, #{$tag-background-degree}),
+	"success": map.get($color-success-map, #{$tag-background-degree}),
+	"info": map.get($color-info-map, #{$tag-background-degree}),
+	"warning": map.get($color-warning-map, #{$tag-background-degree}),
+	"error": map.get($color-error-map, #{$tag-background-degree}),
+	"light": map.get($color-light-map, #{$tag-background-degree})
+);
+
+$tag-text-map: (
+	"primary": func-text-color(primary, $tag-background-degree),
+	"secondary": func-text-color(secondary, $tag-background-degree),
+	"success": func-text-color(success, $tag-background-degree),
+	"info": func-text-color(info, $tag-background-degree),
+	"warning": func-text-color(warning, $tag-background-degree),
+	"error": func-text-color(error, $tag-background-degree),
+	"light": func-text-color(light, $tag-background-degree)
+);

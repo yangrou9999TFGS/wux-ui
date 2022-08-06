@@ -18,8 +18,8 @@
 	margin-bottom: $form-input-margin-bottom;
 	resize: none;
 	max-width: auto;
-	transition: 0.2s;
-	  -webkit-transition: 0.2s;
+	transition: 0.5s;
+	  -webkit-transition: 0.5s;
 
   // Default
 	padding: map.get($form-input-padding-x-map, "md") map.get($form-input-padding-x-map, "md");

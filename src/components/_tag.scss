@@ -1,0 +1,30 @@
+
+/* WuX-UI Components-Tag */
+
+.#{$prefix}tag {
+	position: static;
+
+	border-radius: $tag-border-radius;
+	padding: $tag-padding;
+	margin-right: $tag-margin;
+
+	user-select: none;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+
+	// Default
+	background-color: map.get($tag-background-map, primary);
+	color: map.get($tag-text-map, primary);
+
+	.#{$prefix}tag-close {
+		cursor: pointer;
+		margin-left: 12px;
+	}
+}
+
+@each $color-name in $imported-colors {
+	.#{$prefix}tag-#{$color-name} {
+		background-color: map.get($tag-background-map, #{$color-name});
+		color: map.get($tag-text-map, #{$color-name});
+	}
+};

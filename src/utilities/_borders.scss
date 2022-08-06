@@ -4,6 +4,38 @@
 // Border-Bolder
 @for $count from 1 through $borders-count {
 	.#{$prefix}border-#{$count} {
-		border-width: 4 * $count;
+		border-width: #{$count}#{px};
 	}
-}
+
+	// Position
+	.#{$prefix}border-top-#{$count} {
+		border-top-width: #{$count}#{px};
+	}
+
+	.#{$prefix}border-bottom-#{$count} {
+		border-bottom-width: #{$count}#{px};
+	}
+
+	.#{$prefix}border-left-#{$count} {
+		border-left-width: #{$count}#{px};
+	}
+
+	.#{$prefix}border-right-#{$count} {
+		border-right-width: #{$count}#{px};
+	}
+};
+
+// Border-Color
+@each $color-name in $imported-colors {
+	.#{$prefix}border-#{$color-name} {
+		border-color: map.get($borders-color-map, #{$color-name});
+	}
+};
+
+// Border-Radius
+@for $count from 1 through $borders-radius-count {
+	.#{$prefix}border-radius-#{$count} {
+		border-radius: $count * 4;
+	}
+};
+

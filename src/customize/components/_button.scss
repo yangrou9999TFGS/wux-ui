@@ -1,14 +1,14 @@
 
 /* WuX-UI Components-Button [Customize] */
 
-/*Layout*/
+// Layout
 $button-solid-border-width: 0px;
 $button-outline-border-width: 1px;
 $button-margin-right: 2px;
 $button-margin-bottom: 4px;
 
 $button-imported-size: xs, sm, md, lg, xl;
-/*Size*/
+// Size
 // 纵
 $button-padding-y-map: (
 	xs: 4px,
@@ -34,7 +34,7 @@ $button-size-map: (
   xl: 20px
 );
 
-/*Color-Degree*/
+// Color-Degree
 $button-background-degree: 500;
 $button-border-degree: 600;
 

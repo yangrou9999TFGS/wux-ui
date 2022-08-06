@@ -5,8 +5,8 @@
 	position: relative;
 
 	background-color: $tables-background-color;
+	border: $tables-border;
 	border-radius: $tables-border-radius;
-	border-collapse: collapse;
 	border-spacing: 0;
 	box-sizing: border-box;
 	  -webkit-box-sizing: border-box;
@@ -15,6 +15,7 @@
 
 	thead {
 		background-color: $tables-head-background-color;
+		border-collapse: collapse;
 		margin-bottom: $tables-head-margin;
 
 		th {
@@ -33,6 +34,8 @@
 	}
 
 	tbody {
+		border-collapse: collapse;
+
 		tr {
 			position: relative;
 			margin-bottom: $tables-row-margin;
@@ -44,6 +47,11 @@
 			}
 
 			&:last-child {
+
+				td {
+					border-bottom: none;
+				}
+
 				td:first-child, 
 				th:first-child {
 					border-radius: 0 0 0 $tables-border-radius;
@@ -66,6 +74,10 @@
 
 			border: $tables-row-item-border;
 			padding: $tables-row-item-padding;
+
+			&:last-child {
+				border-right: none;
+			}
 		}
 	}
 }

@@ -20,7 +20,8 @@
 	  padding: $list-item-padding;
 	  width: 100%;
 
-	  transition: 0.2s;
+	  transition: 0.5s;
+	  	-webkit-transition: 0.5s;
 
 	  + .#{$prefix}list-item {
 	  	border-top: none;

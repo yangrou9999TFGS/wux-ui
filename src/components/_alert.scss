@@ -10,7 +10,6 @@
 	padding: $alert-padding;
 	margin-bottom: $alert-margin-bottom;	
 
-	/*Default*/
 	background-color: map-get($alert-background-color-map, "primary");
 	color: map-get($alert-text-color-map, "primary");
 	border-left-color: map-get($alert-border-color-map, "primary");

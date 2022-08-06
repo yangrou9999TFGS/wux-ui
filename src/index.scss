@@ -11,12 +11,19 @@
 // SCSS
 @use "sass:map";
 
-// Functions
+// Functions*
   @import "functions/func-color";
 
 // Customize
-  // Color
-    @import "customize/color/colors";
+  // Color*
+    @import "customize/color/colors";   
+      @import "customize/color/colors/primary";
+      @import "customize/color/colors/secondary";
+      @import "customize/color/colors/success";
+      @import "customize/color/colors/info";
+      @import "customize/color/colors/warning";
+      @import "customize/color/colors/error";
+      @import "customize/color/colors/light";
   // Components
     @import "customize/components/alert";
     @import "customize/components/badge";
@@ -37,8 +44,9 @@
     @import "customize/components/loading";
     @import "customize/components/progress";
     @import "customize/components/tables";
+    @import "customize/components/tag";
     @import "customize/components/tooltip";
-  // Prefix
+  // Prefix*
     @import "customize/prefix/prefix";
   // Layout
     @import "customize/layout/container";
@@ -99,6 +107,7 @@
   @import "components/loading";
   @import "components/progress";
   @import "components/tables";
+  @import "components/tag";
   @import "components/tooltip";
 
-// 老式写法，即将弃用。
+// Don't delete the module when the module have a * !
