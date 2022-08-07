@@ -7,6 +7,8 @@
 	display: block;
 	
 	appearance: none;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
 	background: $form-input-background;
 	border: $form-input-border-width solid $form-input-border-color;
 	border-radius: $form-input-border-radius;

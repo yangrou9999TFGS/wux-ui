@@ -60,6 +60,7 @@
         .#{$prefix}header-option {
           box-sizing: border-box;
             -webkit-box-sizing: border-box;
+          border-radius: $header-option-border-radius;
           color: $header-text-color;
           display: none;
           padding: $header-option-padding-y $header-option-padding-x;
@@ -87,6 +88,9 @@
       display: block !important;
     
   	  .#{$prefix}header-option {
+        box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+        border-radius: $header-option-border-radius;
   		  color: $header-text-color;
         display: inline-block !important;
   		  padding: $header-option-padding-y $header-option-padding-x;
@@ -110,6 +114,11 @@
     border: none;
     padding-top: $header-option-padding-y;
     padding-bottom: $header-option-padding-y;
+  }
+
+  .#{$prefix}header-option-bold {
+    background-color: map.get($color-primary-map, "#{$header-option-bold-background-color-degree}") !important;
+    color: func-text-color(primary, $header-option-bold-background-color-degree) !important;
   }
 }
 

@@ -1,0 +1,21 @@
+
+/* WuX-UI Components-Tag [Customize] */
+
+$search-border-color: #CCCCCC;
+$search-border-width: 2px;
+$search-border-radius: 9999px;
+$search-background-color: #FFFFFF;
+$search-padding: 12px 16px;
+$search-text-color: #000000;
+
+$search-hover-background-color: #FFFFFF;
+$search-hover-border-width: 2px;
+$search-hover-border-color: #CCCCCC;
+$search-hover-text-color: #000000;
+$search-hover-shadow: 0 0 6px #DDDDDD;
+
+$search-focus-background-color: #FFFFFF;
+$search-focus-border-width: 2px;
+$search-focus-border-color: map.get($color-primary-map, "500");
+$search-focus-text-color: #000000;
+$search-focus-shadow: 0 0 6px #DDDDDD;

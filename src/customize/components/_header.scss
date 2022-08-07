@@ -4,15 +4,18 @@
 $header-background: transparent;
 $header-text-color: $color-primary;
 $header-padding-x: 16px;
-$header-padding-y: 20px;
+$header-padding-y: 14px;
 $header-font-size: 16px;
 
 $header-option-space: 4px;
 $header-option-padding-x: 8px;
-$header-option-padding-y: 4px; // For Options, Title and SmallDeviceMenu
+$header-option-padding-y: 6px; // For Options, Title and SmallDeviceMenu
+$header-option-border-radius: 6px;
 
 $header-fixed-background: white;
 $header-fixed-text-color: $color-primary;
 $header-fixed-shadow: 0 2px 4px #CCCCCC;
 
 $header-small-option-group-padding: 6px;
+
+$header-option-bold-background-color-degree: 500;

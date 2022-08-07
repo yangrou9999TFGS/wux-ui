@@ -11,19 +11,19 @@ $button-imported-size: xs, sm, md, lg, xl;
 // Size
 // 纵
 $button-padding-y-map: (
-	xs: 4px,
-	sm: 8px,
-	md: 10px,
-	lg: 14px,
-	xl: 18px
-);
-// 横
-$button-padding-x-map: (
 	xs: 6px,
 	sm: 10px,
 	md: 12px,
 	lg: 16px,
 	xl: 20px
+);
+// 横
+$button-padding-x-map: (
+	xs: 10px,
+	sm: 14px,
+	md: 16px,
+	lg: 20px,
+	xl: 24px
 );
 
 $button-size-map: (
@@ -72,9 +72,9 @@ $button-imported-border: square, default, round;
 $button-border-map: (
   square: 0,
   default-xs: 6px,
-  default-sm: 6px,
-  default-md: 8px,
-  default-lg: 10px,
-  default-xl: 12px,
+  default-sm: 10px,
+  default-md: 12px,
+  default-lg: 16px,
+  default-xl: 20px,
   round: 9999px,
 );

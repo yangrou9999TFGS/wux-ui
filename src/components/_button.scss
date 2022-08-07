@@ -13,13 +13,13 @@
 	white-space: nowrap;
   vertical-align: middle;
   transition: 0.5s;
-	  -webkit-transition: 0.5s; /* Safari */
+	  -webkit-transition: 0.5s; // Safari
 	text-decoration: none;
 	user-select: none;
 	  -webkit-user-select: none;
 	  -moz-user-select: none;
 
-	/*Default*/
+	// Default
   background-color: map.get($button-background-color-map,"primary");
 	color: map.get($button-text-color-map,"primary");
 	border: $button-solid-border-width solid map.get($button-border-color-map,"primary");
@@ -64,12 +64,13 @@
   	outline: none;
 	}
 
-	/*Block*/
+	// Block
 	&.#{$prefix}btn-block {
 		width: 100%;
 	}
 }
 
+// Button Colors/Style
 @each $color-name in $imported-colors {
   .#{$prefix}btn-solid.#{$prefix}btn-#{$color-name},
   .#{$prefix}btn-#{$color-name} {
@@ -124,6 +125,7 @@
   }
 };
 
+// Button Size
 @each $size-name in $button-imported-size {
   .#{$prefix}btn-#{$size-name} {
 	  padding: map.get($button-padding-y-map,"#{$size-name}") map.get($button-padding-x-map,"#{$size-name}");
@@ -132,8 +134,52 @@
 	}
 };
 
+// Button-BorderStyle
 @each $border-name in $button-imported-border {
   .#{$prefix}btn-#{$border-name} {
     border-radius: map.get($button-border-map,"#{$border-name}");
   }
 };
+
+
+.#{$prefix}btn-group {
+	.#{$prefix}btn {
+		border-radius: 0;
+		margin: 0;
+
+		// Default
+		&:first-child {
+			border-top-left-radius: map.get($button-border-map,"default-md");
+			border-bottom-left-radius: map.get($button-border-map,"default-md");
+		}
+
+		&:last-child {
+			border-top-right-radius: map.get($button-border-map,"default-md");
+			border-bottom-right-radius: map.get($button-border-map,"default-md");
+		}
+	}
+}
+
+@each $size-name in $button-imported-size {
+	.#{$prefix}btn-group-#{$size-name} {
+		display: inline-flex; // Delete space when code have newline.
+		position: relative;
+		white-space: nowrap;
+
+		.#{$prefix}btn {
+			font-size: map.get($button-size-map,"#{$size-name}");
+			padding: map.get($button-padding-y-map,"#{$size-name}") map.get($button-padding-x-map,"#{$size-name}");
+
+			// Default
+			&:first-child {
+				border-top-left-radius: map.get($button-border-map,"default-#{$size-name}");
+				border-bottom-left-radius: map.get($button-border-map,"default-#{$size-name}");
+			}
+
+			&:last-child {
+				border-top-right-radius: map.get($button-border-map,"default-#{$size-name}");
+				border-bottom-right-radius: map.get($button-border-map,"default-#{$size-name}");
+			}
+		}
+	}
+}

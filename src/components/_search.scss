@@ -1,0 +1,37 @@
+
+/* WuX-UI Components-Tag */
+
+.#{$prefix}search {
+	width: 100%;
+	display: block;
+
+	appearance: none;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	background-color: $search-background-color;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' fill='none' stroke='rgb(100,100,100)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='7' cy='7' r='6'%3E%3C/circle%3E%3Cline x1='15' y1='15' x2='12' y2='12'%3E%3C/line%3E%3C/svg%3E");
+	background-position: center left 15px;
+	background-repeat: no-repeat;
+	border: $search-border-width solid $search-border-color;
+	border-radius: $search-border-radius;
+	color: $search-text-color;
+	padding: $search-padding;
+	padding-inline-start: 40px;
+	transition: 0.5s;
+
+	&:hover {
+		box-shadow: $search-hover-shadow;
+		background-color: $search-hover-background-color;
+		border: $search-hover-border-width solid $search-hover-border-color;
+		color: $search-hover-text-color;
+		outline: none;
+	}
+
+	&:focus {
+		box-shadow: $search-focus-shadow;
+		background-color: $search-focus-background-color;
+		border: $search-focus-border-width solid $search-focus-border-color;
+		color: $search-focus-text-color;
+		outline: none;
+	}
+}
