@@ -12,8 +12,8 @@
   display: inline-block;
   overflow: hidden;
   height: $progress-height;
-  transition: ease 0.5s;
-    -webkit-transition: ease 0.5s;
+  transition: ease $global-animation-speed;
+    -webkit-transition: ease $global-animation-speed;
   width: 100%;
 
   &::-webkit-progress-bar {

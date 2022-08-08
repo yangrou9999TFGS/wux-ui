@@ -16,8 +16,8 @@
 	  -webkit-box-sizing: border-box;
 	padding: $form-select-padding-y $form-select-padding-x;
 	outline: none;
-	transition: 0.5s;
-		-webkit-transition: 0.5s;
+	transition: $global-animation-speed;
+		-webkit-transition: $global-animation-speed;
 	width: 100%;
 
 	&:hover {

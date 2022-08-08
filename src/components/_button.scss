@@ -12,8 +12,8 @@
 	margin-bottom: $button-margin-bottom;
 	white-space: nowrap;
   vertical-align: middle;
-  transition: 0.5s;
-	  -webkit-transition: 0.5s; // Safari
+  transition: $global-animation-speed;
+	  -webkit-transition: $global-animation-speed; // Safari
 	text-decoration: none;
 	user-select: none;
 	  -webkit-user-select: none;
@@ -31,8 +31,16 @@
 		background-color: map.get($button-border-color-map,"primary");
 	}
 
+	&:focus:not(:disabled),
+	&.#{$prefix}btn-active {
+  	background-color: map.get($button-border-color-map, "primary");
+  	color: map.get($button-text-color-map, "primary");
+
+  	outline: none;
+	}
+
 	&:disabled {
-		opacity: 30% !important;
+		opacity: 50% !important;
 	}
 
   &.#{$prefix}btn-outline {
@@ -44,6 +52,12 @@
     	background: map.get($button-border-color-map, "primary");
     	color: map.get($button-text-color-map, "primary");
   	}
+
+  	&:focus:not(:disabled),
+		&.#{$prefix}btn-active {
+  		background-color: map.get($button-border-color-map, "primary");
+  		color: map.get($button-text-color-map, "primary");
+		}
 	}
 
 	&.#{$prefix}btn-text {
@@ -55,13 +69,12 @@
   		background: transparent;
     	color: map.get($button-border-color-map, "primary");
   	}
-	}
 
-	&:focus:not(:disabled) {
-  	background-color: map.get($button-border-color-map, "primary");
-  	color: map.get($button-text-color-map, "primary");
-
-  	outline: none;
+  	&:focus:not(:disabled),
+		&.#{$prefix}btn-active {
+  		background-color: transparent;
+  		color: map.get($button-border-color-map, "primary");
+		}
 	}
 
 	// Block
@@ -83,7 +96,8 @@
       color: map.get($button-text-color-map, "#{$color-name}");
 	  }
 
-	  &:focus:not(:disabled) {
+	  &:focus:not(:disabled),
+  	&.#{$prefix}btn-active {
    	  background-color: map.get($button-border-color-map, "#{$color-name}");
    	  color: map.get($button-text-color-map, "#{$color-name}");
   	}
@@ -100,7 +114,8 @@
    	  color: map.get($button-text-color-map, "#{$color-name}");
   	}
 
-  	&:focus:not(:disabled) {
+  	&:focus:not(:disabled),
+  	&.#{$prefix}btn-active {
    	  background: map.get($button-border-color-map, "#{$color-name}");
    	  color: map.get($button-text-color-map, "#{$color-name}");
   	}
@@ -117,7 +132,8 @@
    	  color: map.get($button-border-color-map, "#{$color-name}");
   	}
 
-  	&:focus:not(:disabled) {
+  	&:focus:not(:disabled),
+  	&.#{$prefix}btn-active {
   		background: transparent;
    	  color: map.get($button-border-color-map, "#{$color-name}");
    	  box-shadow: none;
@@ -143,6 +159,11 @@
 
 
 .#{$prefix}btn-group {
+	display: inline-flex; // Delete space when code have newline.
+	position: relative;
+	white-space: nowrap;
+	margin-bottom: $button-margin-bottom;
+
 	.#{$prefix}btn {
 		border-radius: 0;
 		margin: 0;
@@ -162,9 +183,6 @@
 
 @each $size-name in $button-imported-size {
 	.#{$prefix}btn-group-#{$size-name} {
-		display: inline-flex; // Delete space when code have newline.
-		position: relative;
-		white-space: nowrap;
 
 		.#{$prefix}btn {
 			font-size: map.get($button-size-map,"#{$size-name}");

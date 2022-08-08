@@ -19,8 +19,8 @@
 		margin-top: 2px;
 		padding: $dropdown-menu-padding-y $dropdown-menu-padding-x;
 		opacity: 0;
-		transition: 0.5s;
-		  -webkit-transition: 0.5s;
+		transition: $global-animation-speed;
+		  -webkit-transition: $global-animation-speed;
 		z-index: 1;
 
 		.#{$prefix}dropdown-item {

@@ -15,8 +15,11 @@
   @import "functions/func-color";
 
 // Customize
+  // Prefix*
+    @import "customize/prefix/prefix";
   // Color*
     @import "customize/color/colors";   
+    @import "customize/color/colors-dark";   
       @import "customize/color/colors/primary";
       @import "customize/color/colors/secondary";
       @import "customize/color/colors/success";
@@ -47,8 +50,6 @@
     @import "customize/components/tables";
     @import "customize/components/tag";
     @import "customize/components/tooltip";
-  // Prefix*
-    @import "customize/prefix/prefix";
   // Layout
     @import "customize/layout/container";
     @import "customize/layout/grid";
@@ -63,8 +64,10 @@
     @import "customize/utilities/shadows";
 
 // Global
+  // AnimationSpeed
+    @import "global/globalAnimationSpeed";
   // Fonts
-    @import "global/fonts";
+    @import "global/globalFonts";
   // Normalize.CSS
     @import "../node_modules/normalize.css/normalize";
   // Typography

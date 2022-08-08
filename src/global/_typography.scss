@@ -1,6 +1,11 @@
 /* WuX-UI Typography */
 
-// 
+// Fix Focus Backdrop On Webkit
+*,
+*:before,
+*:after {
+  -webkit-tap-highlight-color: transparent; 
+} 
 
 .#{$prefix}typo {
   line-height: 1.8;

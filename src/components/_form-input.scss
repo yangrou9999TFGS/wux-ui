@@ -20,8 +20,8 @@
 	margin-bottom: $form-input-margin-bottom;
 	resize: none;
 	max-width: auto;
-	transition: 0.5s;
-	  -webkit-transition: 0.5s;
+	transition: $global-animation-speed;
+	  -webkit-transition: $global-animation-speed;
 
   // Default
 	padding: map.get($form-input-padding-x-map, "md") map.get($form-input-padding-x-map, "md");

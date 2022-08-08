@@ -14,10 +14,13 @@
 	background-repeat: no-repeat;
 	border: $search-border-width solid $search-border-color;
 	border-radius: $search-border-radius;
+	box-sizing: border-box;
+		-webkit-box-sizing: border-box;
 	color: $search-text-color;
 	padding: $search-padding;
 	padding-inline-start: 40px;
-	transition: 0.5s;
+	transition: $global-animation-speed;
+		-webkit-transition: $global-animation-speed;
 
 	&:hover {
 		box-shadow: $search-hover-shadow;

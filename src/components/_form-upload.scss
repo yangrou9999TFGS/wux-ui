@@ -17,8 +17,8 @@
 	margin: 0;
 	max-width: auto;
 	text-align: center;
-	transition: 0.5s;
-	  -webkit-transition: 0.5s;
+	transition: $global-animation-speed;
+	  -webkit-transition: $global-animation-speed;
   vertical-align: middle;
 	user-select: none;
 	  -webkit-user-select: none;

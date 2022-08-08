@@ -1,6 +1,7 @@
 
-/* WuX-UI Customize-Color */
+/* WuX-UI Customize-Color-Dark */
 
-// Variable
-$imported-colors: primary, secondary, success, info, warning, error, light;
-$imported-degrees: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+// WIP
+.#{$prefix}theme-dark {
+	background-color: rgb(50, 50, 50);
+}

@@ -26,7 +26,7 @@ $form-input-invalid-border-width: 2px;
 $form-input-invalid-text-color: map.get($color-error-map , "500");
 $form-input-invalid-shadow: 0 0 6px map.get($color-error-map , "200");
 
-$form-input-disabled-opacity: 30%;
+$form-input-disabled-opacity: 50%;
 
 $imported-size: xs, sm, md, lg, xl;
 
