@@ -47,12 +47,13 @@
     @import "customize/components/loading";
     @import "customize/components/progress";
     @import "customize/components/search";
+    @import "customize/components/tab";
     @import "customize/components/tables";
     @import "customize/components/tag";
     @import "customize/components/tooltip";
   // Layout
     @import "customize/layout/container";
-    @import "customize/layout/grid";
+    @import "customize/layout/responsive";
     @import "customize/layout/space";
   // Utilities  
     @import "customize/utilities/borders";
@@ -75,7 +76,8 @@
 
 // Layout
   @import "layout/container";
-  @import "layout/grid";
+  @import "layout/responsiveDisplay";
+  @import "layout/responsiveGrid";
   @import "layout/space";
   
 // Utilities
@@ -111,6 +113,7 @@
   @import "components/loading";
   @import "components/progress";
   @import "components/search";
+  @import "components/tab";
   @import "components/tables";
   @import "components/tag";
   @import "components/tooltip";

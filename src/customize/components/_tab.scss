@@ -1,0 +1,15 @@
+
+/* WuX-UI Components-Tab */
+
+$tab-item-background: #FFFFFF;
+$tab-item-border: none;
+$tab-item-border-radius: 0;
+$tab-item-padding: 12px 36px;
+$tab-item-text-color: #000000;
+
+$tab-item-focus-background: #FFFFFF;
+$tab-item-focus-border: 2px solid map.get($color-primary-map, "500");
+$tab-item-focus-text-color: map.get($color-primary-map, "500");
+
+$tab-content-padding: 0;
+$tab-content-margin: 8px;

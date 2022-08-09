@@ -9,6 +9,7 @@
 		border-radius: $tooltip-border-radius;
 		background-color: #000000;
 		backdrop-filter: blur(4px);
+		font-size: $tooltip-font-size;
 		opacity: 0;
 		padding: $tooltip-padding;
     visibility: hidden;
