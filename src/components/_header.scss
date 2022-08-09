@@ -73,6 +73,16 @@
             background: rgb(240,240,240);
           }
         }
+
+        &:active {
+          display: block; 
+          position: static;
+
+          .#{$prefix}header-option {
+            display: inline-block;
+            width: 100%;
+          }
+        }
       }
     }
   }

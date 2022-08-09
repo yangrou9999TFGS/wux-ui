@@ -3,6 +3,7 @@
 
 .#{$prefix}form-range {
 	appearance: none;
+		-webkit-appearance: none;
 	background: transparent;
 	transition: $global-animation-speed;
 	  -webkit-transition: $global-animation-speed;
@@ -25,6 +26,7 @@
 
 	&::-webkit-slider-thumb{
 		appearance: none;
+			-webkit-appearance: none;
 		background: $form-range-thumb-background;
 		border: $form-range-thumb-border;
 		border-radius: 5px;

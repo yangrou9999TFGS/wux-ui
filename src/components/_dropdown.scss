@@ -42,4 +42,9 @@
 			opacity: 1;
 		}
 	}
+
+	.#{$prefix}dropdown-menu:active {
+		display: block;
+		opacity: 1;
+	}
 }
