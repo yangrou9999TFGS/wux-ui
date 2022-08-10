@@ -1,6 +1,8 @@
 
 /* WuX-UI Components-Breadcrumb */
 
+@import "../customize/components/breadcrumb";
+
 .#{$prefix}breadcrumb {
 	display: flex;
 	flex-wrap: wrap;

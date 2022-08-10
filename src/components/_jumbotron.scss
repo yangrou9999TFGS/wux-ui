@@ -1,6 +1,8 @@
 
 /* WuX-UI Components-Jumbotron */
 
+@import "../customize/components/jumbotron";
+
 .#{$prefix}jumbotron {
 	background: $jumbotron-background;
 	box-sizing: border-box;

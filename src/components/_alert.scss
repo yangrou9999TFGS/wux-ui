@@ -1,6 +1,8 @@
 
 /* WuX-UI Components-Alert */
 
+@import "../customize/components/alert";
+
 .#{$prefix}alert {
 	position: relative;
 	border-radius: $alert-border-radius;

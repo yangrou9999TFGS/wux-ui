@@ -1,6 +1,8 @@
 
 /* WuX-UI Components-Dialog */
 
+@import "../customize/components/dialog";
+
 .#{$prefix}dialog {
 	border: $dialog-border;
 	border-radius: $dialog-border-radius;

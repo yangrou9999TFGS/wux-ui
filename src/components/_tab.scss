@@ -1,6 +1,8 @@
 
 /* WuX-UI Components-Tab */
 
+@import "../customize/components/tab";
+
 .#{$prefix}tab {
 	box-sizing: border-box;
 		-webkit-box-sizing: border-box;
@@ -16,8 +18,22 @@
 		cursor: pointer;
 		display: inline-block;
 		padding: $tab-item-padding;
-		transition: color $global-animation-speed;
-			-webkit-transition: color $global-animation-speed;
+		position: relative;
+		transition: $global-animation-speed;
+			-webkit-transition: $global-animation-speed;
+
+		&:after {
+			content: '';
+      position: absolute;
+      z-index: -1;
+      top: 95%;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      transition: ease $global-animation-speed;
+      	-webkit-transition: ease $global-animation-speed;
+      background-color: $tab-item-focus-border-color;
+		}
 	}
 
 	.#{$prefix}tab-content {
@@ -35,8 +51,13 @@
 		&:checked {
 			& + label.#{$prefix}tab-item {
 				background-color: $tab-item-focus-background;
-				border-bottom: $tab-item-focus-border;
+				//border-bottom: $tab-item-focus-border;
 				color: $tab-item-focus-text-color;
+
+				&:after {
+        	left: 0%;	
+        	right: 0%;
+				}
 
 				& + .#{$prefix}tab-content {
 					display: block;

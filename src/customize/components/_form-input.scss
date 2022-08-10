@@ -31,34 +31,34 @@ $form-input-disabled-opacity: 50%;
 $imported-size: xs, sm, md, lg, xl;
 
 $form-input-padding-x-map: (
-	xs: 4px,
-	sm: 6px,
-	md: 8px,
-	lg: 10px,
-	xl: 12px,
+	xs: 6px,
+	sm: 8px,
+	md: 12px,
+	lg: 16px,
+	xl: 20px
 );
 
 $form-input-padding-y-map: (
-	xs: 4px,
-	sm: 8px,
-	md: 10px,
-	lg: 14px,
-	xl: 18px,
+	xs: 6px,
+	sm: 10px,
+	md: 14px,
+	lg: 18px,
+	xl: 22px
 );
 
 $form-input-font-size-map: (
-	xs: 8px,
-	sm: 11px,
+	xs: 10px,
+	sm: 12px,
 	md: 14px,
-	lg: 17px,
-	xl: 20px,
+	lg: 16px,
+  xl: 18px
 );
 
 // border-radius
 $form-input-border-map: (
-	xs: 6px,
-	sm: 6px,
-	md: 8px,
-	lg: 10px,
-	xl: 12px
+	xs: 8px,
+  sm: 10px,
+  md: 12px,
+  lg: 14px,
+  xl: 16px,
 );

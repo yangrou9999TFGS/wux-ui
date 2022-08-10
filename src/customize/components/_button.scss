@@ -13,14 +13,14 @@ $button-imported-size: xs, sm, md, lg, xl;
 $button-padding-y-map: (
 	xs: 6px,
 	sm: 10px,
-	md: 12px,
-	lg: 16px,
-	xl: 20px
+	md: 14px,
+	lg: 18px,
+	xl: 22px
 );
 // 横
 $button-padding-x-map: (
-	xs: 10px,
-	sm: 14px,
+	xs: 8px,
+	sm: 12px,
 	md: 16px,
 	lg: 20px,
 	xl: 24px
@@ -71,10 +71,10 @@ $button-text-color-map: (
 $button-imported-border: square, default, round;
 $button-border-map: (
   square: 0,
-  default-xs: 6px,
-  default-sm: 9px,
+  default-xs: 8px,
+  default-sm: 10px,
   default-md: 12px,
-  default-lg: 15px,
-  default-xl: 18px,
+  default-lg: 14px,
+  default-xl: 16px,
   round: 9999px,
 );

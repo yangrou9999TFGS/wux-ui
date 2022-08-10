@@ -1,6 +1,8 @@
 
 /* WuX-UI Components-Dropdown */
 
+@import "../customize/components/dropdown";
+
 .#{$prefix}dropdown {
 	box-sizing: border-box;
 		-webkit-box-sizing: border-box;
@@ -8,6 +10,7 @@
 
 	.#{$prefix}dropdown-menu {
 		position: absolute;
+
 		top: 100%;
 		width: 160px;
 		background-color: $dropdown-menu-background;
@@ -15,19 +18,20 @@
 		border-radius: $dropdown-menu-border-radius;
 		box-shadow: $dropdown-menu-shadow;
 		cursor: pointer;
-		display: none;
 		margin-top: 2px;
 		padding: $dropdown-menu-padding-y $dropdown-menu-padding-x;
 		opacity: 0;
 		transition: $global-animation-speed;
 		  -webkit-transition: $global-animation-speed;
+		visibility: hidden;
 		z-index: 1;
 
 		.#{$prefix}dropdown-item {
 			border-radius: $dropdown-item-border-radius;
 			list-style: none;
 			padding: $dropdown-item-padding-y $dropdown-item-padding-x;
-			transition: 0.5s;
+			transition: ease-in $global-animation-speed;
+		  	-webkit-transition: ease-in $global-animation-speed;
 
 			&:hover {
 				background-color: $dropdown-item-hover-background;
@@ -38,13 +42,15 @@
 
 	.#{$prefix}dropdown-trigger:focus {
 		& + .#{$prefix}dropdown-menu {
-			display: block;
-			opacity: 1;
+			opacity: 99%;
+			transition: $global-animation-speed;
+		  	-webkit-transition: $global-animation-speed;
+			visibility: visible;
 		}
 	}
 
 	.#{$prefix}dropdown-menu:active {
 		display: block;
-		opacity: 1;
+		opacity: 99%;
 	}
 }

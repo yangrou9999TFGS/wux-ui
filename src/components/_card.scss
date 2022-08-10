@@ -1,6 +1,8 @@
 
 /* WuX-UI Components-Card */
 
+@import "../customize/components/card";
+
 .#{$prefix}card{
 	position: relative;
 	box-sizing: border-box;

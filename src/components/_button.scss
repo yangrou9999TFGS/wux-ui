@@ -1,6 +1,8 @@
 
 /* WuX-UI Components-Button */
 
+@import "../customize/components/button";
+
 .#{$prefix}btn,
 .#{$prefix}btn.#{$prefix}solid {
 	position: relative;
@@ -164,6 +166,24 @@
 	white-space: nowrap;
 	margin-bottom: $button-margin-bottom;
 
+	.#{$prefix}btn {
+		border-radius: 0;
+		margin: 0;
+
+		// Default
+		&:first-child {
+			border-top-left-radius: map.get($button-border-map,"default-md");
+			border-bottom-left-radius: map.get($button-border-map,"default-md");
+		}
+
+		&:last-child {
+			border-top-right-radius: map.get($button-border-map,"default-md");
+			border-bottom-right-radius: map.get($button-border-map,"default-md");
+		}
+	}
+}
+
+.#{$prefix}btn-group-outline {
 	.#{$prefix}btn {
 		border-radius: 0;
 		margin: 0;

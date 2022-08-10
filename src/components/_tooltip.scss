@@ -1,14 +1,15 @@
 
 /* WuX-UI Components-Tooltip */
 
-.#{$prefix}tooltip {
+@import "../customize/components/tooltip";
 
+.#{$prefix}tooltip {
 	.#{$prefix}tooltip-item {
 	  position: absolute;
 
 		border-radius: $tooltip-border-radius;
 		background-color: #000000;
-		backdrop-filter: blur(4px);
+		backdrop-filter: blur(8px);
 		font-size: $tooltip-font-size;
 		opacity: 0;
 		padding: $tooltip-padding;
@@ -20,7 +21,7 @@
 
 	&:hover {
 	  .#{$prefix}tooltip-item {
-	  	opacity: 80%;
+	  	opacity: 60%;
 		  visibility: visible;
 	  }
 	}

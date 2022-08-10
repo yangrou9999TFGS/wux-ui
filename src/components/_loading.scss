@@ -1,6 +1,8 @@
 
 /* WuX-UI Components-Loading */
 
+@import "../customize/components/loading";
+
 .#{$prefix}loading {
   pointer-events: none;
 

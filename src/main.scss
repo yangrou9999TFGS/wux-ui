@@ -19,6 +19,30 @@
     @import "customize/prefix/prefix";
   // Color*
     @import "customize/color/colors";   
+  // Components
+    @import "customize/components/alert";
+    @import "customize/components/badge";
+    @import "customize/components/breadcrumb";
+    @import "customize/components/button";
+    @import "customize/components/card";
+    @import "customize/components/dialog";
+    @import "customize/components/dropdown";
+    @import "customize/components/form-checks";
+    @import "customize/components/form-input";
+    @import "customize/components/form-radios";
+    @import "customize/components/form-range";
+    @import "customize/components/form-select";
+    @import "customize/components/form-upload";
+    @import "customize/components/header";
+    @import "customize/components/jumbotron";
+    @import "customize/components/list";
+    @import "customize/components/loading";
+    @import "customize/components/progress";
+    @import "customize/components/search";
+    @import "customize/components/tab";
+    @import "customize/components/tables";
+    @import "customize/components/tag";
+    @import "customize/components/tooltip";
   // Layout
     @import "customize/layout/container";
     @import "customize/layout/responsive";
