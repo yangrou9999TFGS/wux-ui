@@ -1,8 +1,19 @@
 
 /* WuX-UI Components-Form-Upload [Customize] */
 
-$form-upload-border-color: #CCCCCC;
+$form-upload-border: none;
 $form-upload-border-radius: 8px;
 $form-upload-padding-x: 12px;
 $form-upload-padding-y: 18px;
-$form-upload-hover-shadow: 0 0 6px #DDDDDD;
+$form-upload-hover-shadow: none;
+
+$form-upload-button-background: map.get($color-primary-map, "500");
+$form-upload-button-border: none;
+$form-upload-button-border-radius: 12px;
+$form-upload-button-color: func-text-color(primary, 500);
+$form-upload-button-padding: 14px 16px;
+
+$form-upload-button-hover-background: map.get($color-primary-map, "600");
+$form-upload-button-hover-border: none;
+$form-upload-button-hover-border-radius: 12px;
+$form-upload-button-hover-color: func-text-color(primary, 600);

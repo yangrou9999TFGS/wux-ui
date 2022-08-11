@@ -19,18 +19,6 @@
     @import "customize/prefix/prefix";
   // Color*
     @import "customize/color/colors";   
-  // Layout
-    @import "customize/layout/container";
-    @import "customize/layout/responsive";
-    @import "customize/layout/space";
-  // Utilities  
-    @import "customize/utilities/borders";
-    @import "customize/utilities/filter";
-    @import "customize/utilities/float";
-    @import "customize/utilities/margin";
-    @import "customize/utilities/opacity";
-    @import "customize/utilities/padding";  
-    @import "customize/utilities/shadows";
 
 // Global
   // AnimationSpeed
@@ -65,9 +53,13 @@
   @import "components/alert";
   @import "components/badge";
   @import "components/breadcrumb";
+  @import "components/blankslate";
   @import "components/button";
   @import "components/card";
+  @import "components/carousel";
+  @import "components/collapse";
   @import "components/dialog";
+  @import "components/drawer";
   @import "components/dropdown";
   @import "components/form-checks";
   @import "components/form-input";
@@ -79,6 +71,8 @@
   @import "components/jumbotron";
   @import "components/list";
   @import "components/loading";
+  @import "components/markdown";
+  @import "components/popover";
   @import "components/progress";
   @import "components/search";
   @import "components/tab";

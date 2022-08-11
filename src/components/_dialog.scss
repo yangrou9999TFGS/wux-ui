@@ -7,11 +7,15 @@
 	border: $dialog-border;
 	border-radius: $dialog-border-radius;
 	box-shadow: $dialog-shadow;
-	width: 400px;
+	width: 80%;
+	min-width: 180px;
+	max-width: 400px;
   overflow: auto;
   padding: $dialog-padding;
 
-	&::backdrop {
+  // Polyfill Complate
+	&::backdrop,
+	& + .backdrop {
 		background-color: $dialog-backdrop-color;
 		backdrop-filter: blur($dialog-backdrop-blur);
 	}

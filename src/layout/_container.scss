@@ -1,6 +1,8 @@
 
 /* WuX-UI Layout-Container */
 
+@import "../customize/layout/container";
+
 .#{$prefix}container {
 	box-sizing: border-box;
 	max-width: $container-max-width;

@@ -1,6 +1,8 @@
 
 /* WuX-UI Layout-Grid */
 
+@import "../customize/layout/responsive";
+
 .#{$prefix}row,
 [class*="#{$prefix}row-"] {
   margin-right: -8px;

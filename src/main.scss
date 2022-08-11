@@ -5,6 +5,12 @@
   License: MIT
 */
 
+/*
+------------------------ Warning ------------------------
+This file has only required and suggested modules to add.
+---------------------------------------------------------
+*/
+
 // Charset
 @charset "UTF-8";
 
@@ -19,52 +25,14 @@
     @import "customize/prefix/prefix";
   // Color*
     @import "customize/color/colors";   
-  // Components
-    @import "customize/components/alert";
-    @import "customize/components/badge";
-    @import "customize/components/breadcrumb";
-    @import "customize/components/button";
-    @import "customize/components/card";
-    @import "customize/components/dialog";
-    @import "customize/components/dropdown";
-    @import "customize/components/form-checks";
-    @import "customize/components/form-input";
-    @import "customize/components/form-radios";
-    @import "customize/components/form-range";
-    @import "customize/components/form-select";
-    @import "customize/components/form-upload";
-    @import "customize/components/header";
-    @import "customize/components/jumbotron";
-    @import "customize/components/list";
-    @import "customize/components/loading";
-    @import "customize/components/progress";
-    @import "customize/components/search";
-    @import "customize/components/tab";
-    @import "customize/components/tables";
-    @import "customize/components/tag";
-    @import "customize/components/tooltip";
-  // Layout
-    @import "customize/layout/container";
-    @import "customize/layout/responsive";
-    @import "customize/layout/space";
-  // Utilities  
-    @import "customize/utilities/borders";
-    @import "customize/utilities/filter";
-    @import "customize/utilities/float";
-    @import "customize/utilities/margin";
-    @import "customize/utilities/opacity";
-    @import "customize/utilities/padding";  
-    @import "customize/utilities/shadows";
 
 // Global
-  // AnimationSpeed
+  // AnimationSpeed*
     @import "global/globalAnimationSpeed";
   // Fonts
     @import "global/globalFonts";
   // Normalize.CSS
-    @import "../node_modules/normalize.css/normalize";
-  // Typography
-    @import "global/typography";
+    @import "../node_modules/normalize.css/normalize";;
 
 // Layout
   @import "layout/container";
@@ -85,29 +53,4 @@
   @import "utilities/shadows";
   @import "utilities/visibility";
 
-// Components
-  @import "components/alert";
-  @import "components/badge";
-  @import "components/breadcrumb";
-  @import "components/button";
-  @import "components/card";
-  @import "components/dialog";
-  @import "components/dropdown";
-  @import "components/form-checks";
-  @import "components/form-input";
-  @import "components/form-radios";
-  @import "components/form-range";
-  @import "components/form-select";
-  @import "components/form-upload";
-  @import "components/header";
-  @import "components/jumbotron";
-  @import "components/list";
-  @import "components/loading";
-  @import "components/progress";
-  @import "components/search";
-  @import "components/tab";
-  @import "components/tables";
-  @import "components/tag";
-  @import "components/tooltip";
-
-// Don't delete the module when the module have a * !
+// Don't delete the module when the module have a Mark !

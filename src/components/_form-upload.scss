@@ -9,7 +9,7 @@
 	display: block;
 	
 	appearance: none;
-	border: 2px dashed $form-upload-border-color;
+	border: $form-upload-border;
 	border-radius: $form-upload-border-radius;
 	box-sizing: border-box;
 	  -webkit-box-sizing: border-box;
@@ -17,7 +17,6 @@
 	cursor: pointer;
 	padding: $form-upload-padding-y $form-upload-padding-x;
 	margin: 0;
-	max-width: auto;
 	text-align: center;
 	transition: $global-animation-speed;
 	  -webkit-transition: $global-animation-speed;
@@ -32,10 +31,40 @@
 	}
 
 	&::file-selector-button {
-    display: none;
+    background: $form-upload-button-background;
+    border: $form-upload-button-border;
+    border-radius: $form-upload-button-border-radius;
+    color: $form-upload-button-color;
+    cursor: pointer;
+    padding: $form-upload-button-padding;
+    margin-right: 10px;
+    transition: $global-animation-speed;
+    	-webkit-transition: $global-animation-speed;
+
+    &:hover {
+    	background: $form-upload-button-hover-background;
+    	border: $form-upload-button-hover-border;
+    	border-radius: $form-upload-button-hover-border-radius;
+    	color: $form-upload-button-hover-color;
+    }
   }
 
   &::-webkit-file-upload-button {
-    display: none;
+    background: $form-upload-button-background;
+    border: $form-upload-button-border;
+    border-radius: $form-upload-button-border-radius;
+    color: $form-upload-button-color;
+    cursor: pointer;
+    padding: $form-upload-button-padding;
+    margin-right: 10px;
+    transition: $global-animation-speed;
+    	-webkit-transition: $global-animation-speed;
+
+    &:hover {
+    	background: $form-upload-button-hover-background;
+    	border: $form-upload-button-hover-border;
+    	border-radius: $form-upload-button-hover-border-radius;
+    	color: $form-upload-button-hover-color;
+    }
   }
 }
