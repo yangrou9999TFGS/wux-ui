@@ -42,7 +42,7 @@
     cursor: inherit;
   }
 
-  p, pre, ul, ol, dl, form, hr, figure, table, .mdui-table, .mdui-table-fluid {
+  p, pre, ul, ol, dl, form, hr, figure, table {
     margin: 0 0 1.2em 0;
 
     &:last-child {
@@ -53,6 +53,13 @@
   /* a */
   a {
     color: map.get($color-primary-map, "600");
+    text-decoration: none;
+    transition: $global-animation-speed;
+
+    &:hover {
+      color: map.get($color-primary-map, "700");
+      text-decoration: underline;
+    }
   }
 
   /* small */
@@ -65,55 +72,64 @@
     margin: 0 5px;
     padding: 2px;
     background: #fffdd1;
-    border-bottom: 1px solid #ffedce;
   }
 
   /* h1 - h6 */
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 1.2em;
-    margin-bottom: 0.6em;
+    margin-top: 24px;
+    margin-bottom: 16px;
     color: inherit;
-    font-weight: 400;
     font-family: inherit;
-    line-height: 1.35;
+    line-height: 1.6;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
   h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.8em;
-  }
-  h3 {
-    font-size: 1.6em;
-  }
-  h4 {
-    font-size: 1.4em;
-  }
-  h5 {
-    font-size: 1.2em;
-  }
-  h6 {
-    font-size: 1.1em;
+    font-size: 32px;
+    font-weight: 700;
   }
 
-  /* code */
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  h5 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  h6 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  /* Code */
   code {
     padding: 2px 6px;
     color: #c7254e;
     background-color: #f7f7f9;
-    border-radius: 2px;
+    border-radius: 6px;
   }
 
-  /* pre code */
+  /* Pre Code */
   pre code {
     padding: 0;
     color: inherit;
     font-size: inherit;
-    line-height: 1.7;
+    line-height: 1.6;
     background-color: transparent;
     border-radius: 0;
   }
@@ -147,25 +163,27 @@
     height: 10px;
     margin-bottom: 0.8em;
     border: none;
-    border-bottom: 1px solid #BBBBBB;
+    border-bottom: 1px solid #CCCCCC;
   }
 
   /* pre */
   pre {
     padding: 12px 16px;
-    overflow-x: auto;
-    border: 1px solid #BBBBBB;
-    border-radius: 2px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border: 2px solid #CCCCCC;
+    border-radius: 12px;
     -webkit-overflow-scrolling: touch;
   }
 
   /* kbd */
   kbd {
-    padding: 2px 6px;
+    padding: 4px 8px;
     color: #fff;
     font-size: 90%;
     background-color: #333;
-    border-radius: 2px;
+    border-radius: 6px;
   }
 
   /* ul / ol */
@@ -179,7 +197,7 @@
   }
   li ul,
   li ol {
-    margin: 0.8em 0;
+    margin: 0;
   }
   li ul {
     list-style: circle;
@@ -205,5 +223,13 @@
       cursor: text;
       content: attr(placeholder);
     }
+  }
+
+  blockquote {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='40px'><text x='0' y='50' fill='rgb(200, 200, 200)' font-size='50' stroke-width='2px' stroke='rgb(200, 200, 200)'>%E2%80%9D</text></svg>");
+    background-repeat: no-repeat;
+    background-position: left 2px top;
+    margin: 0;
+    padding-inline-start: 35px;
   }
 }

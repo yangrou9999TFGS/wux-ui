@@ -4,5 +4,34 @@
 @import "../customize/components/blankslate";
 
 .#{$prefix}blankslate {
-	
+	margin-right: auto;
+	margin-left: auto;
+	width: $blankslate-width;
+	text-align: center;
+
+	.#{$prefix}blankslate-title {
+		font-size: $blankslate-title-font-size;
+		color: $blankslate-title-text-color;
+	}
+
+	.#{$prefix}blankslate-subtitle {
+		font-size: $blankslate-subtitle-font-size;
+		color: $blankslate-subtitle-text-color;
+	}
+
+	.#{$prefix}blankslate-button-group {
+		white-space: pre-line;
+
+		.#{$prefix}btn {
+			margin-right: none;
+			margin-bottom: 6px;
+		}
+	}
+
+	.#{$prefix}blankslate-icon {
+		width: $blankslate-icon-size;
+		height: $blankslate-icon-size;
+
+		border-radius: $blankslate-icon-border-radius;
+	}
 }

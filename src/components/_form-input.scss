@@ -55,6 +55,12 @@
 	&:disabled {
 		opacity: $form-input-disabled-opacity;
 	}
+
+	&:-webkit-autofill {
+		background-color: transparent;
+    background-image: none;
+    transition: background-color 500000s ease-in-out 0s;
+	}
 }
 
 @each $size-name in $imported-size {

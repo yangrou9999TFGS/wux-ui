@@ -46,12 +46,6 @@
 
 		.#{$prefix}dialog-footer-group {
 			float: $dialog-footer-group-float;
-
-			.#{$prefix}btn {
-				font-size: map.get($button-size-map, sm);
-				margin-bottom: 0;
-				padding: map.get($button-padding-y-map, sm) map.get($button-padding-x-map, sm);
-			}
 		}
 	}
 }

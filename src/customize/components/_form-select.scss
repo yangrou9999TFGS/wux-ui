@@ -4,11 +4,11 @@
 $form-select-background-color: #FFFFFF;
 $form-select-border-color: #CCCCCC;
 $form-select-border-width: 2px;
-$form-select-border-radius: 4px;
-$form-select-padding-x: 6px;
-$form-select-padding-y: 4px;
+$form-select-border-radius: 12px;
+$form-select-padding-x: 12px;
+$form-select-padding-y: 10px;
 
 $form-select-hover-shadow: 0 0 6px #DDDDDD;
 
-$form-select-focus-border: 2px solid map.get($color-primary-map , "500");
+$form-select-focus-border: 2px solid map.get($color-primary-map ,"500");
 $form-select-focus-shadow: 0 0 6px #DDDDDD;

@@ -14,10 +14,12 @@
 	  -webkit-box-sizing: border-box;
 	box-shadow: $tables-shadow;
 	padding: $tables-padding;
+	z-index: 0;
 
 	thead {
 		background-color: $tables-head-background-color;
 		border-collapse: collapse;
+		color: $tables-head-text-color;
 		margin-bottom: $tables-head-margin;
 
 		th {
@@ -26,11 +28,11 @@
 			min-width: 36px;
 
 			&:first-child {
-				border-radius: $tables-border-radius 0 0 0;
+				border-radius: #{$tables-border-radius - 2} 0 0 0;
 			}
 
 			&:last-child {
-				border-radius: 0 $tables-border-radius 0 0 !important;
+				border-radius: 0 #{$tables-border-radius - 2} 0 0 !important;
 			}
 		}
 	}

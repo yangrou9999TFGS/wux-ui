@@ -38,12 +38,12 @@
       // Col
     	.#{$prefix}col-#{$size-name}-#{$i} {
         float: left;
-        width: map.get($grid-col-map, "#{$i}");
+        width: #{calc((100 / $grid-col-count) * $i)}#{"%"};
     	}
       // Row
       .#{$prefix}row-#{$size-name}-#{$i} .#{$prefix}col{
         float: left;
-        width: map.get($grid-row-map, "#{$i}");
+        width: #{calc(100 / $i)}#{"%"};
       }
     };
   }

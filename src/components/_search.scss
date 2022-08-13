@@ -39,4 +39,10 @@
 		color: $search-focus-text-color;
 		outline: none;
 	}
+
+	&:-webkit-autofill {
+		background-color: transparent;
+    background-image: none;
+    transition: background-color 500000s ease-in-out 0s;
+	}
 }

@@ -22,6 +22,10 @@
 		transition: $global-animation-speed;
 			-webkit-transition: $global-animation-speed;
 
+		user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+
 		&:after {
 			content: '';
       position: absolute;
