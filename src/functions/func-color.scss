@@ -10,5 +10,42 @@
 };
 
 @function func-text-color($background-color,$background-degree) {
-	@return if($background-degree < 400, black, white);
+	@if $background-degree < 400 {
+		// Primary 
+		@if $background-color == primary {
+			@return map.get($color-primary-map, "800");
+		}
+
+		// Secondary 
+		@if $background-color == secondary {
+			@return map.get($color-secondary-map, "800");
+		}
+
+		// Success
+		@if $background-color == success {
+			@return map.get($color-success-map, "800");
+		}
+
+		// Info
+		@if $background-color == info {
+			@return map.get($color-info-map, "800");
+		}
+
+		// Warning
+		@if $background-color == warning {
+			@return map.get($color-warning-map, "800");
+		}
+
+		// Error
+		@if $background-color == error {
+			@return map.get($color-error-map, "800");
+		}
+
+		// Light
+		@if $background-color == light {
+			@return map.get($color-light-map, "800");
+		}
+	} @else {
+		@return white;
+	}
 };

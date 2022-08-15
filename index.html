@@ -5,17 +5,21 @@
     <link href="dist/wux.css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <!--PolyFill-->
+    <script src=""></script>
   </head>
   <body class="wux-header-fixed-margin">
-    <nav class="wux-header wux-header-fixed">
+    <header class="wux-header wux-header-fixed">
       <span class="wux-header-title">WuX-UI Debug Page</span>
       <button class="wux-header-small-option-group">Menu</button>
-      <span class="wux-header-option-group">
-        <a class="wux-header-option" href="https://github.com/wux-ui/wux-ui">Github</a>
-        <a class="wux-header-option wux-header-option-bold" href="https://wux-ui.tk/">Offical Page</a>
-      </span>
-    </nav>
+      <ul class="wux-header-option-group">
+        <li class="wux-header-option" href="https://github.com/wux-ui/wux-ui">Github</li>
+        <li class="wux-header-option wux-header-option-bold" href="https://wux-ui.tk/">Offical Page</li>
+      </ul>
+    </header>
     <div class="wux-container">
+    <!--FAB-->
+    <button class="wux-btn wux-btn-fab wux-btn-xl">FAB</button>
       <div class="wux-row-md-2">
         <div class="wux-col">
           <h1>Alert</h1>
@@ -90,7 +94,7 @@
         <div class="wux-col">
           <h1>Breadcrumb</h1>
           <ul class="wux-breadcrumb">
-            <li class="wux-breadcrumb-item">Home</li>
+            <li class="wux-breadcrumb-item"><a href="https://wux-ui.tk/">Home</a></li>
             <li class="wux-breadcrumb-item">Explore</li>
             <li class="wux-breadcrumb-item">Download</li>
             <li class="wux-breadcrumb-item">About</li>
@@ -98,16 +102,29 @@
         </div>
         <div class="wux-col">
           <h1>Card</h1>
-          <div class="wux-card wux-card-hover">
-            <div class="wux-card-header">
-              <img src="https://image.moeblog.gq/i/2022/07/16/nsdzkk.svg">
+          <div class="wux-row-md-2 wux-row-sm-1">
+            <div class="wux-col">
+              <div class="wux-card wux-card-hover">
+                <div class="wux-card-header">
+                  <img src="https://image.moeblog.gq/i/2022/07/16/nsdzkk.svg">
+                </div>
+                <div class="wux-card-body">
+                  Hello!
+                </div>
+                <div class="wux-card-footer">
+                  <button class="wux-btn wux-btn-primary wux-btn-text">Test</button>
+                </div>
+              </div>
             </div>
-            <div class="wux-card-body">
-              Hello!
-            </div>
-            <div class="wux-card-footer">
-              <button class="wux-btn wux-btn-primary wux-btn-text">Test</button>
-              <button class="wux-btn wux-btn-secondary wux-btn-text">Test</button>
+            <div class="wux-col">
+              <div class="wux-card wux-card-flat">
+                <div class="wux-card-body">
+                  Hello!
+                </div>
+                <div class="wux-card-footer">
+                  <button class="wux-btn wux-btn-primary wux-btn-text">Test</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -138,9 +155,13 @@
               Dropdown!
             </button>
             <ul class="wux-dropdown-menu">
-              <li class="wux-dropdown-item">阿巴阿巴</li>
-              <li class="wux-dropdown-item">阿巴阿巴</li>
-              <li class="wux-dropdown-item">阿巴阿巴</li>
+              <li class="wux-dropdown-menu-header">User</li>
+              <li class="wux-dropdown-item">My Homepage</li>
+              <li class="wux-dropdown-item">My Project</li>
+              <li class="wux-dropdown-item">My Stars</li>
+              <li class="wux-dropdown-menu-divider"></li>
+              <li class="wux-dropdown-item">Logout</li>
+              <li class="wux-dropdown-item">Close</li>
             </ul>
           </div>
         </div>

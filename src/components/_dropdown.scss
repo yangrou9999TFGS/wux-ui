@@ -12,7 +12,7 @@
 		position: absolute;
 
 		top: 100%;
-		width: 160px;
+		width: $dropdown-menu-width;
 		background-color: $dropdown-menu-background;
 		border: $dropdown-menu-border;
 		border-radius: $dropdown-menu-border-radius;
@@ -37,6 +37,22 @@
 				background-color: $dropdown-item-hover-background;
 	      color: $dropdown-item-hover-text-color;
 			}
+		}
+
+		.#{$prefix}dropdown-menu-header {
+			list-style: none;
+			color: $dropdown-menu-header-text-color;
+			font-size: $dropdown-menu-header-font-size;
+			margin-left: $dropdown-menu-header-margin-left;
+			margin-bottom: $dropdown-menu-header-margin-y;
+		}
+
+		.#{$prefix}dropdown-menu-divider {
+			height: 0;
+			margin: $dropdown-menu-divider-margin 0;
+			overflow: hidden;
+			list-style: none;
+			border-top: $dropdown-menu-divider-border;
 		}
 	}
 

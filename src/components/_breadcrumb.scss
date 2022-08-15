@@ -23,8 +23,14 @@
     	padding-right: $breadcrumb-padding-item-x;
     	content: $breadcrumb-content;
     }
-    & a {
-    	text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $breadcrumb-item-link-color;
+
+    &:hover {
+    	text-decoration: underline;
     }
   }
 }

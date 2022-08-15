@@ -3,7 +3,8 @@
 
 @import "../customize/components/card";
 
-.#{$prefix}card{
+.#{$prefix}card,
+.#{$prefix}card-float{
 	position: relative;
 	box-sizing: border-box;
 	  -webkit-box-sizing: border-box;
@@ -51,6 +52,14 @@
   	&::after {
   		content: '';
   	}
+	}
+
+	&.#{$prefix}card-flat,
+	& .#{$prefix}card {
+		background: $card-flat-background;
+		border: $card-flat-border;
+		border-radius: $card-border-radius; // inherit
+		box-shadow: none;
 	}
 }
 

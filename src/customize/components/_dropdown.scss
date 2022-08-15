@@ -7,12 +7,21 @@ $dropdown-menu-border-radius: 12px;
 $dropdown-menu-shadow: none;
 $dropdown-menu-padding-x: 0;
 $dropdown-menu-padding-y: 8px;
+$dropdown-menu-width: 180px;
 
 $dropdown-item-border-radius: 0;
-$dropdown-item-padding-x: 6px;
-$dropdown-item-padding-y: 4px;
+$dropdown-item-padding-x: 10px;
+$dropdown-item-padding-y: 6px;
 
 $dropdown-item-hover-color: primary;
 $dropdown-item-hover-degree: 500;
 $dropdown-item-hover-background: map.get($color-primary-map, #{$dropdown-item-hover-degree});
 $dropdown-item-hover-text-color: func-text-color(primary,$dropdown-item-hover-degree);
+
+$dropdown-menu-header-font-size: 12px;
+$dropdown-menu-header-text-color: #888888;
+$dropdown-menu-header-margin-left: 10px;
+$dropdown-menu-header-margin-y: 6px;
+
+$dropdown-menu-divider-border: 2px solid #CCCCCC;
+$dropdown-menu-divider-margin: 0;

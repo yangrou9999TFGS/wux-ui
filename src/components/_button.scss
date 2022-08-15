@@ -45,6 +45,7 @@
 		opacity: 50% !important;
 	}
 
+	// Style:Outline
   &.#{$prefix}btn-outline {
   	background: transparent;
 	  color: map.get($button-background-color-map, "primary");
@@ -62,6 +63,7 @@
 		}
 	}
 
+	// Style:Text
 	&.#{$prefix}btn-text {
   	background: transparent;
 	  color: map.get($button-background-color-map, "primary");
@@ -83,6 +85,20 @@
 	&.#{$prefix}btn-block {
 		width: 100%;
 	}
+
+	// FAB
+	&.#{$prefix}btn-fab {
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+
+		box-shadow: $button-fab-shadow;
+
+		&:hover {
+			box-shadow: $button-fab-hover-shadow;
+		}
+	}
+
 }
 
 // Button Colors/Style
@@ -106,7 +122,7 @@
 	}
 
   .#{$prefix}btn.#{$prefix}btn-outline.#{$prefix}btn-#{$color-name} {
-  	/* Default */
+  	// Default
   	background: transparent;
   	color: map.get($button-border-color-map, "#{$color-name}");
   	border-color: map.get($button-border-color-map, "#{$color-name}");
@@ -124,7 +140,7 @@
   }
 
   .#{$prefix}btn.#{$prefix}btn-text.#{$prefix}btn-#{$color-name} {
-  	/* Default */
+  	// Default
   	background: transparent;
   	color: map.get($button-background-color-map, "#{$color-name}");
   	border: none;
@@ -159,7 +175,7 @@
   }
 };
 
-
+// Button-Group
 .#{$prefix}btn-group {
 	display: inline-flex; // Delete space when code have newline.
 	position: relative;

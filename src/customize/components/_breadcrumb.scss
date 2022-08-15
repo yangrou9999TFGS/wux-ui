@@ -5,7 +5,9 @@ $breadcrumb-content: quote("/");
 $breadcrumb-background-color: rgb(240,240,240);
 $breadcrumb-border-radius: 12px;
 $breadcrumb-font-size: 14px;
-$breadcrumb-padding-x: 8px;
+$breadcrumb-padding-x: 10px;
 $breadcrumb-padding-y: 12px;
 $breadcrumb-padding-item-x: 6px;
 $breadcrumb-margin-bottom: 2px;
+
+$breadcrumb-item-link-color: map.get($color-primary-map, "600");

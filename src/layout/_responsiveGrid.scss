@@ -41,7 +41,7 @@
         width: #{calc((100 / $grid-col-count) * $i)}#{"%"};
     	}
       // Row
-      .#{$prefix}row-#{$size-name}-#{$i} .#{$prefix}col{
+      .#{$prefix}row-#{$size-name}-#{$i}>.#{$prefix}col{
         float: left;
         width: #{calc(100 / $i)}#{"%"};
       }

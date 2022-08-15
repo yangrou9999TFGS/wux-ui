@@ -13,3 +13,47 @@ $imported-degrees: 100, 200, 300, 400, 500, 600, 700, 800, 900;
   @import "colors/warning";
   @import "colors/error";
   @import "colors/light";
+
+// UnSupport Internet Explorer
+[bg-color] {
+  // Background
+  --attr-custom-bg-color: attr(bg-color);
+  background-color: var(--attr-custom-bg-color);
+}
+
+[text-color] {
+  // Text-Color
+  --attr-custom-text-color: attr(text-color);
+  color: var(--attr-custom-text-color);
+}
+
+// Border-Color
+[border-color] {
+  // All
+  --attr-custom-border-color: attr(border-color);
+  border-color: var(--attr-custom-border-color);
+}
+
+[border-top-color] {
+  // Top
+  --attr-custom-border-top-color: attr(border-top-color);
+  border-top-color: var(--attr-custom-border-top-color);
+}
+
+[border-bottom-color] {
+  // Bottom
+  --attr-custom-border-bottom-color: attr(border-bottom-color);
+  border-bottom-color: var(--attr-custom-border-bottom-color);
+}
+
+[border-left-color] {
+  // Left
+  --attr-custom-border-left-color: attr(border-left-color);
+  border-left-color: var(--attr-custom-border-left-color);
+}
+
+[border-right-color] {
+  // Right
+  --attr-custom-border-right-color: attr(border-right-color);
+  border-right-color: var(--attr-custom-border-right-color);
+}

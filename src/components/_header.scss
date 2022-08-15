@@ -39,6 +39,7 @@
     .#{$prefix}header-small-option-group {
       display: inline-block;
       float: right;
+      margin: 0;
       margin-right: $header-padding-x;
 
       &:focus {
@@ -97,6 +98,7 @@
 
     .#{$prefix}header-option-group {
       float: right;
+      margin: 0;
       margin-right: $header-padding-x;
       display: block !important;
     
