@@ -3,6 +3,45 @@
 
 @import "../customize/components/collapse";
 
-.#{$prefix}collapse {
+details.#{$prefix}collapse {
+	width: 100%;
 	
+	summary {
+		background-color: $collapse-header-background-color;
+		border: $collapse-header-border;
+		border-radius: $collapse-header-border-radius;
+		box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		color: $collapse-header-color;
+		padding: $collapse-header-padding;
+		list-style: none;
+		width: 100%;
+
+		user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+
+		&::webkit-details-maker {
+			display: none;
+		}
+	}
+
+	div {
+		background-color: $collapse-body-background-color;
+		border: $collapse-body-border;
+		border-radius: $collapse-body-border-radius;
+		box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		color: $collapse-body-color;
+		padding: $collapse-body-padding;
+		margin-top: $collapse-body-margin-top;
+		width: 100%;
+	}
+
+	&[open] {
+		summary {
+			border-bottom-left-radius: 0; 
+			border-bottom-right-radius: 0; 
+		}
+	}
 }

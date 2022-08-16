@@ -89,8 +89,13 @@
 	// FAB
 	&.#{$prefix}btn-fab {
 		position: fixed;
+		z-index: 2;
 		bottom: 15px;
 		right: 15px;
+
+		&:not(:nth-child(1)) {
+			display: none;
+		}
 
 		box-shadow: $button-fab-shadow;
 

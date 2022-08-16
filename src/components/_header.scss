@@ -56,7 +56,8 @@
 
       + .#{$prefix}header-option-group {
         display: none;
-        margin-top: 36px;
+        padding: 0;
+        margin-top: 40px;
         margin-left: $header-padding-x;
         margin-right: $header-padding-x;
 
@@ -66,6 +67,7 @@
           border-radius: $header-option-border-radius;
           color: $header-text-color;
           display: none;
+          margin-top: 4px;
           padding: $header-option-padding-y $header-option-padding-x;
           transition: $global-animation-speed;
             -webkit-transition: $global-animation-speed;
@@ -74,6 +76,10 @@
 
           &:hover {
             background: rgb(240,240,240);
+          }
+
+          &:maker {
+            display: none;
           }
         }
 

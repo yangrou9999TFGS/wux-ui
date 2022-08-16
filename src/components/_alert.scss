@@ -16,12 +16,23 @@
 	color: map-get($alert-text-color-map, "primary");
 	border-left-color: map-get($alert-border-color-map, "primary");
 
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
 	.#{$prefix}alert-icon {
  	  color: map-get($alert-icon-color-map, "primary");
  	  margin-right: 2px;
  	  user-select: none;
  	    -webkit-user-select: none; 
  	    -moz-user-select: none; 
+  }
+
+  .#{$prefix}alert-option-group {
+  	float: right;
   }
 }
 
