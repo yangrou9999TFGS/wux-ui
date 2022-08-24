@@ -4,24 +4,40 @@
 @import "../customize/components/dialog";
 
 .#{$prefix}dialog {
-	border: $dialog-border;
-	border-radius: $dialog-border-radius;
-	box-shadow: $dialog-shadow;
+	background-color: var(--dialog-background-color);
+	border: var(--dialog-border);
+	border-radius: var(--dialog-border-radius);
+	box-shadow: var(--dialog-shadow);
+	display: block;
+	position: fixed;
+	top: 50%; bottom: 50%; right: 50%; left: 50%; // Support IE
+  transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, -50%); // Only for IE
 	width: 80%;
-	min-width: 180px;
-	max-width: 400px;
+		min-width: 180px;
+		max-width: 400px;
+	min-height: 200px;
   overflow: auto;
-  padding: $dialog-padding;
+  padding: var(--dialog-padding);
 
-  // Polyfill Complate
-	&::backdrop,
-	& + .backdrop {
+	&::backdrop {
 		background-color: $dialog-backdrop-color;
-		backdrop-filter: blur($dialog-backdrop-blur);
+	}
+
+	// Polyfill Support
+	& .backdrop {
+		position: fixed;
+  	top: 0; right: 0; bottom: 0; left: 0;
+  	background-color: $dialog-backdrop-color;
+	}
+
+	// Polyfill Support
+	&:not([open]) {
+		display: none;
 	}
 
 	.#{$prefix}dialog-header {
-		color: $dialog-header-text-color;
+		color: var(--dialog-header-text-color);
 
 		.#{$prefix}dialog-header-title {
 			margin: 0;
@@ -29,9 +45,10 @@
 	}
 
 	.#{$prefix}dialog-body {
-		font-size: $dialog-body-font-size;
+		color: var(--dialog-body-text-color);
+		font-size: var(--dialog-body-font-size);
 		min-height: 120px;
-		padding: $dialog-body-padding-y $dialog-body-padding-x;
+		padding: var(--dialog-body-padding-y) var(--dialog-body-padding-x);
 		display: block;
 		overflow: auto;
 	}
@@ -45,7 +62,14 @@
 		}
 
 		.#{$prefix}dialog-footer-group {
-			float: $dialog-footer-group-float;
+			float: var(--dialog-footer-group-float);
 		}
 	}
 }
+
+// Polyfill Support
+	._dialog_overlay {
+ 	 	position: fixed;
+  	top: 0; right: 0; bottom: 0; left: 0;
+  	background-color: $dialog-backdrop-color;
+	}

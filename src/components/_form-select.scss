@@ -8,27 +8,28 @@
 	  -webkit-appearance: none;
 	  -moz-appearance: none;
 
-	border: $form-select-border-width solid $form-select-border-color;
-	border-radius: $form-select-border-radius;
-	background-color: $form-select-background-color;
+	border: var(--form-select-border-width) solid var(--form-select-border-color);
+	border-radius: var(--form-select-border-radius);
+	background-color: var(--form-select-background-color);
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' fill='none' stroke='%23AAA' stroke-width='2' stroke-linecap='butt' stroke-linejoin='round'%3E%3Cpolyline points='15 5 10 10 5 5 '%3E%3C/polyline%3E%3C/svg%3E");
 	background-repeat: no-repeat;
-	background-position: right $form-select-padding-x center;
+	background-position: right var(--form-select-padding-x) center;
 	box-sizing: border-box;
 	  -webkit-box-sizing: border-box;
-	padding: $form-select-padding-y $form-select-padding-x;
+	color: var(--form-select-text-color);
+	padding: var(--form-select-padding-y) var(--form-select-padding-x);
 	outline: none;
-	transition: $global-animation-speed;
-		-webkit-transition: $global-animation-speed;
+	transition: var(--global-animation-speed);
+		-webkit-transition: var(--global-animation-speed);
 	width: 100%;
 
 	&:hover {
-		box-shadow: $form-select-hover-shadow;
+		box-shadow: var(--form-select-hover-shadow);
 	}
 
 	&:focus {
-		box-shadow: $form-select-focus-shadow;
-		border: $form-select-focus-border;
+		box-shadow: var(--form-select-focus-shadow);
+		border: var(--form-select-focus-border);
 		outline: none;
 	}
 }

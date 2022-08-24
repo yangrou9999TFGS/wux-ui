@@ -1,5 +1,9 @@
 
 /* WuX-UI Import-AnimationSpeed */
 
-// Default:NotoSansSC
 $global-animation-speed: 0.2s;
+
+// -------------------- CSS Variables --------------------
+:root {
+  --global-animation-speed: #{$global-animation-speed};
+}

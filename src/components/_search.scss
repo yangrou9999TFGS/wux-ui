@@ -10,33 +10,33 @@
 	appearance: none;
 	  -webkit-appearance: none;
 	  -moz-appearance: none;
-	background-color: $search-background-color;
+	background-color: var(--search-background-color);
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' fill='none' stroke='rgb(100,100,100)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='7' cy='7' r='6'%3E%3C/circle%3E%3Cline x1='15' y1='15' x2='12' y2='12'%3E%3C/line%3E%3C/svg%3E");
 	background-position: center left 15px;
 	background-repeat: no-repeat;
-	border: $search-border-width solid $search-border-color;
-	border-radius: $search-border-radius;
+	border: var(--search-border-width) solid var(--search-border-color);
+	border-radius: var(--search-border-radius);
 	box-sizing: border-box;
 		-webkit-box-sizing: border-box;
-	color: $search-text-color;
-	padding: $search-padding;
+	color: var(--search-text-color) !important; // No Global!
+	padding: var(--search-padding);
 	padding-inline-start: 40px;
-	transition: $global-animation-speed;
-		-webkit-transition: $global-animation-speed;
+	transition: var(--global-animation-speed);
+		-webkit-transition: var(--global-animation-speed);
 
 	&:hover {
-		box-shadow: $search-hover-shadow;
-		background-color: $search-hover-background-color;
-		border: $search-hover-border-width solid $search-hover-border-color;
-		color: $search-hover-text-color;
+		box-shadow: var(--search-hover-shadow);
+		background-color: var(--search-hover-background-color);
+		border: var(--search-hover-border-width) solid var(--search-hover-border-color);
+		color: var(--search-hover-text-color);
 		outline: none;
 	}
 
 	&:focus {
-		box-shadow: $search-focus-shadow;
-		background-color: $search-focus-background-color;
-		border: $search-focus-border-width solid $search-focus-border-color;
-		color: $search-focus-text-color;
+		box-shadow: var(--search-focus-shadow);
+		background-color: var(--search-focus-background-color);
+		border: var(--search-focus-border-width) solid var(--search-focus-border-color);
+		color: var(--search-focus-text-color);
 		outline: none;
 	}
 

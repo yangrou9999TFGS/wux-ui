@@ -11,16 +11,16 @@
 	width: 100%;
 
 	label.#{$prefix}tab-item {
-		background-color: $tab-item-background;
-		border-radius: $tab-item-border-radius;
-		border-bottom: $tab-item-border;
-		color: $tab-item-text-color;
+		background-color: var(--tab-item-background);
+		border-radius: var(--tab-item-border-radius);
+		border-bottom: var(--tab-item-border);
+		color: var(--tab-item-text-color);
 		cursor: pointer;
 		display: inline-block;
-		padding: $tab-item-padding;
+		padding: var(--tab-item-padding);
 		position: relative;
-		transition: $global-animation-speed;
-			-webkit-transition: $global-animation-speed;
+		transition: var(--global-animation-speed);
+			-webkit-transition: var(--global-animation-speed);
 
 		user-select: none;
 			-webkit-user-select: none;
@@ -30,20 +30,20 @@
 			content: '';
       position: absolute;
       z-index: -1;
-      top: 95%;
-      left: 50%;
-      right: 50%;
+      top: 100%;
+      left: 80%;
+      right: 80%;
       bottom: 0;
-      transition: ease $global-animation-speed;
-      	-webkit-transition: ease $global-animation-speed;
-      background-color: $tab-item-focus-border-color;
+      transition: ease var(--global-animation-speed);
+      	-webkit-transition: ease var(--global-animation-speed);
+      background-color: var(--tab-item-focus-border-color);
 		}
 	}
 
 	.#{$prefix}tab-content {
 		display: none;
-		padding: $tab-content-padding;
-		margin-top: $tab-content-margin;
+		padding: var(--tab-content-padding);
+		margin-top: var(--tab-content-margin);
 		order: 1;
 		opacity: 0%;
 		width: 100%;
@@ -54,13 +54,15 @@
 
 		&:checked {
 			& + label.#{$prefix}tab-item {
-				background-color: $tab-item-focus-background;
-				//border-bottom: $tab-item-focus-border;
-				color: $tab-item-focus-text-color;
+				background-color: var(--tab-item-focus-background);
+				color: var(--tab-item-focus-text-color);
 
 				&:after {
-        	left: 0%;	
-        	right: 0%;
+					border-radius: 8px;
+					top: 92%;
+        	left: 5%;	
+        	right: 5%;
+        	bottom: 0%;
 				}
 
 				& + .#{$prefix}tab-content {

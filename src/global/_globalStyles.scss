@@ -1,0 +1,19 @@
+
+/* WuX-UI globalStyles */
+
+body {
+	background-color: #FCFCFC;
+}
+
+// -------------------- Dark Mode --------------------
+body[dark-mode] {
+	background-color: #121212;
+	color: #FCFCFC;
+}
+
+// ---------- Fix Focus Backdrop On Webkit ----------
+*,
+*:before,
+*:after {
+  -webkit-tap-highlight-color: transparent; 
+} 

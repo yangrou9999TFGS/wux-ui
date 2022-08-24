@@ -4,11 +4,11 @@
 @import "../customize/components/header";
 
 .#{$prefix}header {
-  background: $header-background;
-  color: $header-text-color;
+  background: var(--header-background);
+  color: var(--header-text-color);
   margin: 0;
-  padding: $header-padding-y 0;
-  font-size: $header-font-size;
+  padding: var(--header-padding-y) 0;
+  font-size: var(--header-font-size);
 
   &:after {
   	content: '';
@@ -17,9 +17,9 @@
   }
 
   &.#{$prefix}header-fixed {
-  	background: $header-fixed-background;
-    color: $header-fixed-text-color;
-    box-shadow: $header-fixed-shadow;
+  	background: var(--header-fixed-background);
+    color: var(--header-fixed-text-color);
+    box-shadow: var(--header-fixed-shadow);
   	position: fixed;
   	top: 0;
   	left: 0;
@@ -29,9 +29,9 @@
 
   .#{$prefix}header-title {
   	float: left;
-    padding-top: $header-option-padding-y;
-    padding-bottom: $header-option-padding-y;
-    margin-left: $header-padding-x; 
+    padding-top: var(--header-option-padding-y);
+    padding-bottom: var(--header-option-padding-y);
+    margin-left: var(--header-padding-x); 
   }
 
   // For Small Device
@@ -40,7 +40,7 @@
       display: inline-block;
       float: right;
       margin: 0;
-      margin-right: $header-padding-x;
+      margin-right: var(--header-padding-x);
 
       &:focus {
         + .#{$prefix}header-option-group {
@@ -58,24 +58,24 @@
         display: none;
         padding: 0;
         margin-top: 40px;
-        margin-left: $header-padding-x;
-        margin-right: $header-padding-x;
+        margin-left: var(--header-padding-x);
+        margin-right: var(--header-padding-x);
 
         .#{$prefix}header-option {
           box-sizing: border-box;
             -webkit-box-sizing: border-box;
-          border-radius: $header-option-border-radius;
-          color: $header-text-color;
+          border-radius: var(--header-option-border-radius);
+          color: var(--header-text-color);
           display: none;
           margin-top: 4px;
-          padding: $header-option-padding-y $header-option-padding-x;
-          transition: $global-animation-speed;
-            -webkit-transition: $global-animation-speed;
+          padding: var(--header-option-padding-y) var(--header-option-padding-x);
+          transition: var(--global-animation-speed);
+            -webkit-transition: var(--global-animation-speed);
           text-decoration: none;
           white-space: nowrap;
 
           &:hover {
-            background: rgb(240,240,240);
+            background: var(--header-option-hover-background-color);
           }
 
           &:maker {
@@ -105,27 +105,28 @@
     .#{$prefix}header-option-group {
       float: right;
       margin: 0;
-      margin-right: $header-padding-x;
+      margin-right: var(--header-padding-x);
       display: block !important;
     
   	  .#{$prefix}header-option {
         box-sizing: border-box;
           -webkit-box-sizing: border-box;
-        border-radius: $header-option-border-radius;
-  		  color: $header-text-color;
+        border-radius: var(--header-option-border-radius);
+  		  color: var(--header-text-color);
+  		  cursor: pointer;
         display: inline-block !important;
-  		  padding: $header-option-padding-y $header-option-padding-x;
+  		  padding: var(--header-option-padding-y) var(--header-option-padding-x);
   		  text-decoration: none;
-  		  transition: $global-animation-speed;
-          -webkit-transition: $global-animation-speed;
+  		  transition: var(--global-animation-speed);
+          -webkit-transition: var(--global-animation-speed);
   		  white-space: nowrap;
 
         + #{$prefix}header-option {
-  	      margin-left: $header-option-space;
+  	      margin-left: var(--header-option-space);
         }
 
   		  &:hover {
-  			  background: rgb(240,240,240);
+  			  background: var(--header-option-hover-background-color);
   		  }
   	  }
     }
@@ -134,16 +135,17 @@
   .#{$prefix}header-small-option-group {
     background: transparent;
     border: none;
-    padding-top: $header-option-padding-y;
-    padding-bottom: $header-option-padding-y;
+    color: var(--header-option-text-color);
+    padding-top: var(--header-option-padding-y);
+    padding-bottom: var(--header-option-padding-y);
   }
 
   .#{$prefix}header-option-bold {
-    background-color: map.get($color-primary-map, "#{$header-option-bold-background-color-degree}") !important;
-    color: func-text-color(primary, $header-option-bold-background-color-degree) !important;
+    background-color: var(--header-option-bold-background-color) !important;
+    color: var(--header-option-bold-text-color) !important;
   }
 }
 
 .#{$prefix}header-fixed-margin {
-  margin-top: $header-padding-y * 2 + $header-font-size + $header-option-padding-y * 2;
+  margin-top: calc(var(--header-padding-y) * 2 + var(--header-font-size) + var(--header-option-padding-y) * 2);
 }

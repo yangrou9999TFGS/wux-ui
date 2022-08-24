@@ -4,9 +4,60 @@
 $form-radios-border-width: 2px;
 $form-radios-border-color: #ABABAB;
 $form-radios-border-radius: 9999px;
+
 $form-radios-hover-background-color: #FFFFFF;
-$form-radios-hover-shadow: 0px 0px 1px 2px #DDDDDD;
+$form-radios-hover-shadow: 0px 0px 2px 1px #DDDDDD;
+
 $form-radios-checked-background-color: white;
 $form-radios-checked-border-width: 5px;
 $form-radios-checked-border-color: map.get($color-primary-map, "500");
 $form-radios-checked-shadow: none;
+
+// -------------------- Dark Mode --------------------
+$form-radios-border-color-dark: #ABABAB;
+
+$form-radios-hover-background-color-dark: transparent;
+$form-radios-hover-shadow-dark: 0px 0px 2px 1px #DDDDDD;
+
+$form-radios-checked-background-color-dark: #FFFFFF;
+$form-radios-checked-border-color-dark: map.get($color-primary-map, "500");
+$form-radios-checked-shadow-dark: none;
+
+// -------------------- CSS Variables --------------------
+:root {
+--form-radios-border-color: #{$form-radios-border-color};
+--form-radios-border-radius: #{$form-radios-border-radius};
+--form-radios-border-width: #{$form-radios-border-width};
+
+--form-radios-hover-background-color: #{$form-radios-hover-background-color};
+--form-radios-hover-shadow: #{$form-radios-hover-shadow};
+
+--form-radios-checked-background-color: #{$form-radios-checked-background-color};
+--form-radios-checked-border-width: #{$form-radios-checked-border-width};
+--form-radios-checked-border-color: #{$form-radios-checked-border-color};
+--form-radios-checked-shadow: #{$form-radios-checked-shadow};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --form-radios-border-color: #{$form-radios-border-color-dark};
+    
+    --form-radios-hover-background-color: #{$form-radios-hover-background-color-dark};
+    --form-radios-hover-shadow: #{$form-radios-hover-shadow-dark};
+    
+    --form-radios-checked-background-color: #{$form-radios-checked-background-color-dark};
+    --form-radios-checked-border-color: #{$form-radios-checked-border-color-dark};
+    --form-radios-checked-shadow: #{$form-radios-checked-shadow-dark};
+  }
+}
+
+[dark-mode] {
+  --form-radios-border-color: #{$form-radios-border-color-dark};
+    
+  --form-radios-hover-background-color: #{$form-radios-hover-background-color-dark};
+  --form-radios-hover-shadow: #{$form-radios-hover-shadow-dark};
+    
+  --form-radios-checked-background-color: #{$form-radios-checked-background-color-dark};
+  --form-radios-checked-border-color: #{$form-radios-checked-border-color-dark};
+  --form-radios-checked-shadow: #{$form-radios-checked-shadow-dark};
+}

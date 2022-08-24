@@ -4,27 +4,28 @@
 @import "../customize/components/jumbotron";
 
 .#{$prefix}jumbotron {
-	background: $jumbotron-background;
+	background: var(--jumbotron-background);
 	box-sizing: border-box;
 	  -webkit-box-sizing: border-box;
 	display: block;
 	width: 100%;
 	margin: 0;
-	padding: $jumbotron-padding;
+	padding: var(--jumbotron-padding);
 
 	.#{$prefix}jumbotron-title {
-		font-size: $jumbotron-title-font-size;
+		color: var(--jumbotron-title-text-color);
+		font-size: var(--jumbotron-title-font-size);
 		font-weight: 700;
-		margin: $jumbotron-title-margin-y 0;
+		margin: var(--jumbotron-title-margin-y) 0;
 
 		.#{$prefix}jumbotron-title-bold {
-			color: $jumbotron-title-bold-color;
+			color: var(--jumbotron-title-bold-color);
 		}
 	}
 
 	.#{$prefix}jumbotron-subtitle {
-		font-size: $jumbotron-subtitle-font-size;
-    margin: $jumbotron-subtitle-margin-y 0;
+		font-size: var(--jumbotron-subtitle-font-size);
+    margin: var(--jumbotron-subtitle-margin-y) 0;
 	}
 
 	.#{$prefix}jumbotron-btn-group {
@@ -32,6 +33,6 @@
 		box-sizing: border-box;
 		  -webkit-box-sizing: border-box;
 		display: block;
-		margin: $jumbotron-button-group-margin-y 0;
+		margin: var(--jumbotron-button-group-margin-y) 0;
 	}
 }

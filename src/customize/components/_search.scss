@@ -6,16 +6,87 @@ $search-border-width: 2px;
 $search-border-radius: 9999px;
 $search-background-color: #FFFFFF;
 $search-padding: 12px 16px;
-$search-text-color: #000000;
+$search-text-color: #121212;
 
 $search-hover-background-color: #FFFFFF;
 $search-hover-border-width: 2px;
 $search-hover-border-color: #CCCCCC;
-$search-hover-text-color: #000000;
+$search-hover-text-color: #121212;
 $search-hover-shadow: 0 0 6px #DDDDDD;
 
 $search-focus-background-color: #FFFFFF;
 $search-focus-border-width: 2px;
 $search-focus-border-color: map.get($color-primary-map, "500");
-$search-focus-text-color: #000000;
+$search-focus-text-color: #121212;
 $search-focus-shadow: 0 0 6px #DDDDDD;
+
+// -------------------- Dark Mode ---------------------
+$search-border-color-dark: #AAAAAA;
+$search-background-color-dark: #121212;
+$search-text-color-dark: #FCFCFC;
+
+$search-hover-background-color-dark: #121212;
+$search-hover-border-color-dark: #AAAAAA;
+$search-hover-text-color-dark: #FCFCFC;
+$search-hover-shadow-dark: 0 0 2px #DDDDDD;
+
+$search-focus-background-color-dark: #121212;
+$search-focus-border-color-dark: map.get($color-primary-map, "400");
+$search-focus-text-color-dark: #FCFCFC;
+$search-focus-shadow-dark: 0 0 2px #DDDDDD;
+
+// -------------------- CSS Variables --------------------
+:root {
+  --search-border-color: #{$search-border-color};
+  --search-border-width: #{$search-border-width};
+  --search-border-radius: #{$search-border-radius};
+  --search-background-color: #{$search-background-color};
+  --search-padding: #{$search-padding};
+  --search-text-color: #{$search-text-color};
+  
+  --search-hover-background-color: #{$search-hover-background-color};
+  --search-hover-border-width: #{$search-hover-border-width};
+  --search-hover-border-color: #{$search-hover-border-color};
+  --search-hover-text-color: #{$search-hover-text-color};
+  --search-hover-shadow: #{$search-hover-shadow};
+  
+  --search-focus-background-color: #{$search-focus-background-color};
+  --search-focus-border-width: #{$search-focus-border-width};
+  --search-focus-border-color: #{$search-focus-border-color};
+  --search-focus-text-color: #{$search-focus-text-color};
+  --search-focus-shadow: #{$search-focus-shadow};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --search-border-color: #{$search-border-color-dark};
+    --search-background-color: #{$search-background-color-dark};
+    --search-text-color: #{$search-text-color-dark};
+    
+    --search-hover-background-color: #{$search-hover-background-color-dark};
+    --search-hover-border-color: #{$search-hover-border-color-dark};
+    --search-hover-text-color: #{$search-hover-text-color-dark};
+    --search-hover-shadow: #{$search-hover-shadow-dark};
+    
+    --search-focus-background-color: #{$search-focus-background-color-dark};
+    --search-focus-border-color: #{$search-focus-border-color-dark};
+    --search-focus-text-color: #{$search-focus-text-color-dark};
+    --search-focus-shadow: #{$search-focus-shadow-dark};
+  }
+}
+
+[dark-mode] {
+  --search-border-color: #{$search-border-color-dark};
+  --search-background-color: #{$search-background-color-dark};
+  --search-text-color: #{$search-text-color-dark};
+  
+  --search-hover-background-color: #{$search-hover-background-color-dark};
+  --search-hover-border-color: #{$search-hover-border-color-dark};
+  --search-hover-text-color: #{$search-hover-text-color-dark};
+  --search-hover-shadow: #{$search-hover-shadow-dark};
+  
+  --search-focus-background-color: #{$search-focus-background-color-dark};
+  --search-focus-border-color: #{$search-focus-border-color-dark};
+  --search-focus-text-color: #{$search-focus-text-color-dark};
+  --search-focus-shadow: #{$search-focus-shadow-dark};
+}

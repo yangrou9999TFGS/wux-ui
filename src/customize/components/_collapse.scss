@@ -1,15 +1,62 @@
 
 /* WuX-UI Components-Collapse [Customize] */
 
-$collapse-header-background-color: #F4F4F4;
+$collapse-header-background-color: #F2F2F2;
 $collapse-header-border: none;
 $collapse-header-border-radius: 12px;
-$collapse-header-color: #1C1C1C;
 $collapse-header-padding: 10px 12px;
+$collapse-header-text-color: #121212;
 
-$collapse-body-background-color: #F9F9F9;
+$collapse-body-background-color: #FcFCFC;
 $collapse-body-border: none;
 $collapse-body-border-radius: 0 0 12px 12px;
-$collapse-body-color: #1C1C1C;
 $collapse-body-padding: 12px;
 $collapse-body-margin-top: 4px;
+$collapse-body-text-color: #121212;
+
+// -------------------- Dark Mode --------------------
+$collapse-header-background-color-dark: #161616;
+$collapse-header-border-dark: none;
+$collapse-header-text-color-dark: #FCFCFC;
+
+$collapse-body-background-color-dark: #282828;
+$collapse-body-border-dark: none;
+$collapse-body-text-color-dark: #FFFFFF;
+
+// -------------------- CSS Variables -------------------
+:root {
+  --collapse-header-background-color: #{$collapse-header-background-color};
+  --collapse-header-border: #{$collapse-header-border};
+  --collapse-header-border-radius: #{$collapse-header-border-radius};
+  --collapse-header-padding: #{$collapse-header-padding};
+  --collapse-header-text-color: #{$collapse-header-text-color};
+  
+  --collapse-body-background-color: #{$collapse-body-background-color};
+  --collapse-body-border: #{$collapse-body-border};
+  --collapse-body-border-radius: #{$collapse-body-border-radius};
+  --collapse-body-padding: #{$collapse-body-padding};
+  --collapse-body-margin-top: #{$collapse-body-margin-top};
+  --collapse-body-text-color: #{$collapse-body-text-color};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --collapse-header-background-color: #{$collapse-header-background-color-dark};
+    --collapse-header-border: #{$collapse-header-border-dark};
+    --collapse-header-text-color: #{$collapse-header-text-color-dark};
+    
+    --collapse-body-background-color: #{$collapse-body-background-color-dark};
+    --collapse-body-border: #{$collapse-body-border-dark};
+    --collapse-body-text-color: #{$collapse-body-text-color-dark};
+  }
+}
+
+[dark-mode] {
+  --collapse-header-background-color: #{$collapse-header-background-color-dark};
+  --collapse-header-border: #{$collapse-header-border-dark};
+  --collapse-header-text-color: #{$collapse-header-text-color-dark};
+  
+  --collapse-body-background-color: #{$collapse-body-background-color-dark};
+  --collapse-body-border: #{$collapse-body-border-dark};
+  --collapse-body-text-color: #{$collapse-body-text-color-dark};
+}

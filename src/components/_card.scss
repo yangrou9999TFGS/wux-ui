@@ -10,15 +10,15 @@
 	  -webkit-box-sizing: border-box;
 	display: block;
 	overflow: hidden;
-	border-radius: $card-border-radius;
-	border: $card-border-width solid $card-border-color;
-	box-shadow: $card-shadow;
-	background-color: $card-background-color;
-	color: $card-text-color;
+	border-radius: var(--card-border-radius);
+	border: var(--card-border-width) solid var(--card-border-color);
+	box-shadow: var(--card-shadow);
+	background-color: var(--card-background-color);
+	color: var(--card-text-color);
 	padding: 0;
-	margin: $card-margin;
-	transition: box-shadow 0.5s;
-	  -webkit-transition: box-shadow 0.5s;
+	margin: var(--card-margin);
+	transition: box-shadow $global-animation-speed;
+	  -webkit-transition: box-shadow $global-animation-speed;
 
 	.#{$prefix}card-header {
  	 	position: relative;
@@ -33,8 +33,8 @@
 
 	.#{$prefix}card-body {
 		position: relative;
-		padding: $card-body-padding;
-		font-size: $card-body-font-size;
+		padding: var(--card-body-padding);
+		font-size: var(--card-body-font-size);
 	}
 
   .#{$prefix}card-footer {
@@ -56,13 +56,13 @@
 
 	&.#{$prefix}card-flat,
 	& .#{$prefix}card {
-		background: $card-flat-background;
-		border: $card-flat-border;
-		border-radius: $card-border-radius; // inherit
+		background: var(--card-flat-background);
+		border: var(--card-flat-border);
+		border-radius: var(--card-border-radius); // inherit
 		box-shadow: none;
 	}
 }
 
 .#{$prefix}card-hover:hover {
-	box-shadow: $card-hover-shadow;
+	box-shadow: var(--card-hover-shadow);
 }

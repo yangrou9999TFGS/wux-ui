@@ -2,11 +2,12 @@
 <html>
   <head>
     <title>WuX-UI Debug Page</title>
-    <link href="dist/wux.css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <link href="dist/wux.css" rel="stylesheet">
     <!--PolyFill-->
-    <script src=""></script>
+    <script src="dist/polyfill/attr-polyfill/attr-polyfill.js"></script>
+    <script src="dist/polyfill/dialog-polyfill/dialog-polyfill.js"></script>
   </head>
   <body class="wux-header-fixed-margin">
     <header class="wux-header wux-header-fixed">
@@ -140,7 +141,6 @@
         </div>
         <div class="wux-col">
           <h1>Dialog</h1>
-          <button class="wux-btn" onclick="testDialog.showModal()">OpenDialog</button>
           <dialog class="wux-dialog" id="testDialog">
             <div class="wux-dialog-header">
               <h1 class="wux-dialog-header-title">Test!</h1>
@@ -157,6 +157,12 @@
               </div>
             </div>
           </dialog>
+          <script>
+              var dialog = document.querySelector('testDialog'); // Catch ID
+              dialogPolyfill.registerDialog(testDialog);
+            </script>
+          <!--Polyfill-->
+          <button class="wux-btn" onclick="testDialog.showModal();">OpenDialog</button>
         </div>
         <div class="wux-col">
           <h1>Dropdown</h1>
@@ -357,7 +363,7 @@
       <div class="wux-row-xs-1">
         <div class="wux-col">
           <h1>Search</h1>
-          <input class="wux-search"></input>
+          <input class="wux-search" />
         </div>
       </div>
       <div class="wux-row-sm-1 wux-row-md-2">
@@ -447,7 +453,7 @@
             <div class="wux-col">
               <h2>Other</h2>
               <div class="wux-typo">
-                <p><a href="#">Link</a></p>
+                <p><a href="#" bg-color="#CCCCCC">Link</a></p>
                 <p>This is <mark>Mark</mark></p>
                 <p><del>Deleted</del></p>
                 <p><ins>I have Super Cow Power!</ins></p>

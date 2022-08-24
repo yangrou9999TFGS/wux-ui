@@ -9,11 +9,11 @@
 	top: -8px;
 	right: -8px;
 	border-radius: 9999px;
-	background: red;
-	color: white;
-	font-size: $badge-font-size;
+	background-color: var(--badge-background-color);
+	color: var(--badge-text-color);
+	font-size: var(--badge-font-size);
 	height: 12px;
-	padding: $badge-padding;
+	padding: var(--badge-padding);
 	min-width: 12px;
 	max-width: 20px;
 	opacity: 95%;

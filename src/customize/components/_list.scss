@@ -1,12 +1,78 @@
-
+ 
 /* WuX-UI Components-List [Customize] */
 
+$list-border: 2px solid #CCCCCC;
 $list-border-radius: 12px;
+
 $list-item-background: #FFFFFF;
-$list-item-border-width: 2px;
+$list-item-border-width: 0;
 $list-item-border-color: #CCCCCC;
 $list-item-padding: 12px;
+$list-item-text-color: #121212;
+
 $list-item-hover-background: map.get($color-primary-map, "200");
 $list-item-hover-text-color: func-text-color(primary, 200);
+
 $list-item-focus-background: map.get($color-primary-map, "500");
 $list-item-focus-text-color: func-text-color(primary, 500);
+
+// -------------------- Dark Mode --------------------
+$list-border-dark: 2px solid #888888;
+
+$list-item-background-dark: #121212;
+$list-item-border-color-dark: #888888;
+$list-item-text-color-dark: #FCFCFC;
+
+$list-item-hover-background-dark: map.get($color-primary-map, "200");
+$list-item-hover-text-color-dark: func-text-color(primary, 200);
+
+$list-item-focus-background-dark: map.get($color-primary-map, "500");
+$list-item-focus-text-color-dark: func-text-color(primary, 500);
+
+// -------------------- CSS Variables --------------------
+:root {
+  --list-border: #{$list-border};
+  --list-border-radius: #{$list-border-radius};
+  
+  --list-item-background: #{$list-item-background};
+  --list-item-border-width: #{$list-item-border-width};
+  --list-item-border-color: #{$list-item-border-color};
+  --list-item-padding: #{$list-item-padding};
+  --list-item-text-color: #{$list-item-text-color};
+  
+  --list-item-hover-background: #{$list-item-hover-background};
+  --list-item-hover-text-color: #{$list-item-hover-text-color};
+  
+  --list-item-focus-background: #{$list-item-focus-background};
+  --list-item-focus-text-color: #{$list-item-focus-text-color};
+}
+
+@media (refers-color-scheme: dark) {
+  :root { 
+    --list-border: #{$list-border-dark};
+    
+    --list-item-background: #{$list-item-background-dark};
+    --list-item-border-color: #{$list-item-border-color-dark};
+    --list-item-text-color: #{$list-item-text-color-dark};
+    
+    --list-item-hover-background: #{$list-item-hover-background-dark};
+    --list-item-hover-text-color: #{$list-item-hover-text-color-dark};
+    
+    --list-item-focus-background: #{$list-item-focus-background-dark};
+    --list-item-focus-text-color: #{$list-item-focus-text-color-dark};
+  }
+}
+
+[dark-mode] {
+  --list-border: #{$list-border-dark};
+  
+  --list-item-background: #{$list-item-background-dark};
+  --list-item-border-color: #{$list-item-border-color-dark};
+  --list-item-text-color: #{$list-item-text-color-dark};
+  
+  --list-item-hover-background: #{$list-item-hover-background-dark};
+  --list-item-hover-text-color: #{$list-item-hover-text-color-dark};
+  
+  --list-item-focus-background: #{$list-item-focus-background-dark};
+  --list-item-focus-text-color: #{$list-item-focus-text-color-dark};
+}

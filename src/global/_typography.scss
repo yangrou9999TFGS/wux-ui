@@ -1,12 +1,5 @@
 /* WuX-UI Typography */
 
-// Fix Focus Backdrop On Webkit
-*,
-*:before,
-*:after {
-  -webkit-tap-highlight-color: transparent; 
-} 
-
 .#{$prefix}typo {
   line-height: 1.8;
   word-wrap: break-word;
@@ -25,7 +18,7 @@
   }
 
   pre, code, kbd, samp, pre tt {
-    font-family: 'Roboto Mono', 'Ubuntu Mono', 'Fira Code', Consola, Monospace, Courier;
+    font-family: 'Fira Code', Consola, 'JetBrainsMono', 'Roboto Mono', 'Ubuntu Mono', Monospace, Courier;
   }
 
   figcaption {
@@ -69,9 +62,22 @@
 
   /* mark */
   mark {
-    margin: 0 5px;
-    padding: 2px;
-    background: #fffdd1;
+    background: transparent;
+    position: relative;
+    margin: 2px 4px;
+    color: #464646;
+    
+    &:after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      background-color: #fffdd1;
+      top: -2px;
+      bottom: -2px;
+      left: -4px;
+      right: -4px;
+      border-radius: 4px;
+    }
   }
 
   /* h1 - h6 */
@@ -120,7 +126,7 @@
   code {
     padding: 2px 6px;
     color: #c7254e;
-    background-color: #f7f7f9;
+    // background-color: #f7f7f9;
     border-radius: 6px;
   }
 
@@ -150,7 +156,19 @@
   /* u */
   u {
     text-decoration: none;
-    border-bottom: 1px solid;
+    position: relative;
+    
+    &:after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      background-color: #AAAAAA;
+      top: 85%;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      border-radius: 4px;
+    }
   }
 
   /* del */

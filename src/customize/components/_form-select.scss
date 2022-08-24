@@ -7,8 +7,59 @@ $form-select-border-width: 2px;
 $form-select-border-radius: 12px;
 $form-select-padding-x: 12px;
 $form-select-padding-y: 10px;
+$form-select-text-color: #121212;
 
 $form-select-hover-shadow: 0 0 6px #DDDDDD;
 
 $form-select-focus-border: 2px solid map.get($color-primary-map ,"500");
 $form-select-focus-shadow: 0 0 6px #DDDDDD;
+
+// -------------------- Dark Mode --------------------
+$form-select-background-color-dark: #121212;
+$form-select-border-color-dark: #CCCCCC;
+$form-select-text-color-dark: #FCFCFC;
+
+$form-select-hover-shadow-dark: 0 0 6px #DDDDDD;
+
+$form-select-focus-border-dark: 2px solid map.get($color-primary-map ,"500");
+$form-select-focus-shadow-dark: 0 0 6px #DDDDDD;
+
+// -------------------- CSS Variables --------------------
+:root {
+  --form-select-background-color: #{$form-select-background-color};
+  --form-select-border-color: #{$form-select-border-color};
+  --form-select-border-width: #{$form-select-border-width};
+  --form-select-border-radius: #{$form-select-border-radius};
+  --form-select-padding-x: #{$form-select-padding-x};
+  --form-select-padding-y: #{$form-select-padding-y};
+  --form-select-text-color: #{$form-select-text-color};
+  
+  --form-select-hover-shadow: #{$form-select-hover-shadow};
+  
+  --form-select-focus-border: #{$form-select-focus-border};
+  --form-select-focus-shadow: #{$form-select-focus-shadow};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --form-select-background-color: #{$form-select-background-color-dark};
+    --form-select-border-color: #{$form-select-border-color-dark};
+    --form-select-text-color: #{$form-select-text-color-dark};
+    
+    --form-select-hover-shadow: #{$form-select-hover-shadow-dark};
+    
+    --form-select-focus-border: #{$form-select-focus-border-dark};
+    --form-select-focus-shadow: #{$form-select-focus-shadow-dark};
+  }
+}
+
+[dark-mode] {
+  --form-select-background-color: #{$form-select-background-color-dark};
+  --form-select-border-color: #{$form-select-border-color-dark};
+  --form-select-text-color: #{$form-select-text-color-dark};
+  
+  --form-select-hover-shadow: #{$form-select-hover-shadow-dark};
+  
+  --form-select-focus-border: #{$form-select-focus-border-dark};
+  --form-select-focus-shadow: #{$form-select-focus-shadow-dark};
+}

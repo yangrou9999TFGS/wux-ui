@@ -8,26 +8,26 @@
 	  -webkit-appearance: none;
 	  -moz-appearance: none;
 	
-	border: $form-radios-border-width solid $form-radios-border-color;
-	border-radius: $form-radios-border-radius;
+	border: var(--form-radios-border-width) solid var(--form-radios-border-color);
+	border-radius: var(--form-radios-border-radius);
 	cursor: pointer;
 	width: 20px;
   height: 20px;
   margin-right: 4px;
   vertical-align: middle;
-  transition: $global-animation-speed;
-    -webkit-transition: $global-animation-speed;
+  transition: var(--global-animation-speed);
+    -webkit-transition: var(--global-animation-speed);
 
   &:not(:disabled):not(:checked):hover {
-  	background-color: $form-radios-hover-background-color;
-  	box-shadow: $form-radios-hover-shadow;
+  	background-color: var(--form-radios-hover-background-color);
+  	box-shadow: var(--form-radios-hover-shadow);
   }
 	
 	&:checked {
-		background-color: $form-radios-checked-background-color;
+		background-color: var(--form-radios-checked-background-color);
     background-repeat: no-repeat;
-		border: $form-radios-checked-border-width solid $form-radios-checked-border-color;
-		box-shadow: $form-radios-checked-shadow;
+		border: var(--form-radios-checked-border-width) solid var(--form-radios-checked-border-color);
+		box-shadow: var(--form-radios-checked-shadow);
 	}
 
 	&:disabled {

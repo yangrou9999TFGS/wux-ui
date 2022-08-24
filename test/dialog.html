@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WuX-UI Debug Page - Dialog</title>
+    <link href="../dist/wux.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <!--PolyFill-->
+    <script src="https://recommend-polyfill.wux-ui.tk/attr-polyfill/attr-polyfill.js"></script>
+    <script src="https://recommend-polyfill.wux-ui.tk/dialog-polyfill/dialog-polyfill.js"></script>
+  </head>
+  <body>
+    <h1>Dialog</h1>
+    <dialog class="wux-dialog" id="testDialog">
+      <div class="wux-dialog-header">
+        <h1 class="wux-dialog-header-title">Test!</h1>
+      </div>
+      <div class="wux-dialog-body">
+        Test!
+      </div>
+      <div class="wux-dialog-footer">
+        <div class="wux-dialog-footer-group">
+          <form method="dialog">
+            <button class="wux-btn wux-btn-secondary wux-btn-text" onclick="testDialog.close()">Cancel</button>
+            <button class="wux-btn" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <script>
+        var dialog = document.querySelector('testDialog'); // Catch ID
+        dialogPolyfill.registerDialog(testDialog);
+    </script>
+    <button onclick="testDialog.showModal();">OpenDialog</button>
+  </body>
+</html>

@@ -2,20 +2,100 @@
 /* WuX-UI Components-Header [Customize]*/
 
 $header-background: transparent;
-$header-text-color: $color-primary;
+$header-font-size: 16px;
 $header-padding-x: 16px;
 $header-padding-y: 14px;
-$header-font-size: 16px;
+$header-text-color: map.get($color-primary-map, "500");
 
-$header-option-space: 4px;
+$header-option-border-radius: 12px;
 $header-option-padding-x: 12px;
 $header-option-padding-y: 8px; // For Options, Title and SmallDeviceMenu
-$header-option-border-radius: 12px;
+$header-option-space: 4px;
+$header-option-text-color: map.get($color-primary-map, "500");
 
-$header-fixed-background: white;
-$header-fixed-text-color: $color-primary;
+$header-option-hover-background-color: rgb(240, 240, 240);
+
+$header-fixed-background: #FFFFFF;
 $header-fixed-shadow: 0 2px 4px #CCCCCC;
+$header-fixed-text-color: map.get($color-primary-map, "500");
 
 $header-small-option-group-padding: 6px;
 
-$header-option-bold-background-color-degree: 500;
+$header-option-bold-background-color: map.get($color-primary-map, "500");
+$header-option-bold-text-color: func-text-color(primary, 500);
+
+// -------------------- Dark Mode -------------------
+$header-background-dark: transparent;
+$header-text-color-dark: map.get($color-primary-map, "300");
+
+$header-fixed-background-dark: #000000;
+$header-fixed-text-color-dark: map.get($color-primary-map, "300");
+$header-fixed-shadow-dark: 0 2px 4px #000000;
+
+$header-option-text-color-dark: #FCFCFC;
+
+$header-option-hover-background-color-dark: #242424;
+
+$header-option-bold-background-color-dark: map.get($color-primary-map, "300");
+$header-option-bold-text-color-dark: func-text-color(primary, 300);
+
+// -------------------- CSS Variables --------------------
+:root {
+  --header-background: #{$header-background};
+  --header-font-size: #{$header-font-size};
+  --header-padding-x: #{$header-padding-x};
+  --header-padding-y: #{$header-padding-y};
+  --header-text-color: #{$header-text-color};
+  
+  --header-option-border-radius: #{$header-option-border-radius};
+  --header-option-padding-x: #{$header-option-padding-x};
+  --header-option-padding-y: #{$header-option-padding-y};
+  --header-option-space: #{$header-option-space};
+  --header-option-text-color: #{$header-option-text-color};
+  
+  --header-option-hover-background-color: #{$header-option-hover-background-color};
+  
+  --header-fixed-background: #{$header-fixed-background};
+  --header-fixed-shadow: #{$header-fixed-shadow};
+  --header-fixed-text-color: #{$header-fixed-text-color};
+  
+  --header-small-option-group-padding: #{$header-small-option-group-padding};
+  
+  --header-option-bold-background-color: #{$header-option-bold-background-color};
+  --header-option-bold-text-color: #{$header-option-bold-text-color};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --header-background: #{$header-background-dark};
+    --header-text-color: #{$header-text-color-dark};
+    
+    --header-fixed-background: #{$header-fixed-background-dark};
+    --header-fixed-shadow: #{$header-fixed-shadow-dark};
+    --header-fixed-text-color: #{$header-fixed-text-color-dark};
+    
+    --header-option-text-color: #{$header-option-text-color-dark};
+    
+    --header-option-hover-background-color: #{$header-option-hover-background-color-dark};
+    
+    --header-option-bold-background-color: #{$header-option-bold-background-color-dark};
+    --header-option-bold-text-color: #{$header-option-bold-text-color-dark};
+  }
+}
+
+[dark-mode] {
+  --header-background: #{$header-background-dark};
+  --header-text-color: #{$header-text-color-dark};
+  
+  --header-fixed-background: #{$header-fixed-background-dark};
+  --header-fixed-shadow: #{$header-fixed-shadow-dark};
+  --header-fixed-text-color: #{$header-fixed-text-color-dark};
+  
+  --header-option-text-color: #{$header-option-text-color-dark};
+  
+  --header-option-hover-background-color: #{$header-option-hover-background-color-dark};
+  
+  --header-option-bold-background-color: #{$header-option-bold-background-color-dark};
+  --header-option-bold-text-color: #{$header-option-bold-text-color-dark};
+}
+

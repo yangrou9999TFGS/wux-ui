@@ -17,3 +17,64 @@ $form-upload-button-hover-background: map.get($color-primary-map, "600");
 $form-upload-button-hover-border: none;
 $form-upload-button-hover-border-radius: 12px;
 $form-upload-button-hover-color: func-text-color(primary, 600);
+
+// -------------------- Dark Mode --------------------
+$form-upload-border-dark: none;
+$form-upload-hover-shadow-dark: none;
+
+$form-upload-button-background-dark: map.get($color-primary-map, "400");
+$form-upload-button-border-dark: none;
+$form-upload-button-color-dark: func-text-color(primary, 400);
+
+$form-upload-button-hover-background-dark: map.get($color-primary-map, "500");
+$form-upload-button-hover-border-dark: none;
+$form-upload-button-hover-color-dark: func-text-color(primary, 500);
+
+// -------------------- CSS Variables --------------------
+:root {
+  --form-upload-border: #{$form-upload-border};
+  --form-upload-border-radius: #{$form-upload-border-radius};
+  --form-upload-padding-x: #{$form-upload-padding-x};
+  --form-upload-padding-y: #{$form-upload-padding-y};
+  --form-upload-hover-shadow: #{$form-upload-hover-shadow};
+  
+  --form-upload-button-background: #{$form-upload-button-background};
+  --form-upload-button-border: #{$form-upload-button-border};
+  --form-upload-button-border-radius: #{$form-upload-button-border-radius};
+  --form-upload-button-color: #{$form-upload-button-color};
+  --form-upload-button-padding: #{$form-upload-button-padding};
+  
+  --form-upload-button-hover-background: #{$form-upload-button-hover-background};
+  --form-upload-button-hover-border: #{$form-upload-button-hover-border};
+  --form-upload-button-hover-border-radius: #{$form-upload-button-hover-border-radius};
+  --form-upload-button-hover-color: #{$form-upload-button-hover-color};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --form-upload-border: #{$form-upload-border-dark};
+    --form-upload-hover-shadow: #{$form-upload-hover-shadow-dark};
+    
+    --form-upload-button-background: #{$form-upload-button-background-dark};
+    --form-upload-button-border: #{$form-upload-button-border-dark};
+    --form-upload-button-color: #{$form-upload-button-color-dark};
+    
+    --form-upload-button-hover-background: #{$form-upload-button-hover-background-dark};
+    --form-upload-button-hover-border: #{$form-upload-button-hover-border-dark};
+    --form-upload-button-hover-color: #{$form-upload-button-hover-color-dark};
+  }
+}
+
+
+[dark-mode] {
+  --form-upload-border: #{$form-upload-border-dark};
+  --form-upload-hover-shadow: #{$form-upload-hover-shadow-dark};
+  
+  --form-upload-button-background: #{$form-upload-button-background-dark};
+  --form-upload-button-border: #{$form-upload-button-border-dark};
+  --form-upload-button-color: #{$form-upload-button-color-dark};
+  
+  --form-upload-button-hover-background: #{$form-upload-button-hover-background-dark};
+  --form-upload-button-hover-border: #{$form-upload-button-hover-border-dark};
+  --form-upload-button-hover-color: #{$form-upload-button-hover-color-dark};
+}

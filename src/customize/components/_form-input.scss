@@ -2,7 +2,7 @@
 /* WuX-UI Components-Form-Input [Customize] */
 
 $form-input-background: #FFFFFF;
-$form-input-text-color: #000000;
+$form-input-text-color: #121212;
 $form-input-border-color: #CCCCCC;
 $form-input-border-width: 2px;
 $form-input-border-radius: 12px;
@@ -11,22 +11,22 @@ $form-input-margin-bottom: 4px;
 $form-input-hover-background: #FFFFFF;
 $form-input-hover-border-color: #CCCCCC;
 $form-input-hover-border-width: 2px;
-$form-input-hover-text-color: #000000;
-$form-input-hover-shadow: 0 0 6px #DDDDDD;
+$form-input-hover-text-color: #121212;
+$form-input-hover-shadow: 0 0 2px 1px #DDDDDD;
 
 $form-input-focus-background: #FFFFFF;
 $form-input-focus-border-color: map.get($color-primary-map, "500");
 $form-input-focus-border-width: 2px;
-$form-input-focus-text-color: #000000;
-$form-input-focus-shadow: 0 0 6px #DDDDDD;
+$form-input-focus-text-color: #121212;
+$form-input-focus-shadow: 0 0 2px 1px #DDDDDD;
 
 $form-input-invalid-background: #FFFFFF;
 $form-input-invalid-border-color: map.get($color-error-map, "500");
 $form-input-invalid-border-width: 2px;
 $form-input-invalid-text-color: map.get($color-error-map , "500");
-$form-input-invalid-shadow: 0 0 6px map.get($color-error-map , "200");
+$form-input-invalid-shadow: 0 0 4px map.get($color-error-map , "200");
 
-$form-input-disabled-opacity: 50%;
+$form-input-disabled-opacity: 40%;
 
 $imported-size: xs, sm, md, lg, xl;
 
@@ -62,3 +62,128 @@ $form-input-border-map: (
   lg: 14px,
   xl: 16px,
 );
+
+// -------------------- Dark Mode --------------------
+$form-input-background-dark: #121212;
+$form-input-text-color-dark: #FCFCFC;
+$form-input-border-color-dark: #AAAAAA;
+
+$form-input-hover-background-dark: #121212;
+$form-input-hover-border-color-dark: #AAAAAA;
+$form-input-hover-text-color-dark: #FCFCFC;
+$form-input-hover-shadow-dark: 0 0 2px 1px #DDDDDD;
+
+$form-input-focus-background-dark: #121212;
+$form-input-focus-border-color-dark: map.get($color-primary-map, "400");
+$form-input-focus-text-color-dark: #FCFCFC;
+$form-input-focus-shadow-dark: 0 0 2px 1px #DDDDDD;
+
+$form-input-invalid-background-dark: #121212;
+$form-input-invalid-border-color-dark: map.get($color-error-map, "400");
+$form-input-invalid-text-color-dark: map.get($color-error-map , "300");
+$form-input-invalid-shadow-dark: 0 0 4px map.get($color-error-map , "200");
+
+$form-input-disabled-opacity-dark: 40%;
+
+// -------------------- CSS Variables --------------------
+:root {
+	--form-input-background: #{$form-input-background};
+	--form-input-border-color: #{$form-input-border-color};
+	--form-input-border-width: #{$form-input-border-width};
+	--form-input-border-radius: #{$form-input-border-radius};
+	--form-input-margin-bottom: #{$form-input-margin-bottom};
+	--form-input-text-color: #{$form-input-text-color};
+	
+	--form-input-hover-background: #{$form-input-hover-background};
+	--form-input-hover-border-color: #{$form-input-hover-border-color};
+	--form-input-hover-border-width: #{$form-input-hover-border-width};
+	--form-input-hover-shadow: #{$form-input-hover-shadow};
+	--form-input-hover-text-color: #{$form-input-hover-text-color};
+	
+	--form-input-focus-background: #{$form-input-focus-background};
+	--form-input-focus-border-color: #{$form-input-focus-border-color};
+	--form-input-focus-border-width: #{$form-input-focus-border-width};
+	--form-input-focus-shadow: #{$form-input-focus-shadow};
+	--form-input-focus-text-color: #{$form-input-focus-text-color};
+	
+	--form-input-invalid-background: #{$form-input-invalid-background};
+	--form-input-invalid-border-color: #{$form-input-invalid-border-color};
+	--form-input-invalid-border-width: #{$form-input-invalid-border-width};
+	--form-input-invalid-text-color: #{$form-input-invalid-text-color};
+	--form-input-invalid-shadow: #{$form-input-invalid-shadow};
+
+	--form-input-disabled-opacity: #{$form-input-disabled-opacity};
+
+	--form-input-padding-x-xs: #{map.get($form-input-padding-x-map, xs)};
+	--form-input-padding-x-sm: #{map.get($form-input-padding-x-map, sm)};
+	--form-input-padding-x-md: #{map.get($form-input-padding-x-map, md)};
+	--form-input-padding-x-lg: #{map.get($form-input-padding-x-map, lg)};
+	--form-input-padding-x-xl: #{map.get($form-input-padding-x-map, xl)};
+
+	--form-input-padding-y-xs: #{map.get($form-input-padding-y-map, xs)};
+	--form-input-padding-y-sm: #{map.get($form-input-padding-y-map, sm)};
+	--form-input-padding-y-md: #{map.get($form-input-padding-y-map, md)};
+	--form-input-padding-y-lg: #{map.get($form-input-padding-y-map, lg)};
+	--form-input-padding-y-xl: #{map.get($form-input-padding-y-map, xl)};
+
+	--form-input-font-size-xs: #{map.get($form-input-font-size-map, xs)};
+	--form-input-font-size-sm: #{map.get($form-input-font-size-map, sm)};
+	--form-input-font-size-md: #{map.get($form-input-font-size-map, md)};
+	--form-input-font-size-lg: #{map.get($form-input-font-size-map, lg)};
+	--form-input-font-size-xl: #{map.get($form-input-font-size-map, xl)};
+
+	// border-radius
+	--form-input-border-radius-xs: #{map.get($form-input-border-map, xs)};
+	--form-input-border-radius-sm: #{map.get($form-input-border-map, sm)};
+	--form-input-border-radius-md: #{map.get($form-input-border-map, md)};
+	--form-input-border-radius-lg: #{map.get($form-input-border-map, lg)};
+	--form-input-border-radius-xl: #{map.get($form-input-border-map, xl)};
+}
+
+@media (refers-color-scheme: dark) {
+	:root {
+		--form-input-background: #{$form-input-background-dark};
+		--form-input-border-color: #{$form-input-border-color-dark};
+		--form-input-text-color: #{$form-input-text-color-dark};
+		
+		--form-input-hover-background: #{$form-input-hover-background-dark};
+		--form-input-hover-border-color: #{$form-input-hover-border-color-dark};
+		--form-input-hover-shadow: #{$form-input-hover-shadow-dark};
+		--form-input-hover-text-color: #{$form-input-hover-text-color-dark};
+		
+		--form-input-focus-background: #{$form-input-focus-background-dark};
+		--form-input-focus-border-color: #{$form-input-focus-border-color-dark};
+		--form-input-focus-shadow: #{$form-input-focus-shadow-dark};
+		--form-input-focus-text-color: #{$form-input-focus-text-color-dark};
+		
+		--form-input-invalid-background: #{$form-input-invalid-background-dark};
+		--form-input-invalid-border-color: #{$form-input-invalid-border-color-dark};
+		--form-input-invalid-text-color: #{$form-input-invalid-text-color-dark};
+		--form-input-invalid-shadow: #{$form-input-invalid-shadow-dark};
+	
+		--form-input-disabled-opacity: #{$form-input-disabled-opacity-dark};
+	}
+}
+
+[dark-mode] {
+	--form-input-background: #{$form-input-background-dark};
+	--form-input-border-color: #{$form-input-border-color-dark};
+	--form-input-text-color: #{$form-input-text-color-dark};
+	
+	--form-input-hover-background: #{$form-input-hover-background-dark};
+	--form-input-hover-border-color: #{$form-input-hover-border-color-dark};
+	--form-input-hover-shadow: #{$form-input-hover-shadow-dark};
+	--form-input-hover-text-color: #{$form-input-hover-text-color-dark};
+	
+	--form-input-focus-background: #{$form-input-focus-background-dark};
+	--form-input-focus-border-color: #{$form-input-focus-border-color-dark};
+	--form-input-focus-shadow: #{$form-input-focus-shadow-dark};
+	--form-input-focus-text-color: #{$form-input-focus-text-color-dark};
+	
+	--form-input-invalid-background: #{$form-input-invalid-background-dark};
+	--form-input-invalid-border-color: #{$form-input-invalid-border-color-dark};
+	--form-input-invalid-text-color: #{$form-input-invalid-text-color-dark};
+	--form-input-invalid-shadow: #{$form-input-invalid-shadow-dark};
+
+	--form-input-disabled-opacity: #{$form-input-disabled-opacity-dark};
+}

@@ -5,16 +5,16 @@
 
 .#{$prefix}alert {
 	position: relative;
-	border-radius: $alert-border-radius;
-	border-left-width: $alert-border-width;
+	border-radius: var(--alert-border-radius);
+	border-left-width: var(--alert-border-width);
 	border-left-style: solid;
-	font-size: $alert-font-size;
-	padding: $alert-padding;
-	margin-bottom: $alert-margin-bottom;	
+	font-size: var(--alert-font-size);
+	padding: var(--alert-padding);
+	margin-bottom: var(--alert-margin-bottom);	
 
-	background-color: map-get($alert-background-color-map, "primary");
-	color: map-get($alert-text-color-map, "primary");
-	border-left-color: map-get($alert-border-color-map, "primary");
+	background-color: var(--alert-background-color-primary);
+	color: var(--alert-text-color-primary);
+	border-left-color: var(--alert-border-color-primary);
 
 	&:before,
 	&:after {
@@ -24,7 +24,7 @@
 	}
 
 	.#{$prefix}alert-icon {
- 	  color: map-get($alert-icon-color-map, "primary");
+ 	  color: var(--alert-icon-color-primary);
  	  margin-right: 2px;
  	  user-select: none;
  	    -webkit-user-select: none; 
@@ -38,12 +38,12 @@
 
 @each $color-name in $imported-colors {
   .#{$prefix}alert-#{$color-name} {
-	  background-color: map-get($alert-background-color-map, "#{$color-name}");
-	  color: map-get($alert-text-color-map, "#{$color-name}");
-	  border-left-color: map-get($alert-border-color-map, "#{$color-name}");
+	  background-color: var(--alert-background-color-#{$color-name});
+	  color: var(--alert-text-color-#{$color-name});
+	  border-left-color: var(--alert-border-color-#{$color-name});
 	  
 	  .#{$prefix}alert-icon {
-	  	color: map-get($alert-icon-color-map, "#{$color-name}");
+	  	color: var(--alert-icon-color-#{$color-name});
 	  	margin-right: 2px;
 	  }
 	}

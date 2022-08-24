@@ -8,11 +8,73 @@ $tables-padding: 0;
 $tables-shadow: none;
 
 $tables-head-background-color: #DDDDDD;
-$tables-head-text-color: #000000;
+$tables-head-text-color: #121212;
 $tables-head-margin: 8px;
 $tables-head-item-padding: 8px;
 
 $tables-row-header-background-color: #EEEEEE;
 $tables-row-item-border: 1px solid #CCCCCC;
 $tables-row-item-padding: 8px;
+$tables-row-item-text-color: #121212;
 $tables-row-margin: 4px;
+
+// -------------------- Dark Mode --------------------
+$tables-background-color-dark: #121212;
+$tables-border-dark: 2px solid #AAAAAA;
+$tables-shadow-dark: none;
+
+$tables-head-background-color-dark: #080808;
+$tables-head-text-color-dark: #FCFCFC;
+
+$tables-row-header-background-color-dark: #242424;
+
+$tables-row-item-border-dark: 1px solid #AAAAAA;
+$tables-row-item-text-color-dark: #FCFCFC;
+
+// -------------------- CSS Variables --------------------
+:root {
+  --tables-background-color: #{$tables-background-color};
+  --tables-border: #{$tables-border};
+  --tables-border-radius: #{$tables-border-radius};
+  --tables-padding: #{$tables-padding};
+  --tables-shadow: #{$tables-shadow};
+  
+  --tables-head-background-color: #{$tables-head-background-color};
+  --tables-head-text-color: #{$tables-head-text-color};
+  --tables-head-margin: #{$tables-head-margin};
+  --tables-head-item-padding: #{$tables-head-item-padding};
+  
+  --tables-row-header-background-color: #{$tables-row-header-background-color};
+  --tables-row-item-border: #{$tables-row-item-border};
+  --tables-row-item-padding: #{$tables-row-item-padding};
+  --tables-row-item-text-color: #{$tables-row-item-text-color};
+  --tables-row-margin: #{$tables-row-margin};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --tables-background-color: #{$tables-background-color-dark};
+    --tables-border: #{$tables-border-dark};
+    --tables-shadow: #{$tables-shadow-dark};
+    
+    --tables-head-background-color: #{$tables-head-background-color-dark};
+    --tables-head-text-color: #{$tables-head-text-color-dark};
+    
+    --tables-row-header-background-color: #{$tables-row-header-background-color-dark};
+    --tables-row-item-border: #{$tables-row-item-border-dark};
+    --tables-row-item-text-color: #{$tables-row-item-text-color};
+  }
+}
+
+[dark-mode] {
+  --tables-background-color: #{$tables-background-color-dark};
+  --tables-border: #{$tables-border-dark};
+  --tables-shadow: #{$tables-shadow-dark};
+  
+  --tables-head-background-color: #{$tables-head-background-color-dark};
+  --tables-head-text-color: #{$tables-head-text-color-dark};
+
+  --tables-row-header-background-color: #{$tables-row-header-background-color-dark};
+  --tables-row-item-border: #{$tables-row-item-border-dark};
+  --tables-row-item-text-color: #{$tables-row-item-text-color};
+}

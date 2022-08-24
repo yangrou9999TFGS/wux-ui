@@ -10,33 +10,39 @@
 	cursor: pointer;
 	font-weight: 400;
 	margin: 0;
-	margin-right: $button-margin-right;
-	margin-bottom: $button-margin-bottom;
+	margin-right: var(--button-margin-right);
+	margin-bottom: var(--button-margin-bottom);
 	white-space: nowrap;
   vertical-align: middle;
-  transition: $global-animation-speed;
-	  -webkit-transition: $global-animation-speed; // Safari
+  transition: var(--global-animation-speed);
+	  -webkit-transition: var(--global-animation-speed); // Safari
 	text-decoration: none;
 	user-select: none;
 	  -webkit-user-select: none;
 	  -moz-user-select: none;
+	  
+	// Disabled 
+	&:disabled {
+		cursor: default;
+	}
 
 	// Default
-  background-color: map.get($button-background-color-map,"primary");
-	color: map.get($button-text-color-map,"primary");
-	border: $button-solid-border-width solid map.get($button-border-color-map,"primary");
-	border-radius: map.get($button-border-map,"default-md");
-  padding: map.get($button-padding-y-map,"md") map.get($button-padding-x-map,"md");
-	font-size: map.get($button-size-map,"md");
+  background-color: var(--button-background-color-primary);
+	color: var(--button-text-color-primary);
+	border: var(--button-solid-border-width) solid var(--button-border-color-primary);
+	border-radius: var(--button-border-size-default-md);
+  padding: var(--button-padding-y-md) var(--button-padding-x-md);
+	font-size: var(--button-font-size-md);
 
 	&:hover:not(:disabled) {
-		background-color: map.get($button-border-color-map,"primary");
+		background-color: var(--button-border-color-primary);
+		color: var(--button-text-color-primary);
 	}
 
 	&:focus:not(:disabled),
 	&.#{$prefix}btn-active {
-  	background-color: map.get($button-border-color-map, "primary");
-  	color: map.get($button-text-color-map, "primary");
+  	background-color: var(--button-border-color-primary);
+  	color: var(--button-text-color-primary);
 
   	outline: none;
 	}
@@ -48,36 +54,36 @@
 	// Style:Outline
   &.#{$prefix}btn-outline {
   	background: transparent;
-	  color: map.get($button-background-color-map, "primary");
-	  border: $button-outline-border-width solid map.get($button-border-color-map,"primary");
+	  color: var(--button-background-color-primary);
+	  border: var(--button-outline-border-width) solid var(--button-border-color-primary);
 
   	&:hover:not(:disabled) {
-    	background: map.get($button-border-color-map, "primary");
-    	color: map.get($button-text-color-map, "primary");
+    	background: var(--button-border-color-primary);
+    	color: var(--button-text-color-primary);
   	}
 
   	&:focus:not(:disabled),
 		&.#{$prefix}btn-active {
-  		background-color: map.get($button-border-color-map, "primary");
-  		color: map.get($button-text-color-map, "primary");
+  		background-color: var(--button-border-color-orimary);
+  		color: var(--button-text-color-primary);
 		}
 	}
 
 	// Style:Text
 	&.#{$prefix}btn-text {
   	background: transparent;
-	  color: map.get($button-background-color-map, "primary");
+	  color: var(--button-background-color-primary);
 	  border: none;
 
   	&:hover:not(:disabled) {
   		background: transparent;
-    	color: map.get($button-border-color-map, "primary");
+    	color: var(--button-border-color-primary);
   	}
 
   	&:focus:not(:disabled),
 		&.#{$prefix}btn-active {
   		background-color: transparent;
-  		color: map.get($button-border-color-map, "primary");
+  		color: var(--button-text-color-primary);
 		}
 	}
 
@@ -97,68 +103,69 @@
 			display: none;
 		}
 
-		box-shadow: $button-fab-shadow;
+		box-shadow: var(--button-fab-shadow);
 
 		&:hover {
-			box-shadow: $button-fab-hover-shadow;
+			box-shadow: var(--button-fab-hover-shadow);
 		}
 	}
-
 }
 
 // Button Colors/Style
 @each $color-name in $imported-colors {
   .#{$prefix}btn-solid.#{$prefix}btn-#{$color-name},
   .#{$prefix}btn-#{$color-name} {
-	  background-color: map.get($button-background-color-map, "#{$color-name}");
-	  color: map.get($button-text-color-map, "#{$color-name}");
-	  border-color: map.get($button-border-color-map, "#{$color-name}");
+	  background-color: var(--button-background-color-#{$color-name});
+	  color: var(--button-text-color-#{$color-name});
+	  border-color: var(--button-border-color-#{$color-name});
 
 	  &:hover:not(:disabled){
-      background-color: map.get($button-border-color-map,"#{$color-name}");
-      color: map.get($button-text-color-map, "#{$color-name}");
+      background-color: var(--button-border-color-#{$color-name});
+      color: var(--button-text-color-#{$color-name});
 	  }
 
 	  &:focus:not(:disabled),
   	&.#{$prefix}btn-active {
-   	  background-color: map.get($button-border-color-map, "#{$color-name}");
-   	  color: map.get($button-text-color-map, "#{$color-name}");
+   	  background-color: var(--button-border-color-#{$color-name});
+   	  color: var(--button-text-color-#{$color-name});
   	}
 	}
-
+	
+	// Outline
   .#{$prefix}btn.#{$prefix}btn-outline.#{$prefix}btn-#{$color-name} {
   	// Default
   	background: transparent;
-  	color: map.get($button-border-color-map, "#{$color-name}");
-  	border-color: map.get($button-border-color-map, "#{$color-name}");
+  	color: var(--button-border-color-#{$color-name});
+  	border-color: var(--button-border-color-#{$color-name});
 
   	&:hover:not(:disabled) {
-   	  background: map.get($button-border-color-map, "#{$color-name}");
-   	  color: map.get($button-text-color-map, "#{$color-name}");
+   	  background: var(--button-border-color-#{$color-name});
+   	  color: var(--button-text-color-#{$color-name});
   	}
 
   	&:focus:not(:disabled),
   	&.#{$prefix}btn-active {
-   	  background: map.get($button-border-color-map, "#{$color-name}");
-   	  color: map.get($button-text-color-map, "#{$color-name}");
+   	  background: var(--button-border-color-#{$color-name});
+   	  color: var(--button-text-color-#{$color-name});
   	}
   }
-
+	
+	// Text
   .#{$prefix}btn.#{$prefix}btn-text.#{$prefix}btn-#{$color-name} {
   	// Default
   	background: transparent;
-  	color: map.get($button-background-color-map, "#{$color-name}");
+  	color: var(--button-background-color-#{$color-name});
   	border: none;
 
   	&:hover:not(:disabled) {
   		background: transparent;
-   	  color: map.get($button-border-color-map, "#{$color-name}");
+   	  color: var(--button-border-color-#{$color-name});
   	}
 
   	&:focus:not(:disabled),
   	&.#{$prefix}btn-active {
   		background: transparent;
-   	  color: map.get($button-border-color-map, "#{$color-name}");
+   	  color: var(--button-border-color-#{$color-name});
    	  box-shadow: none;
   	}
   }
@@ -167,16 +174,16 @@
 // Button Size
 @each $size-name in $button-imported-size {
   .#{$prefix}btn-#{$size-name} {
-	  padding: map.get($button-padding-y-map,"#{$size-name}") map.get($button-padding-x-map,"#{$size-name}");
-	  font-size: map.get($button-size-map,"#{$size-name}");
-	  border-radius: map.get($button-border-map,"default-#{$size-name}");
+	  padding: var(--button-padding-y-#{$size-name}) var(--button-padding-x-#{$size-name});
+	  font-size: var(--button-font-size-#{$size-name});
+	  border-radius: var(--button-border-size-default-#{$size-name});
 	}
 };
 
 // Button-BorderStyle
 @each $border-name in $button-imported-border {
   .#{$prefix}btn-#{$border-name} {
-    border-radius: map.get($button-border-map,"#{$border-name}");
+    border-radius: var(--button-border-size-#{$border-name});
   }
 };
 
@@ -185,7 +192,7 @@
 	display: inline-flex; // Delete space when code have newline.
 	position: relative;
 	white-space: nowrap;
-	margin-bottom: $button-margin-bottom;
+	margin-bottom: var(--button-margin-bottom);
 
 	.#{$prefix}btn {
 		border-radius: 0;
@@ -193,31 +200,13 @@
 
 		// Default
 		&:first-child {
-			border-top-left-radius: map.get($button-border-map,"default-md");
-			border-bottom-left-radius: map.get($button-border-map,"default-md");
+			border-top-left-radius: var(--button-border-size-default-md);
+			border-bottom-left-radius: var(--button-border-size-default-md);
 		}
 
 		&:last-child {
-			border-top-right-radius: map.get($button-border-map,"default-md");
-			border-bottom-right-radius: map.get($button-border-map,"default-md");
-		}
-	}
-}
-
-.#{$prefix}btn-group-outline {
-	.#{$prefix}btn {
-		border-radius: 0;
-		margin: 0;
-
-		// Default
-		&:first-child {
-			border-top-left-radius: map.get($button-border-map,"default-md");
-			border-bottom-left-radius: map.get($button-border-map,"default-md");
-		}
-
-		&:last-child {
-			border-top-right-radius: map.get($button-border-map,"default-md");
-			border-bottom-right-radius: map.get($button-border-map,"default-md");
+			border-top-right-radius: var(--button-border-size-default-md);
+			border-bottom-right-radius: var(--button-border-size-default-md);
 		}
 	}
 }
@@ -226,18 +215,18 @@
 	.#{$prefix}btn-group-#{$size-name} {
 
 		.#{$prefix}btn {
-			font-size: map.get($button-size-map,"#{$size-name}");
-			padding: map.get($button-padding-y-map,"#{$size-name}") map.get($button-padding-x-map,"#{$size-name}");
-
+			font-size: var(--button-font-size-#{$size-name});
+			padding: var(--button-padding-y-#{$size-name}) var(--button-padding-x-#{$size-name});
+			
 			// Default
 			&:first-child {
-				border-top-left-radius: map.get($button-border-map,"default-#{$size-name}");
-				border-bottom-left-radius: map.get($button-border-map,"default-#{$size-name}");
+				border-top-left-radius: var(--button-border-size-default-#{$size-name});
+				border-bottom-left-radius: var(--button-border-size-default-#{$size-name});
 			}
 
 			&:last-child {
-				border-top-right-radius: map.get($button-border-map,"default-#{$size-name}");
-				border-bottom-right-radius: map.get($button-border-map,"default-#{$size-name}");
+				border-top-right-radius: var(--button-border-size-default-#{$size-name});
+				border-bottom-right-radius: var(--button-border-size-default-#{$size-name});
 			}
 		}
 	}

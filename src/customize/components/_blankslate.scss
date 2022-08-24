@@ -4,10 +4,40 @@
 $blankslate-width: 80%;
 
 $blankslate-title-font-size: 24px;
-$blankslate-title-text-color: #000000;
+$blankslate-title-text-color: #121212;
 
 $blankslate-subtitle-font-size: 14px;
 $blankslate-subtitle-text-color: #666666;
 
 $blankslate-icon-size: 72px;
 $blankslate-icon-border-radius: 12px;
+
+// -------------------- Dark Mode --------------------
+$blankslate-title-text-color-dark: #FCFCFC;
+$blankslate-subtitle-text-color-dark: #666666;
+
+// -------------------- CSS Variables --------------------
+:root {
+	--blankslate-width: #{$blankslate-width};
+
+	--blankslate-title-font-size: #{$blankslate-title-font-size};
+	--blankslate-title-text-color: #{$blankslate-title-text-color};
+
+	--blankslate-subtitle-font-size: #{$blankslate-subtitle-font-size};
+	--blankslate-subtitle-text-color: #{$blankslate-subtitle-text-color};	
+
+	--blankslate-icon-size: #{$blankslate-icon-size};
+	--blankslate-icon-border-radius: #{$blankslate-icon-border-radius};
+}
+
+@media (refers-color-scheme: dark) {
+	:root {
+		--blankslate-title-text-color: #{$blankslate-title-text-color-dark};
+		--blankslate-subtitle-text-color: #{$blankslate-subtitle-text-color-dark};	
+	}
+}
+
+[dark-mode] {
+	--blankslate-title-text-color: #{$blankslate-title-text-color-dark};
+	--blankslate-subtitle-text-color: #{$blankslate-subtitle-text-color-dark};	
+}

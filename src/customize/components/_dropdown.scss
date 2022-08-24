@@ -1,7 +1,7 @@
 
 /* WuX-UI Components-Dropdown [Customize] */
 
-$dropdown-menu-background: #FFFFFF;
+$dropdown-menu-background: #FCFCFCF;
 $dropdown-menu-border: 2px solid #CCCCCC;
 $dropdown-menu-border-radius: 12px;
 $dropdown-menu-shadow: none;
@@ -10,18 +10,92 @@ $dropdown-menu-padding-y: 8px;
 $dropdown-menu-width: 180px;
 
 $dropdown-item-border-radius: 0;
+$dropdown-item-text-color: #121212;
 $dropdown-item-padding-x: 10px;
 $dropdown-item-padding-y: 6px;
 
-$dropdown-item-hover-color: primary;
 $dropdown-item-hover-degree: 500;
 $dropdown-item-hover-background: map.get($color-primary-map, #{$dropdown-item-hover-degree});
-$dropdown-item-hover-text-color: func-text-color(primary,$dropdown-item-hover-degree);
+$dropdown-item-hover-text-color: func-text-color(primary, $dropdown-item-hover-degree);
 
 $dropdown-menu-header-font-size: 12px;
 $dropdown-menu-header-text-color: #888888;
 $dropdown-menu-header-margin-left: 10px;
-$dropdown-menu-header-margin-y: 6px;
+$dropdown-menu-header-margin-y: 2px;
 
 $dropdown-menu-divider-border: 2px solid #CCCCCC;
 $dropdown-menu-divider-margin: 0;
+
+// -------------------- Dark Mode --------------------
+$dropdown-menu-background-dark: #121212;
+$dropdown-menu-border-dark: 2px solid #AAAAAA;
+$dropdown-menu-shadow-dark: none;
+
+$dropdown-item-text-color-dark: #FCFCFC;
+
+$dropdown-item-hover-degree-dark: 500;
+$dropdown-item-hover-background-dark: map.get($color-primary-map, #{$dropdown-item-hover-degree});
+$dropdown-item-hover-text-color-dark: func-text-color(primary, $dropdown-item-hover-degree);
+
+$dropdown-menu-header-text-color-dark: #888888;
+
+$dropdown-menu-divider-border-dark: 2px solid #222222;
+
+// --------------------CSS Variables --------------------
+:root {
+  --dropdown-menu-background: #{$dropdown-menu-background};
+  --dropdown-menu-border: #{$dropdown-menu-border};
+  --dropdown-menu-border-radius: #{$dropdown-menu-border-radius};
+  --dropdown-menu-shadow: #{$dropdown-menu-shadow};
+  --dropdown-menu-padding-x: #{$dropdown-menu-padding-x};
+  --dropdown-menu-padding-y: #{$dropdown-menu-padding-y};
+  --dropdown-menu-width: #{$dropdown-menu-width};
+  
+  --dropdown-item-border-radius: #{$dropdown-item-border-radius};
+  --dropdown-item-text-color: #{$dropdown-item-text-color};
+  --dropdown-item-padding-x: #{$dropdown-item-padding-x};
+  --dropdown-item-padding-y: #{$dropdown-item-padding-y};
+  
+  --dropdown-item-hover-background: #{$dropdown-item-hover-background};
+  --dropdown-item-hover-text-color: #{$dropdown-item-hover-text-color};
+  
+  --dropdown-menu-header-font-size: #{$dropdown-menu-header-font-size};
+  --dropdown-menu-header-text-color: #{$dropdown-menu-header-text-color};
+  --dropdown-menu-header-margin-left: #{$dropdown-menu-header-margin-left};
+  --dropdown-menu-header-margin-y: #{$dropdown-menu-header-margin-y};
+  
+  --dropdown-menu-divider-border: #{$dropdown-menu-divider-border};
+  --dropdown-menu-divider-margin: #{$dropdown-menu-divider-margin};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --dropdown-menu-background: #{$dropdown-menu-background-dark};
+    --dropdown-menu-border: #{$dropdown-menu-border-dark};
+    --dropdown-menu-shadow: #{$dropdown-menu-shadow-dark};
+    
+    --dropdown-item-text-color: #{$dropdown-item-text-color-dark};
+    
+    --dropdown-item-hover-background: #{$dropdown-item-hover-background-dark};
+    --dropdown-item-hover-text-color: #{$dropdown-item-hover-text-color-dark};
+    
+    --dropdown-menu-header-text-color: #{$dropdown-menu-header-text-color-dark};
+    
+    --dropdown-menu-divider-border: #{$dropdown-menu-divider-border-dark};
+  }
+}
+
+[dark-mode] {
+  --dropdown-menu-background: #{$dropdown-menu-background-dark};
+  --dropdown-menu-border: #{$dropdown-menu-border-dark};
+  --dropdown-menu-shadow: #{$dropdown-menu-shadow-dark};
+    
+  --dropdown-item-text-color: #{$dropdown-item-text-color-dark};
+    
+  --dropdown-item-hover-background: #{$dropdown-item-hover-background-dark};
+  --dropdown-item-hover-text-color: #{$dropdown-item-hover-text-color-dark};
+    
+  --dropdown-menu-header-text-color: #{$dropdown-menu-header-text-color-dark};
+    
+  --dropdown-menu-divider-border: #{$dropdown-menu-divider-border-dark};
+}

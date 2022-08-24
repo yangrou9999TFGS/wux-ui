@@ -3,6 +3,10 @@
 
 @import "../customize/utilities/borders";
 
+[border-width] {
+	border-width: attr(border-width);
+}
+
 // Border-Bolder
 @for $count from 1 through $borders-count {
 	.#{$prefix}border-#{$count} {

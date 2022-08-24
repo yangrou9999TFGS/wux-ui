@@ -1,5 +1,14 @@
 
 /* WuX-UI Components-Loading [Customize] */
 
-$loading-speed: 1s;
-$loading-circle-width: 3px;
+$loading-speed: 0.8s;
+$loading-circle-width: 2.5px;
+
+// -------------------- Dark Mode --------------------
+// This Components doesn't support DarkMode Setting~
+
+// -------------------- CSS Variables --------------------
+:root {
+  --loading-speed: #{$loading-speed};
+  --loading-circle-width: #{$loading-circle-width};
+}

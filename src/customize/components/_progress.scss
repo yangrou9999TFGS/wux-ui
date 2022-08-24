@@ -7,3 +7,32 @@ $progress-border-color: #CCCCCC;
 $progress-border-radius: 8px;
 $progress-height: 16px;
 $progress-line-color: map.get($color-primary-map, "500");
+
+// -------------------- Dark Mode --------------------
+$progress-background-color-dark: #121212;
+$progress-border-color-dark: #888888;
+$progress-line-color-dark: map.get($color-primary-map, "500");
+
+// -------------------- CSS Variables --------------------
+:root {
+  --progress-background-color: #{$progress-background-color};
+  --progress-border-width: #{$progress-border-width};
+  --progress-border-color: #{$progress-border-color};
+  --progress-border-radius: #{$progress-border-radius};
+  --progress-height: #{$progress-height};
+  --progress-line-color: #{$progress-line-color};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --progress-background-color: #{$progress-background-color-dark};
+    --progress-border-color: #{$progress-border-color-dark};
+    --progress-line-color: #{$progress-line-color-dark};
+  }
+}
+
+[dark-mode] {
+  --progress-background-color: #{$progress-background-color-dark};
+  --progress-border-color: #{$progress-border-color-dark};
+  --progress-line-color: #{$progress-line-color-dark};
+}

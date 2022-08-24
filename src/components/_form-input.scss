@@ -11,62 +11,74 @@
 	appearance: none;
 	  -webkit-appearance: none;
 	  -moz-appearance: none;
-	background: $form-input-background;
-	border: $form-input-border-width solid $form-input-border-color;
-	border-radius: $form-input-border-radius;
+	background: var(--form-input-background);
+	border: var(--form-input-border-width) solid var(--form-input-border-color);
+	border-radius: var(--form-input-border-radius);
 	-webkit-box-sizing: border-box; 
     -moz-box-sizing: border-box; 
     box-sizing: border-box; 
-	color: $form-input-text-color;
+	color: var(--form-input-text-color);
 	margin: 0;
-	margin-bottom: $form-input-margin-bottom;
+	margin-bottom: var(--form-input-margin-bottom);
 	resize: none;
 	max-width: auto;
-	transition: $global-animation-speed;
-	  -webkit-transition: $global-animation-speed;
+	transition: var(--global-animation-speed);
+	  -webkit-transition: var(--global-animation-speed);
 
   // Default
-	padding: map.get($form-input-padding-x-map, "md") map.get($form-input-padding-x-map, "md");
+	padding: var(--form-input-padding-y-md) var(--form-input-padding-x-md);
 
-	&:hover {
-		box-shadow: $form-input-hover-shadow;
-		background: $form-input-hover-background;
-		border: $form-input-hover-border-width solid $form-input-hover-border-color;
-		color: $form-input-hover-text-color;
+	&:hover:not(:disabled):not(:focus):not(:invalid) {
+		box-shadow: var(--form-input-hover-shadow);
+		background: var(--form-input-hover-background);
+		border: var(--form-input-hover-border-width) solid var(--form-input-hover-border-color);
+		color: var(--form-input-hover-text-color);
 		outline: none;
 	}
 
 	&:focus {
-		box-shadow: $form-input-focus-shadow;
-		background: $form-input-focus-background;
-		border: $form-input-focus-border-width solid $form-input-focus-border-color;
-		color: $form-input-focus-text-color;
+		box-shadow: var(--form-input-focus-shadow);
+		background: var(--form-input-focus-background);
+		border: var(--form-input-focus-border-width) solid var(--form-input-focus-border-color);
+		color: var(--form-input-focus-text-color);
 		outline: none;
 	}
 
 	&:invalid {
-		box-shadow: $form-input-invalid-shadow;
-		background: $form-input-invalid-background;
-		border: $form-input-invalid-border-width solid $form-input-invalid-border-color;
-		color: $form-input-invalid-text-color;
+		box-shadow: var(--form-input-invalid-shadow);
+		background: var(--form-input-invalid-background);
+		border: var(--form-input-invalid-border-width) solid var(--form-input-invalid-border-color);
+		color: var(--form-input-invalid-text-color);
 		outline: none;
 	}
 
 	&:disabled {
-		opacity: $form-input-disabled-opacity;
+		opacity: var(--form-input-disabled-opacity);
 	}
 
 	&:-webkit-autofill {
 		background-color: transparent;
     background-image: none;
-    transition: background-color 500000s ease-in-out 0s;
+    transition: background-color 99999999s ease-in-out 0s;
+	}
+	
+	&::placeholder {
+		color: #CCCCCC;
+	}
+	
+	&::-webkit-placeholder {
+		color: #CCCCCC;
+	}
+	
+	&::-moz-placeholder {
+		color: #CCCCCC;
 	}
 }
 
 @each $size-name in $imported-size {
 	.#{$prefix}form-input-#{$size-name} {
-		padding: map.get($form-input-padding-y-map, #{$size-name}) map.get($form-input-padding-x-map, #{$size-name});
-		font-size: map.get($form-input-font-size-map, #{$size-name});
-		border-radius: map.get($form-input-border-map, #{$size-name});
+		padding: var(--form-input-padding-y-#{$size-name}) var(--form-input-padding-x-#{$size-name});
+		font-size: var(--form-input-font-size-#{$size-name});
+		border-radius: var(--form-input-border-radius-#{$size-name});
 	}
 }

@@ -6,17 +6,17 @@
 .#{$prefix}tag {
 	position: static;
 
-	border-radius: $tag-border-radius;
-	padding: $tag-padding;
-	margin-right: $tag-margin;
+	border-radius: var(--tag-border-radius);
+	padding: var(--tag-padding);
+	margin-right: var(--tag-margin);
 
 	user-select: none;
 	  -webkit-user-select: none;
 	  -moz-user-select: none;
 
 	// Default
-	background-color: map.get($tag-background-map, primary);
-	color: map.get($tag-text-map, primary);
+	background-color: var(--tag-background-color-primary);
+	color: var(--tag-text-color-primary);
 
 	.#{$prefix}tag-close {
 		cursor: pointer;
@@ -26,7 +26,7 @@
 
 @each $color-name in $imported-colors {
 	.#{$prefix}tag-#{$color-name} {
-		background-color: map.get($tag-background-map, #{$color-name});
-		color: map.get($tag-text-map, #{$color-name});
+		background-color: var(--tag-background-color-#{$color-name});
+		color: var(--tag-text-color-#{$color-name});
 	}
 };

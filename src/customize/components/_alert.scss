@@ -16,39 +16,195 @@ $alert-icon-degree: 500;
 $alert-background-color-map: (
 	primary: map.get($color-primary-map, #{$alert-background-degree}),
 	secondary: map.get($color-secondary-map, #{$alert-background-degree}),
- 	success: map.get($color-success-map, #{$alert-background-degree}),
- 	info: map.get($color-info-map, #{$alert-background-degree}),
+	success: map.get($color-success-map, #{$alert-background-degree}),
+	info: map.get($color-info-map, #{$alert-background-degree}),
 	warning: map.get($color-warning-map, #{$alert-background-degree}),
- 	error: map.get($color-error-map, #{$alert-background-degree}),
- 	light: map.get($color-light-map, #{$alert-background-degree})
+	error: map.get($color-error-map, #{$alert-background-degree}),
+	light: map.get($color-light-map, #{$alert-background-degree})
 );
 
 $alert-border-color-map: (
 	primary: map.get($color-primary-map, #{$alert-border-degree}),
- 	secondary: map.get($color-secondary-map, #{$alert-border-degree}),
- 	success: map.get($color-success-map, #{$alert-border-degree}),
- 	info: map.get($color-info-map, #{$alert-border-degree}),
- 	warning: map.get($color-warning-map, #{$alert-border-degree}),
- 	error: map.get($color-error-map, #{$alert-border-degree}),
- 	light: map.get($color-light-map, #{$alert-border-degree})
+	secondary: map.get($color-secondary-map, #{$alert-border-degree}),
+	success: map.get($color-success-map, #{$alert-border-degree}),
+	info: map.get($color-info-map, #{$alert-border-degree}),
+	warning: map.get($color-warning-map, #{$alert-border-degree}),
+	error: map.get($color-error-map, #{$alert-border-degree}),
+	light: map.get($color-light-map, #{$alert-border-degree})
 );
 
 $alert-text-color-map: (
 	primary: func-text-color(primary,$alert-background-degree),
- 	secondary: func-text-color(secondary,$alert-background-degree),
- 	success: func-text-color(success,$alert-background-degree),
- 	info: func-text-color(info,$alert-background-degree),
- 	warning: func-text-color(warning,$alert-background-degree),
- 	error: func-text-color(error,$alert-background-degree),
- 	light: func-text-color(light,$alert-background-degree)
+	secondary: func-text-color(secondary,$alert-background-degree),
+	success: func-text-color(success,$alert-background-degree),
+	info: func-text-color(info,$alert-background-degree),
+	warning: func-text-color(warning,$alert-background-degree),
+	error: func-text-color(error,$alert-background-degree),
+	light: func-text-color(light,$alert-background-degree)
 );
 
 $alert-icon-color-map: (
 	primary: map.get($color-primary-map, #{$alert-icon-degree}),
- 	secondary: map.get($color-secondary-map, #{$alert-icon-degree}),
- 	success: map.get($color-success-map, #{$alert-icon-degree}),
- 	info: map.get($color-info-map, #{$alert-icon-degree}),
- 	warning: map.get($color-warning-map, #{$alert-icon-degree}),
- 	error: map.get($color-error-map, #{$alert-icon-degree}),
- 	light: map.get($color-light-map, #{$alert-icon-degree})
+	secondary: map.get($color-secondary-map, #{$alert-icon-degree}),
+	success: map.get($color-success-map, #{$alert-icon-degree}),
+	info: map.get($color-info-map, #{$alert-icon-degree}),
+	warning: map.get($color-warning-map, #{$alert-icon-degree}),
+	error: map.get($color-error-map, #{$alert-icon-degree}),
+	light: map.get($color-light-map, #{$alert-icon-degree})
 );
+
+// -------------------- Dark Mode --------------------
+$alert-background-degree-dark: 400;
+$alert-border-degree-dark: 600;
+$alert-icon-degree-dark: 100;
+
+$alert-background-color-map-dark: (
+	primary: map.get($color-primary-map, #{$alert-background-degree-dark}),
+	secondary: map.get($color-secondary-map, #{$alert-background-degree-dark}),
+	success: map.get($color-success-map, #{$alert-background-degree-dark}),
+	info: map.get($color-info-map, #{$alert-background-degree-dark}),
+	warning: map.get($color-warning-map, #{$alert-background-degree-dark}),
+	error: map.get($color-error-map, #{$alert-background-degree-dark}),
+	light: map.get($color-light-map, #{$alert-background-degree-dark})
+);
+
+$alert-border-color-map-dark: (
+	primary: map.get($color-primary-map, #{$alert-border-degree-dark}),
+	secondary: map.get($color-secondary-map, #{$alert-border-degree-dark}),
+	success: map.get($color-success-map, #{$alert-border-degree-dark}),
+	info: map.get($color-info-map, #{$alert-border-degree-dark}),
+	warning: map.get($color-warning-map, #{$alert-border-degree-dark}),
+	error: map.get($color-error-map, #{$alert-border-degree-dark}),
+	light: map.get($color-light-map, #{$alert-border-degree-dark})
+);
+
+$alert-text-color-map-dark: (
+	primary: func-text-color(primary,$alert-background-degree-dark),
+	secondary: func-text-color(secondary,$alert-background-degree-dark),
+	success: func-text-color(success,$alert-background-degree-dark),
+	info: func-text-color(info,$alert-background-degree-dark),
+	warning: func-text-color(warning,$alert-background-degree-dark),
+	error: func-text-color(error,$alert-background-degree-dark),
+	light: func-text-color(light,$alert-background-degree-dark)
+);
+
+$alert-icon-color-map-dark: (
+	primary: map.get($color-primary-map, #{$alert-icon-degree-dark}),
+	secondary: map.get($color-secondary-map, #{$alert-icon-degree-dark}),
+	success: map.get($color-success-map, #{$alert-icon-degree-dark}),
+	info: map.get($color-info-map, #{$alert-icon-degree-dark}),
+	warning: map.get($color-warning-map, #{$alert-icon-degree-dark}),
+	error: map.get($color-error-map, #{$alert-icon-degree-dark}),
+	light: map.get($color-light-map, #{$alert-icon-degree-dark})
+);
+
+// -------------------- CSS Variables --------------------
+:root {
+	--alert-border-radius: #{$alert-border-radius};
+	--alert-border-width: #{$alert-border-width};
+	--alert-font-size: #{$alert-font-size};
+	--alert-padding: #{$alert-padding};
+	--alert-margin-bottom: #{$alert-margin-bottom};
+
+	--alert-background-color-primary: #{map.get($alert-background-color-map, primary)};
+	--alert-background-color-secondary: #{map.get($alert-background-color-map, secondary)};
+	--alert-background-color-success: #{map.get($alert-background-color-map, success)};
+	--alert-background-color-info: #{map.get($alert-background-color-map, info)};
+	--alert-background-color-warning: #{map.get($alert-background-color-map, warning)};
+	--alert-background-color-error: #{map.get($alert-background-color-map, error)};
+	--alert-background-color-light: #{map.get($alert-background-color-map, light)};
+
+	--alert-border-color-primary: #{map.get($alert-border-color-map, primary)};
+	--alert-border-color-secondary: #{map.get($alert-border-color-map, secondary)};
+	--alert-border-color-success: #{map.get($alert-border-color-map, success)};
+	--alert-border-color-info: #{map.get($alert-border-color-map, info)};
+	--alert-border-color-warning: #{map.get($alert-border-color-map, warning)};
+	--alert-border-color-error: #{map.get($alert-border-color-map, error)};
+	--alert-border-color-light: #{map.get($alert-border-color-map, light)};
+
+	--alert-text-color-primary: #{map.get($alert-text-color-map, primary)};
+	--alert-text-color-secondary: #{map.get($alert-text-color-map, secondary)};
+	--alert-text-color-success: #{map.get($alert-text-color-map, success)};
+	--alert-text-color-info: #{map.get($alert-text-color-map, info)};
+	--alert-text-color-warning: #{map.get($alert-text-color-map, warning)};
+	--alert-text-color-error: #{map.get($alert-text-color-map, error)};
+	--alert-text-color-light: #{map.get($alert-text-color-map, light)};
+
+	--alert-icon-color-primary: #{map.get($alert-icon-color-map, primary)};
+	--alert-icon-color-secondary: #{map.get($alert-icon-color-map, secondary)};
+	--alert-icon-color-success: #{map.get($alert-icon-color-map, success)};
+	--alert-icon-color-info: #{map.get($alert-icon-color-map, info)};
+	--alert-icon-color-warning: #{map.get($alert-icon-color-map, warning)};
+	--alert-icon-color-error: #{map.get($alert-icon-color-map, error)};
+	--alert-icon-color-light: #{map.get($alert-icon-color-map, light)};
+}
+
+@media (refers-color-scheme: dark) {
+	:root {
+		--alert-background-color-primary: #{map.get($alert-background-color-map-dark, primary)};
+		--alert-background-color-secondary: #{map.get($alert-background-color-map-dark, secondary)};
+		--alert-background-color-success: #{map.get($alert-background-color-map-dark, success)};
+		--alert-background-color-info: #{map.get($alert-background-color-map-dark, info)};
+		--alert-background-color-warning: #{map.get($alert-background-color-map-dark, warning)};
+		--alert-background-color-error: #{map.get($alert-background-color-map-dark, error)};
+		--alert-background-color-light: #{map.get($alert-background-color-map-dark, light)};
+
+		--alert-border-color-primary: #{map.get($alert-border-color-map-dark, primary)};
+		--alert-border-color-secondary: #{map.get($alert-border-color-map-dark, secondary)};
+		--alert-border-color-success: #{map.get($alert-border-color-map-dark, success)};
+		--alert-border-color-info: #{map.get($alert-border-color-map-dark, info)};
+		--alert-border-color-warning: #{map.get($alert-border-color-map-dark, warning)};
+		--alert-border-color-error: #{map.get($alert-border-color-map-dark, error)};
+		--alert-border-color-light: #{map.get($alert-border-color-map-dark, light)};
+
+		--alert-text-color-primary: #{map.get($alert-text-color-map-dark, primary)};
+		--alert-text-color-secondary: #{map.get($alert-text-color-map-dark, secondary)};
+		--alert-text-color-success: #{map.get($alert-text-color-map-dark, success)};
+		--alert-text-color-info: #{map.get($alert-text-color-map-dark, info)};
+		--alert-text-color-warning: #{map.get($alert-text-color-map-dark, warning)};
+		--alert-text-color-error: #{map.get($alert-text-color-map-dark, error)};
+		--alert-text-color-light: #{map.get($alert-text-color-map-dark, light)};
+
+		--alert-icon-color-primary: #{map.get($alert-icon-color-map-dark, primary)};
+		--alert-icon-color-secondary: #{map.get($alert-icon-color-map-dark, secondary)};
+		--alert-icon-color-success: #{map.get($alert-icon-color-map-dark, success)};
+		--alert-icon-color-info: #{map.get($alert-icon-color-map-dark, info)};
+		--alert-icon-color-warning: #{map.get($alert-icon-color-map-dark, warning)};
+		--alert-icon-color-error: #{map.get($alert-icon-color-map-dark, error)};
+		--alert-icon-color-light: #{map.get($alert-icon-color-map-dark, light)};
+	}
+}
+
+[dark-mode] {
+	--alert-background-color-primary: #{map.get($alert-background-color-map-dark, primary)};
+	--alert-background-color-secondary: #{map.get($alert-background-color-map-dark, secondary)};
+	--alert-background-color-success: #{map.get($alert-background-color-map-dark, success)};
+	--alert-background-color-info: #{map.get($alert-background-color-map-dark, info)};
+	--alert-background-color-warning: #{map.get($alert-background-color-map-dark, warning)};
+	--alert-background-color-error: #{map.get($alert-background-color-map-dark, error)};
+	--alert-background-color-light: #{map.get($alert-background-color-map-dark, light)};
+
+	--alert-border-color-primary: #{map.get($alert-border-color-map-dark, primary)};
+	--alert-border-color-secondary: #{map.get($alert-border-color-map-dark, secondary)};
+	--alert-border-color-success: #{map.get($alert-border-color-map-dark, success)};
+	--alert-border-color-info: #{map.get($alert-border-color-map-dark, info)};
+	--alert-border-color-warning: #{map.get($alert-border-color-map-dark, warning)};
+	--alert-border-color-error: #{map.get($alert-border-color-map-dark, error)};
+	--alert-border-color-light: #{map.get($alert-border-color-map-dark, light)};
+
+	--alert-text-color-primary: #{map.get($alert-text-color-map-dark, primary)};
+	--alert-text-color-secondary: #{map.get($alert-text-color-map-dark, secondary)};
+	--alert-text-color-success: #{map.get($alert-text-color-map-dark, success)};
+	--alert-text-color-info: #{map.get($alert-text-color-map-dark, info)};
+	--alert-text-color-warning: #{map.get($alert-text-color-map-dark, warning)};
+	--alert-text-color-error: #{map.get($alert-text-color-map-dark, error)};
+	--alert-text-color-light: #{map.get($alert-text-color-map-dark, light)};
+
+	--alert-icon-color-primary: #{map.get($alert-icon-color-map-dark, primary)};
+	--alert-icon-color-secondary: #{map.get($alert-icon-color-map-dark, secondary)};
+	--alert-icon-color-success: #{map.get($alert-icon-color-map-dark, success)};
+	--alert-icon-color-info: #{map.get($alert-icon-color-map-dark, info)};
+	--alert-icon-color-warning: #{map.get($alert-icon-color-map-dark, warning)};
+	--alert-icon-color-error: #{map.get($alert-icon-color-map-dark, error)};
+	--alert-icon-color-light: #{map.get($alert-icon-color-map-dark, light)};
+}

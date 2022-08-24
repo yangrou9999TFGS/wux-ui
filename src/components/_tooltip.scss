@@ -7,14 +7,14 @@
 	.#{$prefix}tooltip-item {
 	  position: absolute;
 
-		border-radius: $tooltip-border-radius;
+		border-radius: var(--tooltip-border-radius);
 		background-color: #000000;
-		font-size: $tooltip-font-size;
+		font-size: var(--tooltip-font-size);
 		opacity: 0;
-		padding: $tooltip-padding;
+		padding: var(--tooltip-padding);
     visibility: hidden;
-    transition: $global-animation-speed;
-      -webkit-transition: $global-animation-speed;
+    transition: var(--global-animation-speed);
+      -webkit-transition: var(--global-animation-speed);
     z-index: 1;
 	}
 

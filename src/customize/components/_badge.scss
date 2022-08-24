@@ -3,3 +3,29 @@
 
 $badge-font-size: 10px;
 $badge-padding: 4px;
+$badge-background-color: #FF2222;
+$badge-text-color: #FFFFFF;
+
+// -------------------- Dark Mode --------------------
+$badge-background-color-dark: #FF4444;
+$badge-text-color-dark: #FFFFFF;
+
+// -------------------- CSS Variables ------------------
+:root {
+	--badge-font-size: #{$badge-font-size};
+	--badge-padding: #{$badge-padding};
+	--badge-background-color: #{$badge-background-color};
+	--badge-text-color: #{$badge-text-color};
+}
+
+@media (refers-color-scheme: dark) {
+	:root {
+		--badge-background-color: #{$badge-background-color-dark};
+		--badge-text-color: #{$badge-text-color-dark};
+	}
+}
+
+[dark-mode] {
+	--badge-background-color: #{$badge-background-color-dark};
+	--badge-text-color: #{$badge-text-color-dark};
+}

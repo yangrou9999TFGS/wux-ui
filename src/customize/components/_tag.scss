@@ -5,23 +5,106 @@ $tag-border-radius: 4px;
 $tag-margin: 2px;
 $tag-padding: 6px 8px;
 
-$tag-background-degree: 200;
-$tag-background-map: (
-	"primary": map.get($color-primary-map, #{$tag-background-degree}),
-	"secondary": map.get($color-secondary-map, #{$tag-background-degree}),
-	"success": map.get($color-success-map, #{$tag-background-degree}),
-	"info": map.get($color-info-map, #{$tag-background-degree}),
-	"warning": map.get($color-warning-map, #{$tag-background-degree}),
-	"error": map.get($color-error-map, #{$tag-background-degree}),
-	"light": map.get($color-light-map, #{$tag-background-degree})
+$tag-background-color-degree: 200;
+$tag-background-color-map: (
+	"primary": map.get($color-primary-map, #{$tag-background-color-degree}),
+	"secondary": map.get($color-secondary-map, #{$tag-background-color-degree}),
+	"success": map.get($color-success-map, #{$tag-background-color-degree}),
+	"info": map.get($color-info-map, #{$tag-background-color-degree}),
+	"warning": map.get($color-warning-map, #{$tag-background-color-degree}),
+	"error": map.get($color-error-map, #{$tag-background-color-degree}),
+	"light": map.get($color-light-map, #{$tag-background-color-degree})
 );
 
-$tag-text-map: (
-	"primary": func-text-color(primary, $tag-background-degree),
-	"secondary": func-text-color(secondary, $tag-background-degree),
-	"success": func-text-color(success, $tag-background-degree),
-	"info": func-text-color(info, $tag-background-degree),
-	"warning": func-text-color(warning, $tag-background-degree),
-	"error": func-text-color(error, $tag-background-degree),
-	"light": func-text-color(light, $tag-background-degree)
+$tag-text-color-map: (
+	"primary": func-text-color(primary, $tag-background-color-degree),
+	"secondary": func-text-color(secondary, $tag-background-color-degree),
+	"success": func-text-color(success, $tag-background-color-degree),
+	"info": func-text-color(info, $tag-background-color-degree),
+	"warning": func-text-color(warning, $tag-background-color-degree),
+	"error": func-text-color(error, $tag-background-color-degree),
+	"light": func-text-color(light, $tag-background-color-degree)
 );
+
+// -------------------- Dark Mode --------------------
+$tag-background-color-degree-dark: 300;
+$tag-background-color-map-dark: (
+	"primary": map.get($color-primary-map, #{$tag-background-color-degree-dark}),
+	"secondary": map.get($color-secondary-map, #{$tag-background-color-degree-dark}),
+	"success": map.get($color-success-map, #{$tag-background-color-degree-dark}),
+	"info": map.get($color-info-map, #{$tag-background-color-degree-dark}),
+	"warning": map.get($color-warning-map, #{$tag-background-color-degree-dark}),
+	"error": map.get($color-error-map, #{$tag-background-color-degree-dark}),
+	"light": map.get($color-light-map, #{$tag-background-color-degree-dark})
+);
+
+$tag-text-color-map-dark: (
+	"primary": func-text-color(primary, $tag-background-color-degree-dark),
+	"secondary": func-text-color(secondary, $tag-background-color-degree-dark),
+	"success": func-text-color(success, $tag-background-color-degree-dark),
+	"info": func-text-color(info, $tag-background-color-degree-dark),
+	"warning": func-text-color(warning, $tag-background-color-degree-dark),
+	"error": func-text-color(error, $tag-background-color-degree-dark),
+	"light": func-text-color(light, $tag-background-color-degree-dark)
+);
+
+// -------------------- CSS Variables --------------------
+:root {
+	--tag-border-radius: #{$tag-border-radius};
+	--tag-margin: #{$tag-margin};
+	--tag-padding: #{$tag-padding};
+
+	--tag-background-color-primary: #{map.get($tag-background-color-map, primary)};
+	--tag-background-color-secondary: #{map.get($tag-background-color-map, secondary)};
+	--tag-background-color-success: #{map.get($tag-background-color-map, success)};
+	--tag-background-color-info: #{map.get($tag-background-color-map, info)};
+	--tag-background-color-warning: #{map.get($tag-background-color-map, warning)};
+	--tag-background-color-error: #{map.get($tag-background-color-map, error)};
+	--tag-background-color-light: #{map.get($tag-background-color-map, light)};
+
+	--tag-text-color-primary: #{map.get($tag-text-color-map, primary)};
+	--tag-text-color-secondary: #{map.get($tag-text-color-map, secondary)};
+	--tag-text-color-success: #{map.get($tag-text-color-map, success)};
+	--tag-text-color-info: #{map.get($tag-text-color-map, info)};
+	--tag-text-color-warning: #{map.get($tag-text-color-map, warning)};
+	--tag-text-color-error: #{map.get($tag-text-color-map, error)};
+	--tag-text-color-light: #{map.get($tag-text-color-map, light)};
+}
+
+@media (refers-color-scheme: dark) {
+	:root {
+		--tag-background-color-primary: #{map.get($tag-background-color-map-dark, primary)};
+		--tag-background-color-secondary: #{map.get($tag-background-color-map-dark, secondary)};
+		--tag-background-color-success: #{map.get($tag-background-color-map-dark, success)};
+		--tag-background-color-info: #{map.get($tag-background-color-map-dark, info)};
+		--tag-background-color-warning: #{map.get($tag-background-color-map-dark, warning)};
+		--tag-background-color-error: #{map.get($tag-background-color-map-dark, error)};
+		--tag-background-color-light: #{map.get($tag-background-color-map-dark, light)};
+
+		--tag-text-color-primary: #{map.get($tag-text-color-map-dark, primary)};
+		--tag-text-color-secondary: #{map.get($tag-text-color-map-dark, secondary)};
+		--tag-text-color-success: #{map.get($tag-text-color-map-dark, success)};
+		--tag-text-color-info: #{map.get($tag-text-color-map-dark, info)};
+		--tag-text-color-warning: #{map.get($tag-text-color-map-dark, warning)};
+		--tag-text-color-error: #{map.get($tag-text-color-map-dark, error)};
+		--tag-text-color-light: #{map.get($tag-text-color-map-dark, light)};
+	}
+}
+
+[dark-mode] {
+	--tag-background-color-primary: #{map.get($tag-background-color-map-dark, primary)};
+	--tag-background-color-secondary: #{map.get($tag-background-color-map-dark, secondary)};
+	--tag-background-color-success: #{map.get($tag-background-color-map-dark, success)};
+	--tag-background-color-info: #{map.get($tag-background-color-map-dark, info)};
+	--tag-background-color-warning: #{map.get($tag-background-color-map-dark, warning)};
+	--tag-background-color-error: #{map.get($tag-background-color-map-dark, error)};
+	--tag-background-color-light: #{map.get($tag-background-color-map-dark, light)};
+
+	--tag-text-color-primary: #{map.get($tag-text-color-map-dark, primary)};
+	--tag-text-color-secondary: #{map.get($tag-text-color-map-dark, secondary)};
+	--tag-text-color-success: #{map.get($tag-text-color-map-dark, success)};
+	--tag-text-color-info: #{map.get($tag-text-color-map-dark, info)};
+	--tag-text-color-warning: #{map.get($tag-text-color-map-dark, warning)};
+	--tag-text-color-error: #{map.get($tag-text-color-map-dark, error)};
+	--tag-text-color-light: #{map.get($tag-text-color-map-dark, light)};
+}

@@ -7,27 +7,31 @@
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;// No List-Dot
-	background-color: $breadcrumb-background-color;
-	border-radius: $breadcrumb-border-radius;
-	padding: $breadcrumb-padding-y $breadcrumb-padding-x;
-	margin-bottom: $breadcrumb-margin-bottom;
+
+	background-color: var(--breadcrumb-background-color);
+	border: var(--breadcrumb-border);
+	border-radius: var(--breadcrumb-border-radius);
+	color: var(--breadcrumb-color);
+	padding: var(--breadcrumb-padding-y) var(--breadcrumb-padding-x);
+	margin-bottom: var(--breadcrumb-margin-bottom);
 }
 
 .#{$prefix}breadcrumb-item {
-	font-size: $breadcrumb-font-size;
+	font-size: var(--breadcrumb-font-size);
 
   + .#{$prefix}breadcrumb-item {
-  	padding-left: $breadcrumb-padding-item-x;
+  	padding-left: var(--breadcrumb-padding-item-x);
+
     &::before {
     	float: left;
-    	padding-right: $breadcrumb-padding-item-x;
+    	padding-right: var(--breadcrumb-padding-item-x);
     	content: $breadcrumb-content;
     }
   }
 
   a {
     text-decoration: none;
-    color: $breadcrumb-item-link-color;
+    color: var(--breadcrumb-item-link-color);
 
     &:hover {
     	text-decoration: underline;

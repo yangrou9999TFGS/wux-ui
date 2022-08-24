@@ -6,17 +6,17 @@
 .#{$prefix}blankslate {
 	margin-right: auto;
 	margin-left: auto;
-	width: $blankslate-width;
+	width: var(--blankslate-width);
 	text-align: center;
 
 	.#{$prefix}blankslate-title {
-		font-size: $blankslate-title-font-size;
-		color: $blankslate-title-text-color;
+		font-size: var(--blankslate-title-font-size);
+		color: var(--blankslate-title-text-color);
 	}
 
 	.#{$prefix}blankslate-subtitle {
-		font-size: $blankslate-subtitle-font-size;
-		color: $blankslate-subtitle-text-color;
+		font-size: var(--blankslate-subtitle-font-size);
+		color: var(--blankslate-subtitle-text-color);
 	}
 
 	.#{$prefix}blankslate-button-group {
@@ -29,9 +29,9 @@
 	}
 
 	.#{$prefix}blankslate-icon {
-		width: $blankslate-icon-size;
-		height: $blankslate-icon-size;
+		width: var(--blankslate-icon-size);
+		height: var(--blankslate-icon-size);
 
-		border-radius: $blankslate-icon-border-radius;
+		border-radius: var(--blankslate-icon-border-radius);
 	}
 }

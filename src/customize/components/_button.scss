@@ -12,7 +12,7 @@ $button-fab-hover-shadow: 1px 1px 6px 2px #888888;
 
 $button-imported-size: xs, sm, md, lg, xl;
 // Size
-// 纵
+
 $button-padding-y-map: (
 	xs: 4px,
 	sm: 6px,
@@ -20,7 +20,7 @@ $button-padding-y-map: (
 	lg: 14px,
 	xl: 18px
 );
-// 横
+
 $button-padding-x-map: (
 	xs: 10px,
 	sm: 12px,
@@ -43,32 +43,32 @@ $button-border-degree: 600;
 
 $button-background-color-map: (
 	primary: map.get($color-primary-map, #{$button-background-degree}),
- 	secondary: map.get($color-secondary-map, #{$button-background-degree}),
- 	success: map.get($color-success-map, #{$button-background-degree}),
- 	info: map.get($color-info-map, #{$button-background-degree}),
- 	warning: map.get($color-warning-map, #{$button-background-degree}),
- 	error: map.get($color-error-map, #{$button-background-degree}),
- 	light: map.get($color-light-map, #{$button-background-degree})
+	secondary: map.get($color-secondary-map, #{$button-background-degree}),
+	success: map.get($color-success-map, #{$button-background-degree}),
+	info: map.get($color-info-map, #{$button-background-degree}),
+	warning: map.get($color-warning-map, #{$button-background-degree}),
+	error: map.get($color-error-map, #{$button-background-degree}),
+	light: map.get($color-light-map, #{$button-background-degree})
 );
 
 $button-border-color-map: (
 	primary: map.get($color-primary-map, #{$button-border-degree}),
- 	secondary: map.get($color-secondary-map, #{$button-border-degree}),
- 	success: map.get($color-success-map, #{$button-border-degree}),
- 	info: map.get($color-info-map, #{$button-border-degree}),
- 	warning: map.get($color-warning-map, #{$button-border-degree}),
- 	error: map.get($color-error-map, #{$button-border-degree}),
- 	light: map.get($color-light-map, #{$button-border-degree})
+	secondary: map.get($color-secondary-map, #{$button-border-degree}),
+	success: map.get($color-success-map, #{$button-border-degree}),
+	info: map.get($color-info-map, #{$button-border-degree}),
+	warning: map.get($color-warning-map, #{$button-border-degree}),
+	error: map.get($color-error-map, #{$button-border-degree}),
+	light: map.get($color-light-map, #{$button-border-degree})
 );
 
 $button-text-color-map: (
-	primary: func-text-color(primary,$button-background-degree),
- 	secondary: func-text-color(secondary,$button-background-degree),
- 	success: func-text-color(success,$button-background-degree),
- 	info: func-text-color(info,$button-background-degree),
- 	warning: func-text-color(warning,$button-background-degree),
- 	error: func-text-color(error,$button-background-degree),
- 	light: func-text-color(light,$button-background-degree)
+	primary: func-text-color(primary, $button-background-degree),
+	secondary: func-text-color(secondary, $button-background-degree),
+	success: func-text-color(success, $button-background-degree),
+	info: func-text-color(info, $button-background-degree),
+	warning: func-text-color(warning, $button-background-degree),
+	error: func-text-color(error, $button-background-degree),
+	light: func-text-color(light, $button-background-degree)
 );
 
 $button-imported-border: square, default, round;
@@ -81,3 +81,168 @@ $button-border-map: (
   default-xl: 16px,
   round: 9999px,
 );
+
+// ------------------- Dark Mode --------------------
+$button-fab-shadow-dark: 1px 1px 4px 1px #000000;
+$button-fab-hover-shadow-dark: 1px 1px 6px 2px #000000;
+
+// Color-Degree
+$button-background-degree-dark: 400;
+$button-border-degree-dark: 500;
+
+$button-background-color-map-dark: (
+  primary: map.get($color-primary-map, #{$button-background-degree-dark}),
+	secondary: map.get($color-secondary-map, #{$button-background-degree-dark}),
+	success: map.get($color-success-map, #{$button-background-degree-dark}),
+	info: map.get($color-info-map, #{$button-background-degree-dark}),
+	warning: map.get($color-warning-map, #{$button-background-degree-dark}),
+	error: map.get($color-error-map, #{$button-background-degree-dark}),
+	light: map.get($color-light-map, #{$button-background-degree-dark})
+);
+
+$button-border-color-map-dark: (
+	primary: map.get($color-primary-map, #{$button-border-degree-dark}),
+	secondary: map.get($color-secondary-map, #{$button-border-degree-dark}),
+	success: map.get($color-success-map, #{$button-border-degree-dark}),
+	info: map.get($color-info-map, #{$button-border-degree-dark}),
+	warning: map.get($color-warning-map, #{$button-border-degree-dark}),
+	error: map.get($color-error-map, #{$button-border-degree-dark}),
+	light: map.get($color-light-map, #{$button-border-degree-dark})
+);
+
+$button-text-color-map-dark: (
+	primary: func-text-color(primary, $button-background-degree-dark),
+  secondary: func-text-color(secondary, $button-background-degree-dark),
+	success: func-text-color(success, $button-background-degree-dark),
+	info: func-text-color(info, $button-background-degree-dark),
+	warning: func-text-color(warning, $button-background-degree-dark),
+	error: func-text-color(error, $button-background-degree-dark),
+	light: func-text-color(light, $button-background-degree-dark)
+);
+
+// -------------------- CSS Variables --------------------
+:root {
+  --button-solid-border-width: #{$button-solid-border-width};
+  --button-outline-border-width: #{$button-outline-border-width};
+  --button-margin-right: #{$button-margin-right};
+  --button-margin-bottom: #{$button-margin-bottom};
+	
+	// FAB
+  --button-fab-shadow: #{$button-fab-shadow};
+  --button-fab-hover-shadow: #{$button-fab-hover-shadow};
+  
+  // Color
+  --button-background-color-primary: #{map.get($button-background-color-map, primary)};
+  --button-background-color-secondary: #{map.get($button-background-color-map, secondary)};
+  --button-background-color-success: #{map.get($button-background-color-map, success)};
+  --button-background-color-info: #{map.get($button-background-color-map, info)};
+  --button-background-color-warning: #{map.get($button-background-color-map, warning)};
+  --button-background-color-error: #{map.get($button-background-color-map, error)};
+  --button-background-color-light: #{map.get($button-background-color-map, light)};
+  
+  --button-border-color-primary: #{map.get($button-border-color-map, primary)};
+  --button-border-color-secondary: #{map.get($button-border-color-map, secondary)};
+  --button-border-color-success: #{map.get($button-border-color-map, success)};
+  --button-border-color-info: #{map.get($button-border-color-map, info)};
+  --button-border-color-warning: #{map.get($button-border-color-map, warning)};
+  --button-border-color-error: #{map.get($button-border-color-map, error)};
+  --button-border-color-light: #{map.get($button-border-color-map, light)};
+  
+  --button-text-color-primary: #{map.get($button-text-color-map, primary)};
+  --button-text-color-secondary: #{map.get($button-text-color-map, secondary)};
+  --button-text-color-success: #{map.get($button-text-color-map, success)};
+  --button-text-color-info: #{map.get($button-text-color-map, info)};
+  --button-text-color-warning: #{map.get($button-text-color-map, warning)};
+  --button-text-color-error: #{map.get($button-text-color-map, error)};
+  --button-text-color-light: #{map.get($button-text-color-map, light)};
+
+		// Border-Radius
+  --button-border-size-square: #{map.get($button-border-map, square)};
+  --button-border-size-default: #{map.get($button-border-map, default-md)};
+  --button-border-size-default-xs: #{map.get($button-border-map, default-xs)};
+  --button-border-size-default-sm: #{map.get($button-border-map, default-sm)};
+  --button-border-size-default-md: #{map.get($button-border-map, default-md)};
+  --button-border-size-default-lg: #{map.get($button-border-map, default-lg)};
+  --button-border-size-default-xl: #{map.get($button-border-map, default-xl)};
+  --button-border-size-round: #{map.get($button-border-map, round)};
+  
+  // Padding
+  --button-padding-x-xs: #{map.get($button-padding-x-map, xs)};
+  --button-padding-x-sm: #{map.get($button-padding-x-map, sm)};
+  --button-padding-x-md: #{map.get($button-padding-x-map, md)};
+  --button-padding-x-lg: #{map.get($button-padding-x-map, lg)};
+  --button-padding-x-xl: #{map.get($button-padding-x-map, xl)};
+  
+  --button-padding-y-xs: #{map.get($button-padding-y-map, xs)};
+  --button-padding-y-sm: #{map.get($button-padding-y-map, sm)};
+  --button-padding-y-md: #{map.get($button-padding-y-map, md)};
+  --button-padding-y-lg: #{map.get($button-padding-y-map, lg)};
+  --button-padding-y-xl: #{map.get($button-padding-y-map, xl)};
+  
+  // Font Size
+  --button-font-size-xs: #{map.get($button-size-map, xs)};
+  --button-font-size-sm: #{map.get($button-size-map, sm)};
+  --button-font-size-md: #{map.get($button-size-map, md)};
+  --button-font-size-lg: #{map.get($button-size-map, lg)};
+  --button-font-size-xl: #{map.get($button-size-map, xl)};
+}
+
+@media (refers-color-scheme: dark) {
+	:root {
+		--button-fab-shadow: #{$button-fab-shadow-dark};
+		--button-fab-hover-shadow: #{$button-fab-hover-shadow-dark};
+  
+		--button-background-color-primary: #{map.get($button-background-color-map-dark, primary)};
+		--button-background-color-secondary: #{map.get($button-background-color-map-dark, secondary)};
+		--button-background-color-success: #{map.get($button-background-color-map-dark, success)};
+		--button-background-color-info: #{map.get($button-background-color-map-dark, info)};
+		--button-background-color-warning: #{map.get($button-background-color-map-dark, warning)};
+		--button-background-color-error: #{map.get($button-background-color-map-dark, error)};
+		--button-background-color-light: #{map.get($button-background-color-map-dark, light)};
+  
+		--button-border-color-primary: #{map.get($button-border-color-map-dark, primary)};
+		--button-border-color-secondary: #{map.get($button-border-color-map-dark, secondary)};
+		--button-border-color-success: #{map.get($button-border-color-map-dark, success)};
+		--button-border-color-info: #{map.get($button-border-color-map-dark, info)};
+		--button-border-color-warning: #{map.get($button-border-color-map-dark, warning)};
+		--button-border-color-error: #{map.get($button-border-color-map-dark, error)};
+		--button-border-color-light: #{map.get($button-border-color-map-dark, light)};
+  
+		--button-text-color-primary: #{map.get($button-text-color-map-dark, primary)};
+		--button-text-color-secondary: #{map.get($button-text-color-map-dark, secondary)};
+		--button-text-color-success: #{map.get($button-text-color-map-dark, success)};
+		--button-text-color-info: #{map.get($button-text-color-map-dark, info)};
+		--button-text-color-warning: #{map.get($button-text-color-map-dark, warning)};
+		--button-text-color-error: #{map.get($button-text-color-map-dark, error)};
+		--button-text-color-light: #{map.get($button-text-color-map-dark, light)};
+	}
+}
+
+[dark-mode] {
+	--button-fab-shadow: #{$button-fab-shadow-dark};
+	--button-fab-hover-shadow: #{$button-fab-hover-shadow-dark};
+  
+	--button-background-color-primary: #{map.get($button-background-color-map-dark, primary)};
+	--button-background-color-secondary: #{map.get($button-background-color-map-dark, secondary)};
+	--button-background-color-success: #{map.get($button-background-color-map-dark, success)};
+	--button-background-color-info: #{map.get($button-background-color-map-dark, info)};
+	--button-background-color-warning: #{map.get($button-background-color-map-dark, warning)};
+	--button-background-color-error: #{map.get($button-background-color-map-dark, error)};
+	--button-background-color-light: #{map.get($button-background-color-map-dark, light)};
+  
+	--button-border-color-primary: #{map.get($button-border-color-map-dark, primary)};
+	--button-border-color-secondary: #{map.get($button-border-color-map-dark, secondary)};
+	--button-border-color-success: #{map.get($button-border-color-map-dark, success)};
+	--button-border-color-info: #{map.get($button-border-color-map-dark, info)};
+	--button-border-color-warning: #{map.get($button-border-color-map-dark, warning)};
+	--button-border-color-error: #{map.get($button-border-color-map-dark, error)};
+	--button-border-color-light: #{map.get($button-border-color-map-dark, light)};
+  
+	--button-text-color-primary: #{map.get($button-text-color-map-dark, primary)};
+	--button-text-color-secondary: #{map.get($button-text-color-map-dark, secondary)};
+	--button-text-color-success: #{map.get($button-text-color-map-dark, success)};
+	--button-text-color-info: #{map.get($button-text-color-map-dark, info)};
+	--button-text-color-warning: #{map.get($button-text-color-map-dark, warning)};
+	--button-text-color-error: #{map.get($button-text-color-map-dark, error)};
+	--button-text-color-light: #{map.get($button-text-color-map-dark, light)};
+}

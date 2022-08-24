@@ -6,8 +6,63 @@ $form-range-thumb-border: none;
 $form-range-thumb-shadow: 0 0 0 6px map.get($color-primary-map, "500");
 $form-range-thumb-height: 6px;
 $form-range-thumb-width: 6px;
+
 $form-range-track-background: map.get($color-primary-map, "100");
 $form-range-track-border-radius: 9999px;
 $form-range-track-height: 2px;
+
 $form-range-thumb-focus-background: map.get($color-primary-map, "600");
 $form-range-thumb-focus-shadow: 0 0 0 4px map.get($color-primary-map, "600");
+
+// -------------------- Dark Mode --------------------
+$form-range-thumb-background-dark: map.get($color-primary-map, "300");
+$form-range-thumb-border-dark: none;
+$form-range-thumb-shadow-dark: 0 0 0 6px map.get($color-primary-map, "300");
+
+$form-range-track-background-dark: map.get($color-primary-map, "100");
+$form-range-track-border-radius-dark: 9999px;
+
+$form-range-thumb-focus-background-dark: map.get($color-primary-map, "400");
+$form-range-thumb-focus-shadow-dark: 0 0 0 4px map.get($color-primary-map, "400");
+
+// -------------------- CSS Variables --------------------
+:root {
+  --form-range-thumb-background: #{$form-range-thumb-background};
+  --form-range-thumb-border: #{$form-range-thumb-border};
+  --form-range-thumb-shadow: #{$form-range-thumb-shadow};
+  --form-range-thumb-height: #{$form-range-thumb-height};
+  --form-range-thumb-width: #{$form-range-thumb-width};
+  
+  --form-range-track-background: #{$form-range-track-background};
+  --form-range-track-border-radius: #{$form-range-track-border-radius};
+  --form-range-track-height: #{$form-range-track-height};
+  
+  --form-range-thumb-focus-background: #{$form-range-thumb-focus-background};
+  --form-range-thumb-focus-shadow: #{$form-range-thumb-focus-shadow};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --form-range-thumb-background: #{$form-range-thumb-background-dark};
+    --form-range-thumb-border: #{$form-range-thumb-border-dark};
+    --form-range-thumb-shadow: #{$form-range-thumb-shadow-dark};
+    
+    --form-range-track-background: #{$form-range-track-background-dark};
+    --form-range-track-border-radius: #{$form-range-track-border-radius-dark};
+    
+    --form-range-thumb-focus-background: #{$form-range-thumb-focus-background-dark};
+    --form-range-thumb-focus-shadow: #{$form-range-thumb-focus-shadow-dark};
+  }
+}
+
+[dark-mode] {
+  --form-range-thumb-background: #{$form-range-thumb-background-dark};
+  --form-range-thumb-border: #{$form-range-thumb-border-dark};
+  --form-range-thumb-shadow: #{$form-range-thumb-shadow-dark};
+  
+  --form-range-track-background: #{$form-range-track-background-dark};
+  --form-range-track-border-radius: #{$form-range-track-border-radius-dark};
+  
+  --form-range-thumb-focus-background: #{$form-range-thumb-focus-background-dark};
+  --form-range-thumb-focus-shadow: #{$form-range-thumb-focus-shadow-dark};
+}

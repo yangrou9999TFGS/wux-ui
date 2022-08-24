@@ -2,8 +2,10 @@
 /* WuX-UI Components-Breadcrumb [Customize] */
 
 $breadcrumb-content: quote("/");
-$breadcrumb-background-color: rgb(240,240,240);
+$breadcrumb-background-color: transparent;
+$breadcrumb-border: none;
 $breadcrumb-border-radius: 12px;
+$breadcrumb-color: #121212;
 $breadcrumb-font-size: 14px;
 $breadcrumb-padding-x: 10px;
 $breadcrumb-padding-y: 12px;
@@ -11,3 +13,43 @@ $breadcrumb-padding-item-x: 6px;
 $breadcrumb-margin-bottom: 2px;
 
 $breadcrumb-item-link-color: map.get($color-primary-map, "600");
+
+// -------------------- DarkMode --------------------
+$breadcrumb-background-color-dark: transparent;
+$breadcrumb-border-dark: none;
+$breadcrumb-color-dark: #FFFFFF;
+
+$breadcrumb-item-link-color-dark: map.get($color-primary-map, "400");
+
+// -------------------- CSS Variable --------------------
+:root {
+	--breadcrumb-background-color: #{$breadcrumb-background-color};
+	--breadcrumb-border: #{$breadcrumb-border};
+	--breadcrumb-border-radius: #{$breadcrumb-border-radius};
+	--breadcrumb-color: #{$breadcrumb-color};
+	--breadcrumb-font-size: #{$breadcrumb-font-size};
+	--breadcrumb-padding-x: #{$breadcrumb-padding-x};
+	--breadcrumb-padding-y: #{$breadcrumb-padding-y};
+	--breadcrumb-padding-item-x: #{$breadcrumb-padding-item-x};
+	--breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
+
+	--breadcrumb-item-link-color: #{$breadcrumb-item-link-color};
+}
+
+@media (refers-color-scheme: dark) {
+	:root {
+		--breadcrumb-background-color: #{$breadcrumb-background-color-dark};
+		--breadcrumb-border: #{$breadcrumb-border-dark};
+		--breadcrumb-color: #{$breadcrumb-color-dark};
+
+		--breadcrumb-item-link-color: #{$breadcrumb-item-link-color-dark};
+	}
+}
+
+[dark-mode] {
+	--breadcrumb-background-color: #{$breadcrumb-background-color-dark};
+	--breadcrumb-border: #{$breadcrumb-border-dark};
+	--breadcrumb-color: #{$breadcrumb-color-dark};
+
+	--breadcrumb-item-link-color: #{$breadcrumb-item-link-color-dark};
+}

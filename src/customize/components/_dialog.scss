@@ -1,18 +1,68 @@
 
 /* WuX-UI Components-Dialog [Customize]*/
 
+$dialog-background-color: #FCFCFC;
 $dialog-border: none;
 $dialog-border-radius: 12px;
 $dialog-padding: 24px;
 $dialog-shadow: none;
 
-$dialog-backdrop-blur: none;
-$dialog-backdrop-color: rgba(50,50,50,0.95);
+$dialog-backdrop-color: #323232CC;
 
 $dialog-header-text-color: #AAAAAA;
 
 $dialog-body-padding-x: 0;
 $dialog-body-padding-y: 8px;
 $dialog-body-font-size: 16px;
+$dialog-body-text-color: #000000;
 
 $dialog-footer-group-float: right;
+
+// -------------------- DarkMode --------------------
+$dialog-background-color-dark: #121212;
+$dialog-border-dark: none;
+$dialog-shadow-dark: none;
+
+$dialog-header-text-color-dark: #F1F1F1;
+
+$dialog-body-text-color-dark: #FFFFFF;
+
+// -------------------- CSS Variables --------------------
+:root {
+	--dialog-background-color: #{$dialog-background-color};
+	--dialog-border: #{$dialog-border};
+	--dialog-border-radius: #{$dialog-border-radius};
+	--dialog-padding: #{$dialog-padding};
+	--dialog-shadow: #{$dialog-shadow};
+
+	--dialog-backdrop-color: #{$dialog-backdrop-color};
+
+	--dialog-body-padding-x: #{$dialog-body-padding-x};
+	--dialog-body-padding-y: #{$dialog-body-padding-y};
+	--dialog-body-font-size: #{$dialog-body-font-size};
+	--dialog-body-text-color: #{$dialog-body-text-color};
+
+	--dialog-footer-group-float: #{$dialog-footer-group-float};
+}
+
+@media (refers-color-scheme: dark) {
+	:root {
+		--dialog-background-color: #{$dialog-background-color-dark};
+		--dialog-border: #{$dialog-border-dark};
+		--dialog-shadow: #{$dialog-shadow-dark};
+
+		--dialog-header-text-color: #{$dialog-header-text-color-dark};
+
+		--dialog-body-text-color: #{$dialog-body-text-color-dark};
+	}
+}
+
+[dark-mode] {
+	--dialog-background-color: #{$dialog-background-color-dark};
+	--dialog-border: #{$dialog-border-dark};
+	--dialog-shadow: #{$dialog-shadow-dark};
+
+	--dialog-header-text-color: #{$dialog-header-text-color-dark};
+
+	--dialog-body-text-color: #{$dialog-body-text-color-dark};
+}

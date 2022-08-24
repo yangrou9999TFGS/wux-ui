@@ -4,9 +4,60 @@
 $form-checks-border-width: 2px;
 $form-checks-border-color: #ABABAB;
 $form-checks-border-radius: 4px;
-$form-checks-hover-background-color: #FFFFFF;
-$form-checks-hover-shadow: 0px 0px 1px 2px #DDDDDD;
+
+$form-checks-hover-background-color: transparent;
+$form-checks-hover-shadow: 0px 0px 2px 1px #DDDDDD;
+
 $form-checks-checked-background-color: map.get($color-primary-map, "500");
 $form-checks-checked-border-width: 1px;
 $form-checks-checked-border-color: map.get($color-primary-map, "500");
 $form-checks-checked-shadow: none;
+
+// -------------------- Dark Mode --------------------
+$form-checks-border-color-dark: #ABABAB;
+
+$form-checks-hover-background-color-dark: transparent;
+$form-checks-hover-shadow-dark: 0px 0px 2px 1px #DDDDDD;
+
+$form-checks-checked-background-color-dark: map.get($color-primary-map, "400");
+$form-checks-checked-border-color-dark: map.get($color-primary-map, "400");
+$form-checks-checked-shadow-dark: none;
+
+// -------------------- CSS Variables --------------------
+:root {
+  --form-checks-border-width: #{$form-checks-border-width};
+  --form-checks-border-color: #{$form-checks-border-color};
+  --form-checks-border-radius: #{$form-checks-border-radius};
+
+  --form-checks-hover-background-color: #{$form-checks-hover-background-color};
+  --form-checks-hover-shadow: #{$form-checks-hover-shadow};
+  
+  --form-checks-checked-background-color: #{$form-checks-checked-background-color};
+  --form-checks-checked-border-width: #{$form-checks-checked-border-width};
+  --form-checks-checked-border-color: #{$form-checks-checked-border-color};
+  --form-checks-checked-shadow: #{$form-checks-checked-shadow};
+}
+
+@media (refers-color-scheme: dark) {
+  :root {
+    --form-checks-border-color: #{$form-checks-border-color-dark};
+  
+    --form-checks-hover-background-color: #{$form-checks-hover-background-color-dark};
+    --form-checks-hover-shadow: #{$form-checks-hover-shadow-dark};
+    
+    --form-checks-checked-background-color: #{$form-checks-checked-background-color-dark};
+    --form-checks-checked-border-color: #{$form-checks-checked-border-color-dark};
+    --form-checks-checked-shadow: #{$form-checks-checked-shadow-dark};
+  }
+}
+
+[dark-mode] {
+  --form-checks-border-color: #{$form-checks-border-color-dark};
+
+  --form-checks-hover-background-color: #{$form-checks-hover-background-color-dark};
+  --form-checks-hover-shadow: #{$form-checks-hover-shadow-dark};
+  
+  --form-checks-checked-background-color: #{$form-checks-checked-background-color-dark};
+  --form-checks-checked-border-color: #{$form-checks-checked-border-color-dark};
+  --form-checks-checked-shadow: #{$form-checks-checked-shadow-dark};
+}
