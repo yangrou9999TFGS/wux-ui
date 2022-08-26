@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WuX-UI Debug Page body[dark-mode]</title>
+    <title>WuX-UI Debug Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
     <link href="dist/wux.css" rel="stylesheet">
@@ -157,10 +157,11 @@
               </div>
             </div>
           </dialog>
+          <!--Polyfill-->
           <script>
-              var dialog = document.querySelector('testDialog'); // Catch ID
-              dialogPolyfill.registerDialog(testDialog);
-            </script>
+            var dialog = document.querySelector('testDialog'); // Catch ID
+            dialogPolyfill.registerDialog(testDialog);
+          </script>
           <!--Polyfill-->
           <button class="wux-btn" onclick="testDialog.showModal();">OpenDialog</button>
         </div>
@@ -453,7 +454,7 @@
             <div class="wux-col">
               <h2>Other</h2>
               <div class="wux-typo">
-                <p><a href="#" bg-color="#CCCCCC">Link</a></p>
+                <p><a href="#">Link</a></p>
                 <p>This is <mark>Mark</mark></p>
                 <p><del>Deleted</del></p>
                 <p><ins>I have Super Cow Power!</ins></p>
@@ -479,6 +480,72 @@
               This is a Test Collapse.
             </div>
           </details>
+        </div>
+      </div>
+      <div class="wux-row-xs-1">
+        <div class="wux-col">
+          <h1>Utilities</h1>
+          <div class="wux-row-xs-1 wux-row-sm-2 wux-row-md-5">
+            <div class="wux-col">
+              <h2>Border</h2>
+              <p border-bottom-color="#CCCCCC" border-bottom-style="dashed" border-bottom-width="4px" > 
+                Border~
+              </p>
+              <p border-radius="12" bg-color="#DBDBDB" padding="6px"> 
+                Border-Radius~
+              </p>
+            </div>
+            <div class="wux-col">
+              <h2>Background</h2>
+              <p bg-color="#FFFF02"> 
+                Background~
+              </p>
+            </div>
+            <div class="wux-col">
+              <h2>Text</h2>
+              <p text-color="#FF8686"> 
+                Text~
+              </p>
+            </div>
+            <div class="wux-col">
+              <h2>Float</h2>
+              <float-clear>
+                <p float="right">Right</p>
+                <p float="left">Left</p>
+              </float-clear>
+            </div>
+            <div class="wux-col">
+              <h2>Margin</h2>
+              <p margin-bottom="4">
+              Margin-Bottom 4px
+              </p>
+              <p margin-left="12">
+              Margin-left 12px
+              </p>
+            </div>
+          </div>
+          <div class="wux-row-xs-1 wux-row-sm-2 wux-row-md-4">
+            <div class="wux-col">
+              <h2>Opacity</h2>
+              <p opacity="0.6">60%</p>
+              <p opacity="0.2">20%</p>
+            </div>
+            <div class="wux-col">
+              <h2>Overflow</h2>
+              <p overflow="scroll" > 
+                Overflow Scroll Overflow Scroll Overflow Scroll Overflow Scroll
+              </p>
+            </div>
+            <div class="wux-col">
+              <h2>Padding</h2>
+              <p padding="8">Padding 8px</p>
+            </div>
+            <div class="wux-col">
+              <h2>Visibility</h2>
+              <p visibility="visible">Visible</p>
+              <p visibility="hidden">Hidden</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
