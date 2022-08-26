@@ -1,0 +1,8 @@
+
+/* WuX-UI Utilities-Font-Size */
+
+// ---------- Text-color ----------
+[font-size] {
+  --attr-custom-font-size: attr(font-size px);
+  font-size: var(--attr-custom-font-size);
+}

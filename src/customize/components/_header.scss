@@ -7,6 +7,8 @@ $header-padding-x: 16px;
 $header-padding-y: 14px;
 $header-text-color: map.get($color-primary-map, "500");
 
+$header-title-text-color: #121212;
+
 $header-option-border-radius: 12px;
 $header-option-padding-x: 12px;
 $header-option-padding-y: 8px; // For Options, Title and SmallDeviceMenu
@@ -28,6 +30,8 @@ $header-option-bold-text-color: func-text-color(primary, 500);
 $header-background-dark: transparent;
 $header-text-color-dark: map.get($color-primary-map, "300");
 
+$header-title-text-color-dark: #FCFCFC;
+
 $header-fixed-background-dark: #000000;
 $header-fixed-text-color-dark: map.get($color-primary-map, "300");
 $header-fixed-shadow-dark: 0 0 10px #000000;
@@ -46,6 +50,8 @@ $header-option-bold-text-color-dark: func-text-color(primary, 300);
   --header-padding-x: #{$header-padding-x};
   --header-padding-y: #{$header-padding-y};
   --header-text-color: #{$header-text-color};
+  
+  --header-title-text-color: #{$header-title-text-color};
   
   --header-option-border-radius: #{$header-option-border-radius};
   --header-option-padding-x: #{$header-option-padding-x};
@@ -70,6 +76,8 @@ $header-option-bold-text-color-dark: func-text-color(primary, 300);
     --header-background: #{$header-background-dark};
     --header-text-color: #{$header-text-color-dark};
     
+    --header-title-text-color: #{$header-title-text-color-dark};
+    
     --header-fixed-background: #{$header-fixed-background-dark};
     --header-fixed-shadow: #{$header-fixed-shadow-dark};
     --header-fixed-text-color: #{$header-fixed-text-color-dark};
@@ -86,6 +94,8 @@ $header-option-bold-text-color-dark: func-text-color(primary, 300);
 [dark-mode] {
   --header-background: #{$header-background-dark};
   --header-text-color: #{$header-text-color-dark};
+      
+  --header-title-text-color: #{$header-title-text-color-dark};
   
   --header-fixed-background: #{$header-fixed-background-dark};
   --header-fixed-shadow: #{$header-fixed-shadow-dark};

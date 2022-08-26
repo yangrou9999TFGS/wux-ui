@@ -11,6 +11,19 @@
 	width: 100%;
 	margin: 0;
 	padding: var(--jumbotron-padding);
+	text-align: var(--jumbotron-text-align);
+	
+	&[align=center] {
+		text-align: center;
+	}
+	
+	&[align=left] {
+		text-align: left;
+	}
+	
+	&[align=right] {
+		text-align: right;
+	}
 
 	.#{$prefix}jumbotron-title {
 		color: var(--jumbotron-title-text-color);

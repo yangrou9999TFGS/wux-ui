@@ -28,6 +28,8 @@
   }
 
   .#{$prefix}header-title {
+    color: var(--header-title-text-color);
+    font-weight: 700;
   	float: left;
     padding-top: var(--header-option-padding-y);
     padding-bottom: var(--header-option-padding-y);
@@ -123,6 +125,11 @@
 
         + #{$prefix}header-option {
   	      margin-left: var(--header-option-space);
+        }
+        
+        a {
+          color: inherit;
+          text-decoration: none;
         }
 
   		  &:hover {

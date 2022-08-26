@@ -3,6 +3,14 @@
 .#{$prefix}typo {
   line-height: 1.8;
   word-wrap: break-word;
+  
+  footer {
+    font-size: 12px;
+    margin-top: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+  }
 
   address, caption, cite, code, dfn, th {
     font-weight: 400;
