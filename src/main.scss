@@ -43,16 +43,12 @@ This file has only required and suggested modules to add.
   @import "layout/space";
   
 // Utilities
+  @import "utilities/background";
   @import "utilities/borders";
-  @import "utilities/colors";
-  @import "utilities/filter";
   @import "utilities/float";
-  @import "utilities/links";
   @import "utilities/margin";
   @import "utilities/opacity";
   @import "utilities/overflow";
   @import "utilities/padding";
-  @import "utilities/shadows";
+  @import "utilities/text";
   @import "utilities/visibility";
-
-// Don't delete the module when the module have a Mark !

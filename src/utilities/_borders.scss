@@ -1,47 +1,116 @@
 
 /* WuX-UI Utilities-Borders */
 
-@import "../customize/utilities/borders";
-
+// Width
 [border-width] {
-	border-width: attr(border-width);
+	--attr-custom-border-width: attr(border-width px);
+	border-width: var(--attr-custom-border-width);
 }
 
-// Border-Bolder
-@for $count from 1 through $borders-count {
-	.#{$prefix}border-#{$count} {
-		border-width: #{$count}#{px};
+	[border-top-width] {
+		--attr-custom-border-top-width: attr(border-top-width px);
+		border-top-width: var(--attr-custom-border-top-width);
 	}
 
-	// Position
-	.#{$prefix}border-top-#{$count} {
-		border-top-width: #{$count}#{px};
+	[border-bottom-width] {
+		--attr-custom-border-bottom-width: attr(border-bottom-width px);
+		border-bottom-width: var(--attr-custom-border-bottom-width);
 	}
 
-	.#{$prefix}border-bottom-#{$count} {
-		border-bottom-width: #{$count}#{px};
+	[border-left-width] {
+		--attr-custom-border-left-width: attr(border-left-width px);
+		border-left-width: var(--attr-custom-border-left-width);
 	}
 
-	.#{$prefix}border-left-#{$count} {
-		border-left-width: #{$count}#{px};
+	[border-right-width] {
+		--attr-custom-border-right-width: attr(border-right-width px);
+		border-right-width: var(--attr-custom-border-right-width);
+	}
+	
+// Color
+[border-color] {
+		--attr-custom-border-color: attr(border-color color);
+		border-color: var(--attr-custom-border-color);
+		// Default
+		border-style: solid;
+}
+
+	[border-top-color] {
+		--attr-custom-border-top-color: attr(border-top-color color);
+		border-top-color: var(--attr-custom-border-top-color);
+		// Default
+		border-top-style: solid;
 	}
 
-	.#{$prefix}border-right-#{$count} {
-		border-right-width: #{$count}#{px};
+	[border-bottom-color] {
+		--attr-custom-border-bottom-color: attr(border-bottom-color color);
+		border-bottom-color: var(--attr-custom-border-bottom-color);
+		// Default
+		border-bottom-style: solid;
 	}
-};
 
-// Border-Color
-@each $color-name in $imported-colors {
-	.#{$prefix}border-#{$color-name} {
-		border-color: map.get($borders-color-map, #{$color-name});
+	[border-left-color] {
+		--attr-custom-border-left-color: attr(border-left-color color);
+		border-left-color: var(--attr-custom-border-left-color);
+		// Default
+		border-left-style: solid;
 	}
-};
 
-// Border-Radius
-@for $count from 1 through $borders-radius-count {
-	.#{$prefix}border-radius-#{$count} {
-		border-radius: $count * 4;
+	[border-right-color] {
+		--attr-custom-border-right-color: attr(border-right-color color);
+		border-right-color: var(--attr-custom-border-right-color);
+		// Default
+		border-right-style: solid;
 	}
-};
 
+// Radius
+[border-radius] {
+	--attr-custom-border-radius: attr(border-radius px);
+	border-radius: var(--attr-custom-border-radius);
+}
+
+	[border-top-left-radius] {
+		--attr-custom-border-top-left-radius: attr(border-top-left-radius px);
+		border-top-left-radius: var(--attr-custom-border-top-left-radius);
+	}
+
+	[border-top-right-radius] {
+		--attr-custom-border-top-right-radius: attr(border-top-right-radius px);
+		border-top-right-radius: var(--attr-custom-border-top-right-radius);
+	}
+	
+	[border-bottom-left-radius] {
+		--attr-custom-border-bottom-left-radius: attr(border-bottom-left-radius px);
+		border-bottom-left-radius: var(--attr-custom-border-bottom-left-radius);
+	}
+	
+	[border-bottom-right-radius] {
+		--attr-custom-border-bottom-right-radius: attr(border-bottom-right-radius px);
+		border-bottom-right-radius: var(--attr-custom-border-bottom-right-radius);
+	}
+	
+// Style 
+[border-style="solid"] {border-style: solid;}
+[border-style="dashed"] {border-style: dashed;}
+[border-style="dotted"] {border-style: dotted;}
+[border-style="double"] {border-style: double;}
+
+	[border-top-style="solid"] {border-top-style: solid;}
+	[border-top-style="dashed"] {border-top-style: dashed;}
+	[border-top-style="dotted"] {border-top-style: dotted;}
+	[border-top-style="double"] {border-top-style: double;}
+	
+	[border-bottom-style="solid"] {border-bottom-style: solid;}
+	[border-bottom-style="dashed"] {border-bottom-style: dashed;}
+	[border-bottom-style="dotted"] {border-bottom-style: dotted;}
+	[border-bottom-style="double"] {border-bottom-style: double;}
+	
+	[border-left-style="solid"] {border-left-style: solid;}
+	[border-left-style="dashed"] {border-left-style: dashed;}
+	[border-left-style="dotted"] {border-left-style: dotted;}
+	[border-left-style="double"] {border-left-style: double;}
+	
+	[border-right-style="solid"] {border-right-style: solid;}
+	[border-right-style="dashed"] {border-right-style: dashed;}
+	[border-right-style="dotted"] {border-right-style: dotted;}
+	[border-right-style="double"] {border-right-style: double;}

@@ -16,7 +16,7 @@ $header-option-text-color: map.get($color-primary-map, "500");
 $header-option-hover-background-color: rgb(240, 240, 240);
 
 $header-fixed-background: #FFFFFF;
-$header-fixed-shadow: 0 2px 4px #CCCCCC;
+$header-fixed-shadow: 0 0 8px #DDDDDD;
 $header-fixed-text-color: map.get($color-primary-map, "500");
 
 $header-small-option-group-padding: 6px;
@@ -30,7 +30,7 @@ $header-text-color-dark: map.get($color-primary-map, "300");
 
 $header-fixed-background-dark: #000000;
 $header-fixed-text-color-dark: map.get($color-primary-map, "300");
-$header-fixed-shadow-dark: 0 2px 4px #000000;
+$header-fixed-shadow-dark: 0 0 10px #000000;
 
 $header-option-text-color-dark: #FCFCFC;
 

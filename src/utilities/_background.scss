@@ -1,0 +1,13 @@
+
+/* WuX-UI Utilities-Background */
+
+// ---------- Background ----------
+[bg-color] {
+  --attr-custom-bg-color: attr(bg-color color);
+  background-color: var(--attr-custom-bg-color);
+}
+
+[bg-img] {
+  --attr-custom-bg-img: attr(bg-img url);
+  background-image: var(--attr-custom-bg-img);
+}

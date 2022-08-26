@@ -1,4 +1,27 @@
 
 /* WuX-UI Utilities-Margin */
 
-@import "../customize/utilities/margin";
+[margin] {
+  --attr-custom-margin: attr(margin px);
+  margin: var(--attr-custom-margin);
+}
+
+  [margin-top] {
+    --attr-custom-margin-top: attr(margin-top px);
+    margin-top: var(--attr-custom-margin-top);
+  }
+  
+  [margin-bottom] {
+    --attr-custom-margin-bottom: attr(margin-bottom px);
+    margin-bottom: var(--attr-custom-margin-bottom);
+  }
+  
+  [margin-left] {
+    --attr-custom-margin-left: attr(margin-left px);
+    margin-left: var(--attr-custom-margin-left);
+  }
+  
+  [margin-right] {
+    --attr-custom-margin-right: attr(margin-right px);
+    margin-right: var(--attr-custom-margin-right);
+  }

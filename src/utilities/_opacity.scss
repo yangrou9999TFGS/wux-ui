@@ -1,4 +1,8 @@
 
 /* WuX-UI Utilities-Opacity */
 
-@import "../customize/utilities/opacity";
+[opacity] {
+  --attr-custom-opacity: attr(opacity number);
+  opacity: var(--attr-custom-opacity);
+}
+
