@@ -10,9 +10,10 @@
 	box-shadow: var(--dialog-shadow);
 	display: block;
 	position: fixed;
-	top: 50%; bottom: 50%; right: 50%; left: 50%; // Support IE
-  transform: translate(-50%, 0%);
-  -ms-transform: translate(-50%, -50%); // Only for IE
+	// top: 50%; bottom: 50%; right: 50%; left: 50%; // Support IE
+  // -moz-transform: translate(-50, -50%);
+  // -webkit-transform: translate(-50%, 0%);
+  // -ms-transform: translate(-50%, -50%); // Only for IE
 	width: 80%;
 		min-width: 180px;
 		max-width: 400px;

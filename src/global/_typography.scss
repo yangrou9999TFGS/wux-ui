@@ -52,7 +52,7 @@
   }
 
   /* a */
-  a {
+  a:not(.wux-btn) {
     color: map.get($color-primary-map, "600");
     text-decoration: none;
     transition: $global-animation-speed;
@@ -140,7 +140,8 @@
 
   /* Pre Code */
   pre code {
-    padding: 0;
+    margin: 2px;
+    padding: 0 !important;
     color: inherit;
     font-size: inherit;
     line-height: 1.6;
@@ -194,7 +195,7 @@
 
   /* pre */
   pre {
-    padding: 12px 16px;
+    padding: 8px 12px;
     font-size: 14px;
     white-space: pre-wrap;
     overflow-wrap: break-word;
