@@ -154,5 +154,7 @@
 }
 
 .#{$prefix}header-fixed-margin {
-  margin-top: calc(var(--header-padding-y) * 2 + var(--header-font-size) + var(--header-option-padding-y) * 2 + 12px);
+  padding-top: calc(var(--header-padding-y) * 2 + var(--header-font-size) + var(--header-option-padding-y) * 2 + 14px);
 }
+
+

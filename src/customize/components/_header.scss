@@ -109,3 +109,8 @@ $header-option-bold-text-color-dark: func-text-color(primary, 300);
   --header-option-bold-text-color: #{$header-option-bold-text-color-dark};
 }
 
+.#{$prefix}header-fixed:before {
+  --header-padding-y: #{$header-padding-y};
+  --header-option-padding-y: #{$header-option-padding-y};
+  --header-font-size: #{$header-font-size};
+}

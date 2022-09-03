@@ -57,8 +57,21 @@
 		}
 	}
 
+	@media (max-width: 800px) {
+		.#{$prefix}dropdown-trigger:hover {
+			& + .#{$prefix}dropdown-menu {
+				display: block;
+				opacity: 99%;
+				transition: var(--global-animation-speed);
+					-webkit-transition: var(--global-animation-speed);
+				visibility: visible;
+			}
+		}
+	}
+	
 	.#{$prefix}dropdown-trigger:focus {
 		& + .#{$prefix}dropdown-menu {
+			display: block;
 			opacity: 99%;
 			transition: var(--global-animation-speed);
 		  	-webkit-transition: var(--global-animation-speed);
@@ -66,7 +79,7 @@
 		}
 	}
 
-	.#{$prefix}dropdown-menu:active {
+	.#{$prefix}dropdown-menu:hover {
 		display: block;
 		opacity: 99%;
 	}
