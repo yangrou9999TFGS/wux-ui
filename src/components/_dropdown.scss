@@ -56,7 +56,7 @@
 		}
 	}
 
-	@media (max-width: 800px) {
+	@media (pointer: fine) {
 		.#{$prefix}dropdown-trigger:hover {
 			& + .#{$prefix}dropdown-menu {
 				display: block;
