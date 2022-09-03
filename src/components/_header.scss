@@ -44,7 +44,7 @@
       margin: 0;
       margin-right: var(--header-padding-x);
 
-      &:focus {
+      &:hover {
         + .#{$prefix}header-option-group {
           display: block;
           position: static;
