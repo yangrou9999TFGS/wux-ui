@@ -4,14 +4,13 @@
 @import "../customize/components/dropdown";
 
 .#{$prefix}dropdown {
-	box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-	display: block;
+	position: relative;
 
 	.#{$prefix}dropdown-menu {
 		position: absolute;
 
-		top: 100%;
+		top: 30px;
+		left: 0;
 		width: var(--dropdown-menu-width);
 		background-color: var(--dropdown-menu-background);
 		border: var(--dropdown-menu-border);

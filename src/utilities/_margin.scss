@@ -3,25 +3,25 @@
 
 [margin] {
   --attr-custom-margin: attr(margin px);
-  margin: var(--attr-custom-margin);
+  margin: var(--attr-custom-margin) !important;
 }
 
   [margin-top] {
     --attr-custom-margin-top: attr(margin-top px);
-    margin-top: var(--attr-custom-margin-top);
+    margin-top: var(--attr-custom-margin-top) !important;
   }
   
   [margin-bottom] {
     --attr-custom-margin-bottom: attr(margin-bottom px);
-    margin-bottom: var(--attr-custom-margin-bottom);
+    margin-bottom: var(--attr-custom-margin-bottom) !important;
   }
   
   [margin-left] {
     --attr-custom-margin-left: attr(margin-left px);
-    margin-left: var(--attr-custom-margin-left);
+    margin-left: var(--attr-custom-margin-left) !important;
   }
   
   [margin-right] {
     --attr-custom-margin-right: attr(margin-right px);
-    margin-right: var(--attr-custom-margin-right);
+    margin-right: var(--attr-custom-margin-right) !important;
   }

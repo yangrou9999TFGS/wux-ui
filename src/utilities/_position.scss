@@ -1,0 +1,22 @@
+
+/* WuX-UI Utilities Position */
+
+[top] {
+	--attr-custom-position-top: attr(top px);
+	top: var(--attr-custom-position-top) !important;
+}
+
+[bottom] {
+	--attr-custom-position-bottom: attr(bottom px);
+	bottom: var(--attr-custom-position-bottom) !important;
+}
+
+[right] {
+	--attr-custom-position-right: attr(right px);
+	right: var(--attr-custom-position-right) !important;
+}
+
+[left] {
+	--attr-custom-position-left: attr(left px);
+	left: var(--attr-custom-position-left) !important;
+}

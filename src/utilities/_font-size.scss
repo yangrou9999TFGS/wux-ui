@@ -4,5 +4,5 @@
 // ---------- Text-color ----------
 [font-size] {
   --attr-custom-font-size: attr(font-size px);
-  font-size: var(--attr-custom-font-size);
+  font-size: var(--attr-custom-font-size) !important;
 }

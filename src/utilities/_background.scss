@@ -4,10 +4,10 @@
 // ---------- Background ----------
 [bg-color] {
   --attr-custom-bg-color: attr(bg-color color);
-  background-color: var(--attr-custom-bg-color);
+  background-color: var(--attr-custom-bg-color) !important;
 }
 
 [bg-img] {
   --attr-custom-bg-img: attr(bg-img url);
-  background-image: var(--attr-custom-bg-img);
+  background-image: var(--attr-custom-bg-img) !important;
 }

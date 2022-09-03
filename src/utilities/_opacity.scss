@@ -3,6 +3,6 @@
 
 [opacity] {
   --attr-custom-opacity: attr(opacity number);
-  opacity: var(--attr-custom-opacity);
+  opacity: var(--attr-custom-opacity) !important;
 }
 

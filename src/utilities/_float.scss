@@ -2,18 +2,18 @@
 /* WuX-UI Utilities-Float */
 
 [float=left] {
-  float: left;
+  float: left !important;
 }
 
 [float=right] {
-  float: right;
+  float: right !important;
 }
 
 float-clear {
   &:before,
   &:after {
-    content: '';
-    display: table;
-    clear: both;
+    content: '' !important;
+    display: table !important;
+    clear: both !important;
   }
 }
