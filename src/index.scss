@@ -19,6 +19,9 @@
     @import "customize/prefix/prefix";
   // Color*
     @import "customize/color/colors";   
+    
+// @supports
+@import "@supports/fuckyouie.scss";
 
 // Global
   // AnimationSpeed
