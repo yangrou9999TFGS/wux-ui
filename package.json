@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/wux-ui/wux-ui#readme",
   "dependencies": {
+    "inter-ui": "^3.19.3",
     "normalize.css": "^8.0.1"
   }
 }

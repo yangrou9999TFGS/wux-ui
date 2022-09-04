@@ -25,17 +25,17 @@ $form-radios-checked-shadow-dark: none;
 
 // -------------------- CSS Variables --------------------
 :root {
---form-radios-border-color: #{$form-radios-border-color};
---form-radios-border-radius: #{$form-radios-border-radius};
---form-radios-border-width: #{$form-radios-border-width};
-
---form-radios-hover-background-color: #{$form-radios-hover-background-color};
---form-radios-hover-shadow: #{$form-radios-hover-shadow};
-
---form-radios-checked-background-color: #{$form-radios-checked-background-color};
---form-radios-checked-border-width: #{$form-radios-checked-border-width};
---form-radios-checked-border-color: #{$form-radios-checked-border-color};
---form-radios-checked-shadow: #{$form-radios-checked-shadow};
+  --form-radios-border-color: #{$form-radios-border-color};
+  --form-radios-border-radius: #{$form-radios-border-radius};
+  --form-radios-border-width: #{$form-radios-border-width};
+  
+  --form-radios-hover-background-color: #{$form-radios-hover-background-color};
+  --form-radios-hover-shadow: #{$form-radios-hover-shadow};
+  
+  --form-radios-checked-background-color: #{$form-radios-checked-background-color};
+  --form-radios-checked-border-width: #{$form-radios-checked-border-width};
+  --form-radios-checked-border-color: #{$form-radios-checked-border-color};
+  --form-radios-checked-shadow: #{$form-radios-checked-shadow};
 }
 
 @media (refers-color-scheme: dark) {
