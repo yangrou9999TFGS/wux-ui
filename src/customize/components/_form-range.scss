@@ -55,7 +55,8 @@ $form-range-thumb-focus-shadow-dark: 0 0 0 4px map.get($color-primary-map, "400"
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --form-range-thumb-background: #{$form-range-thumb-background-dark};
   --form-range-thumb-border: #{$form-range-thumb-border-dark};
   --form-range-thumb-shadow: #{$form-range-thumb-shadow-dark};

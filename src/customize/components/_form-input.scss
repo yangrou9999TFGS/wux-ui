@@ -165,7 +165,8 @@ $form-input-disabled-opacity-dark: 40%;
 	}
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
 	--form-input-background: #{$form-input-background-dark};
 	--form-input-border-color: #{$form-input-border-color-dark};
 	--form-input-text-color: #{$form-input-text-color-dark};

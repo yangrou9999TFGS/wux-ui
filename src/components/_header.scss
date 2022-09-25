@@ -43,15 +43,32 @@
       float: right;
       margin: 0;
       margin-right: var(--header-padding-x);
+      
+      // Fix :focus on the phone.
+      @media (pointer: fine) {
+        &:focus {
+          + .#{$prefix}header-option-group {
+            display: block;
+            position: static;
 
-      &:hover {
-        + .#{$prefix}header-option-group {
-          display: block;
-          position: static;
+            .#{$prefix}header-option {
+              display: inline-block;
+              width: 100%;
+            }
+          }
+        }
+      }
+      
+      @media (pointer: coarse) {
+        &:hover {
+          + .#{$prefix}header-option-group {
+            display: block;
+            position: static;
 
-          .#{$prefix}header-option {
-            display: inline-block;
-            width: 100%;
+            .#{$prefix}header-option {
+              display: inline-block;
+              width: 100%;
+            }
           }
         }
       }
@@ -82,16 +99,6 @@
 
           &:maker {
             display: none;
-          }
-        }
-
-        &:active {
-          display: block; 
-          position: static;
-
-          .#{$prefix}header-option {
-            display: inline-block;
-            width: 100%;
           }
         }
       }

@@ -25,7 +25,8 @@ $badge-text-color-dark: #FFFFFF;
 	}
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
 	--badge-background-color: #{$badge-background-color-dark};
 	--badge-text-color: #{$badge-text-color-dark};
 }

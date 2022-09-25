@@ -75,7 +75,8 @@ $search-focus-shadow-dark: 0 0 2px #DDDDDD;
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --search-border-color: #{$search-border-color-dark};
   --search-background-color: #{$search-background-color-dark};
   --search-text-color: #{$search-text-color-dark};

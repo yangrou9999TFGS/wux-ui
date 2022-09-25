@@ -91,7 +91,8 @@ $tag-text-color-map-dark: (
 	}
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
 	--tag-background-color-primary: #{map.get($tag-background-color-map-dark, primary)};
 	--tag-background-color-secondary: #{map.get($tag-background-color-map-dark, secondary)};
 	--tag-background-color-success: #{map.get($tag-background-color-map-dark, success)};

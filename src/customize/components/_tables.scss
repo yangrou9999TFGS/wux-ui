@@ -66,7 +66,8 @@ $tables-row-item-text-color-dark: #FCFCFC;
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --tables-background-color: #{$tables-background-color-dark};
   --tables-border: #{$tables-border-dark};
   --tables-shadow: #{$tables-shadow-dark};

@@ -51,7 +51,8 @@ $form-radios-checked-shadow-dark: none;
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --form-radios-border-color: #{$form-radios-border-color-dark};
     
   --form-radios-hover-background-color: #{$form-radios-hover-background-color-dark};

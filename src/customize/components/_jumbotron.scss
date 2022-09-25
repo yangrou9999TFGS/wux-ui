@@ -49,7 +49,9 @@ $jumbotron-title-text-color-dark: #FCFCFC;
     --jumbotron-title-bold-color: #{$jumbotron-title-bold-color-dark};
   }
 }
-[dark-mode] {
+
+[dark-mode],
+body.#{$prefix}dark-mode {
   --jumbotron-background: #{$jumbotron-background-dark};
   
   --jumbotron-title-text-color: #{$jumbotron-title-text-color-dark};

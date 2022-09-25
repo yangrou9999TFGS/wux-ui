@@ -57,7 +57,8 @@ $card-flat-border-dark: #121212;
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --card-border-color: #{$card-border-color-dark};
   --card-background-color: #{$card-background-color-dark};
   --card-shadow: #{$card-shadow-dark};

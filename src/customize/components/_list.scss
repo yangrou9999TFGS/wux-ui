@@ -63,7 +63,8 @@ $list-item-focus-text-color-dark: func-text-color(primary, 500);
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --list-border: #{$list-border-dark};
   
   --list-item-background: #{$list-item-background-dark};

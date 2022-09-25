@@ -57,7 +57,8 @@ $dialog-body-text-color-dark: #FFFFFF;
 	}
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
 	--dialog-background-color: #{$dialog-background-color-dark};
 	--dialog-border: #{$dialog-border-dark};
 	--dialog-shadow: #{$dialog-shadow-dark};

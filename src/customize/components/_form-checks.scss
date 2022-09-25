@@ -51,7 +51,8 @@ $form-checks-checked-shadow-dark: none;
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --form-checks-border-color: #{$form-checks-border-color-dark};
 
   --form-checks-hover-background-color: #{$form-checks-hover-background-color-dark};

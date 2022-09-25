@@ -51,7 +51,8 @@ $tab-item-focus-text-color-dark: map.get($color-primary-map, "300");
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --tab-item-background: #{$tab-item-background-dark};
   --tab-item-border: #{$tab-item-border-dark};
   --tab-item-text-color: #{$tab-item-text-color-dark};

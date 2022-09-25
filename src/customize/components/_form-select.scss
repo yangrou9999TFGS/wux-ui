@@ -53,7 +53,8 @@ $form-select-focus-shadow-dark: 0 0 6px #DDDDDD;
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --form-select-background-color: #{$form-select-background-color-dark};
   --form-select-border-color: #{$form-select-border-color-dark};
   --form-select-text-color: #{$form-select-text-color-dark};

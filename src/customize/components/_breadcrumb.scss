@@ -46,7 +46,8 @@ $breadcrumb-item-link-color-dark: map.get($color-primary-map, "400");
 	}
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
 	--breadcrumb-background-color: #{$breadcrumb-background-color-dark};
 	--breadcrumb-border: #{$breadcrumb-border-dark};
 	--breadcrumb-color: #{$breadcrumb-color-dark};

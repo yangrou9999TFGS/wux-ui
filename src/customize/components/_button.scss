@@ -218,7 +218,8 @@ $button-text-color-map-dark: (
 	}
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
 	--button-fab-shadow: #{$button-fab-shadow-dark};
 	--button-fab-hover-shadow: #{$button-fab-hover-shadow-dark};
   

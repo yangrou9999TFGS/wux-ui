@@ -9,7 +9,8 @@
   float: right !important;
 }
 
-float-clear {
+float-clear,
+.#{$prefix}float-clear {
   &:before,
   &:after {
     content: '' !important;

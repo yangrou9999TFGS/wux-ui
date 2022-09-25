@@ -51,7 +51,8 @@ $collapse-body-text-color-dark: #FFFFFF;
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --collapse-header-background-color: #{$collapse-header-background-color-dark};
   --collapse-header-border: #{$collapse-header-border-dark};
   --collapse-header-text-color: #{$collapse-header-text-color-dark};

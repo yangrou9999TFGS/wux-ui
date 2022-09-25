@@ -175,7 +175,8 @@ $alert-icon-color-map-dark: (
 	}
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
 	--alert-background-color-primary: #{map.get($alert-background-color-map-dark, primary)};
 	--alert-background-color-secondary: #{map.get($alert-background-color-map-dark, secondary)};
 	--alert-background-color-success: #{map.get($alert-background-color-map-dark, success)};

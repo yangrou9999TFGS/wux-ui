@@ -31,7 +31,8 @@ $progress-line-color-dark: map.get($color-primary-map, "500");
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --progress-background-color: #{$progress-background-color-dark};
   --progress-border-color: #{$progress-border-color-dark};
   --progress-line-color: #{$progress-line-color-dark};

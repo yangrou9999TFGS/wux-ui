@@ -37,7 +37,8 @@ $blankslate-subtitle-text-color-dark: #666666;
 	}
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
 	--blankslate-title-text-color: #{$blankslate-title-text-color-dark};
 	--blankslate-subtitle-text-color: #{$blankslate-subtitle-text-color-dark};	
 }

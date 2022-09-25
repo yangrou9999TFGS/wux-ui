@@ -91,7 +91,8 @@ $header-option-bold-text-color-dark: func-text-color(primary, 300);
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --header-background: #{$header-background-dark};
   --header-text-color: #{$header-text-color-dark};
       

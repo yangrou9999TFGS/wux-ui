@@ -85,7 +85,8 @@ $dropdown-menu-divider-border-dark: 2px solid #222222;
   }
 }
 
-[dark-mode] {
+[dark-mode],
+body.#{$prefix}dark-mode {
   --dropdown-menu-background: #{$dropdown-menu-background-dark};
   --dropdown-menu-border: #{$dropdown-menu-border-dark};
   --dropdown-menu-shadow: #{$dropdown-menu-shadow-dark};
