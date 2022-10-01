@@ -27,66 +27,62 @@
 	// Disabled 
 	&:disabled {
 		cursor: default;
+		opacity: 50% !important;
 	}
-
-	// Default
-  background-color: var(--button-background-color-primary);
-	color: var(--button-text-color-primary);
-	border: var(--button-solid-border-width) solid var(--button-border-color-primary);
+	
+	// Default(Style:Solid)
+  background-color: var(--button-solid-background-color-primary);
+	color: var(--button-solid-text-color-primary);
+	border: transparent;
 	border-radius: var(--button-border-size-default-md);
   padding: var(--button-padding-y-md) var(--button-padding-x-md);
 	font-size: var(--button-font-size-md);
 
 	&:hover:not(:disabled) {
-		background-color: var(--button-border-color-primary);
-		color: var(--button-text-color-primary);
+		background-color: var(--button-solid-hover-background-color-primary);
+		color: var(--button-solid-hover-text-color-primary);
 	}
 
 	&:focus:not(:disabled),
 	&.#{$prefix}btn-active {
-  	background-color: var(--button-border-color-primary);
-  	color: var(--button-text-color-primary);
-
+  	background-color: var(--button-solid-hover-background-color-primary);
+  	color: var(--button-solid-hover-text-color-primary);
   	outline: none;
-	}
-
-	&:disabled {
-		opacity: 50% !important;
 	}
 
 	// Style:Outline
   &.#{$prefix}btn-outline {
   	background: transparent;
-	  color: var(--button-background-color-primary);
-	  border: var(--button-outline-border-width) solid var(--button-border-color-primary);
+	  color: var(--button-outline-text-color-primary);
+	  border: var(--button-outline-border-width) solid var(--button-outline-border-color-primary);
 
   	&:hover:not(:disabled) {
-    	background: var(--button-border-color-primary);
-    	color: var(--button-text-color-primary);
+    	background: var(--button-outline-hover-background-color-primary);
+    	color: var(--button-outline-hover-text-color-primary);
   	}
 
   	&:focus:not(:disabled),
 		&.#{$prefix}btn-active {
-  		background-color: var(--button-border-color-orimary);
-  		color: var(--button-text-color-primary);
+  		background: var(--button-outline-hover-background-color-primary);
+    	color: var(--button-outline-hover-text-color-primary);
 		}
 	}
 
 	// Style:Text
 	&.#{$prefix}btn-text {
   	background: transparent;
-	  color: var(--button-background-color-primary);
+	  color: var(--button-text-text-color-primary);
 	  border: none;
 
   	&:hover:not(:disabled) {
-  		background: transparent;
-    	color: var(--button-border-color-primary);
+  		background: var(--button-text-hover-background-color-primary);
+    	color: var(--button-text-hover-text-color-primary);
   	}
 
   	&:focus:not(:disabled),
 		&.#{$prefix}btn-active {
-  		background-color: transparent;
-  		color: var(--button-border-color-primary);
+  		background-color: var(--button-text-hover-background-color-primary);
+  		color: var(--button-text-hover-text-color-primary);
 		}
 	}
 
@@ -116,21 +112,22 @@
 
 // Button Colors/Style
 @each $color-name in $imported-colors {
+	// Solid
   .#{$prefix}btn-solid.#{$prefix}btn-#{$color-name},
   .#{$prefix}btn-#{$color-name} {
-	  background-color: var(--button-background-color-#{$color-name});
-	  color: var(--button-text-color-#{$color-name});
-	  border-color: var(--button-border-color-#{$color-name});
+	  background-color: var(--button-solid-background-color-#{$color-name});
+	  color: var(--button-solid-text-color-#{$color-name});
+	  border-color: transparent;
 
 	  &:hover:not(:disabled){
-      background-color: var(--button-border-color-#{$color-name});
-      color: var(--button-text-color-#{$color-name});
+      background-color: var(--button-solid-hover-background-color-#{$color-name});
+      color: var(--button-solid-hover-text-color-#{$color-name});
 	  }
 
 	  &:focus:not(:disabled),
   	&.#{$prefix}btn-active {
-   	  background-color: var(--button-border-color-#{$color-name});
-   	  color: var(--button-text-color-#{$color-name});
+   	  background-color: var(--button-solid-hover-background-color-#{$color-name});
+			 color: var(--button-solid-hover-text-color-#{$color-name});
   	}
 	}
 	
@@ -138,18 +135,18 @@
   .#{$prefix}btn.#{$prefix}btn-outline.#{$prefix}btn-#{$color-name} {
   	// Default
   	background: transparent;
-  	color: var(--button-border-color-#{$color-name});
-  	border-color: var(--button-border-color-#{$color-name});
+  	color: var(--button-outline-text-color-#{$color-name});
+  	border-color: var(--button-outline-border-color-#{$color-name});
 
   	&:hover:not(:disabled) {
-   	  background: var(--button-border-color-#{$color-name});
-   	  color: var(--button-text-color-#{$color-name});
+   	  background: var(--button-outline-hover-background-color-#{$color-name});
+   	  color: var(--button-outline-hover-text-color-#{$color-name});
   	}
 
   	&:focus:not(:disabled),
   	&.#{$prefix}btn-active {
-   	  background: var(--button-border-color-#{$color-name});
-   	  color: var(--button-text-color-#{$color-name});
+   	  background: var(--button-outline-hover-background-color-#{$color-name});
+   	  color: var(--button-outline-hover-text-color-#{$color-name});
   	}
   }
 	
@@ -157,19 +154,19 @@
   .#{$prefix}btn.#{$prefix}btn-text.#{$prefix}btn-#{$color-name} {
   	// Default
   	background: transparent;
-  	color: var(--button-background-color-#{$color-name});
+  	color: var(--button-text-text-color-#{$color-name});
   	border: none;
 
   	&:hover:not(:disabled) {
-  		background: transparent;
-   	  color: var(--button-border-color-#{$color-name});
+  		background: var(--button-text-hover-background-color-#{$color-name});
+   	 color: var(--button-text-hover-text-color-#{$color-name});
   	}
 
   	&:focus:not(:disabled),
   	&.#{$prefix}btn-active {
-  		background: transparent;
-   	  color: var(--button-border-color-#{$color-name});
-   	  box-shadow: none;
+  		background: var(--button-text-hover-background-color-#{$color-name});
+   	 color: var(--button-text-hover-text-color-#{$color-name});
+   	 box-shadow: none;
   	}
   }
 };

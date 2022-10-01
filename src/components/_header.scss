@@ -115,7 +115,7 @@
       float: right;
       margin: 0;
       margin-right: var(--header-padding-x);
-      display: block !important;
+      display: block;
     
   	  .#{$prefix}header-option {
         box-sizing: border-box;
@@ -123,7 +123,7 @@
         border-radius: var(--header-option-border-radius);
   		  color: var(--header-text-color);
   		  cursor: pointer;
-        display: inline-block !important;
+        display: inline-block;
   		  padding: var(--header-option-padding-y) var(--header-option-padding-x);
   		  text-decoration: none;
   		  transition: var(--global-animation-speed);
