@@ -9,5 +9,39 @@
 
 [bg-img] {
   --attr-custom-bg-img: attr(bg-img url);
-  background-image: var(--attr-custom-bg-img) !important;
+  background-image: url(var(--attr-custom-bg-img)) !important;
 }
+
+[bg-repeat= repeat] {background-repeat: repeat;}
+[bg-repeat= repeat-x] {background-repeat: repeat-x;}
+[bg-repeat= repeat-y] {background-repeat: repeat-y;}
+[bg-repeat= no-repeat] {background-repeat: no-repeat;}
+[bg-repeat= space] {background-repeat: space;}
+[bg-repeat= round] {background-repeat: round;}
+
+[bg-position= top] {background-position: top;}
+[bg-position= bottom] {background-position: bottom;}
+[bg-position= left] {background-position: left;}
+[bg-position= right] {background-position: right;}
+[bg-position= center] {background-position: center;}
+
+[bg-position-x= top] {background-position-x: top;}
+[bg-position-x= bottom] {background-position-x: bottom;}
+[bg-position-x= left] {background-position-x: left;}
+[bg-position-x= right] {background-position-x: right;}
+[bg-position-x= center] {background-position-x: center;}
+
+[bg-position-y= top] {background-position-y: top;}
+[bg-position-y= bottom] {background-position-y: bottom;}
+[bg-position-y= left] {background-position-y: left;}
+[bg-position-y= right] {background-position-y: right;}
+[bg-position-y= center] {background-position-y: center;}
+
+[bg-size= contain] {background-size: contain;}
+[bg-size= cover] {background-size: cover;}
+
+[bg-size-num] {
+  --attr-custom-background-size: attr(bg-size-num length);
+  background-size: var(--attr-custom-background-size);
+}
+

@@ -13,3 +13,17 @@ $color-primary-map: (
 	"800": func-shade-color($color-primary, 60%),
 	"900": func-shade-color($color-primary, 80%)
 );
+
+// -------------------- CSS Variables --------------------
+
+:root {
+	--color-primary-100: #{map.get($color-primary-map, "100")};
+	--color-primary-200: #{map.get($color-primary-map, "200")};
+	--color-primary-300: #{map.get($color-primary-map, "300")};
+	--color-primary-400: #{map.get($color-primary-map, "400")};
+	--color-primary-500: #{map.get($color-primary-map, "500")};
+	--color-primary-600: #{map.get($color-primary-map, "600")};
+	--color-primary-700: #{map.get($color-primary-map, "700")};
+	--color-primary-800: #{map.get($color-primary-map, "800")};
+	--color-primary-900: #{map.get($color-primary-map, "900")};
+}

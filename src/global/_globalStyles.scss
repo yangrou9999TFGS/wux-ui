@@ -12,6 +12,13 @@ body.#{$prefix}dark-mode {
 	color: #FCFCFC;
 }
 
+@media (refers-color-scheme: dark) {
+	:root {
+		background-color: #121212;
+		color: #FCFCFC;
+	}
+}
+
 // ---------- Fix Focus Backdrop On Webkit ----------
 *,
 *:before,

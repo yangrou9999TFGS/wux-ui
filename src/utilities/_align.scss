@@ -1,0 +1,32 @@
+
+/* WuX-UI Utilities-Align */
+
+// ---------- Vertical ----------
+[vertical-align=baseline]{vertical-align: baseline !important;}
+[vertical-align=sub]{vertical-align: sub !important;}
+[vertical-align=super]{vertical-align: super !important;}
+[vertical-align=text-top]{vertical-align: text-top !important;}
+[vertical-align=text-bottom]{vertical-align: text-bottom !important;}
+[vertical-align=top]{vertical-align: top !important;}
+[vertical-align=middle]{vertical-align: middle !important;}
+[vertical-align=bottom]{vertical-align: bottom !important;}
+
+// px
+[vertical-align-num]{
+  --attr-custom-vertical-align: attr(vertical-align length);
+  vertical-align: var(--attr-custom-vertical-align) !important;
+}
+
+// ---------- Text-Align ---------- 
+[text-align=left]{text-align: left !important;}
+[text-align=center]{text-align: center !important;}
+[text-align=justify]{text-align: justify !important;}
+[text-align=justify-all]{text-align: justify-all !important;}
+[text-align=start]{text-align: start !important;}
+[text-align=end]{text-align: end !important;}
+[text-align=match-parent]{text-align: match-parent !important;}
+[text-align=inherit]{text-align: inherit !important;}
+[text-align=initial]{text-align: initial !important;}
+[text-align=unset]{text-align: unset !important;}
+
+

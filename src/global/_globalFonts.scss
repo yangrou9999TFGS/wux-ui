@@ -2,11 +2,16 @@
 /* WuX-UI Import-Fonts */
 
 // Default: Inter + NotoSansSC
-@import url("https://fonts.font.im/css2?family=Inter:wght@400;700&display=swap&family=Noto%20Sans%20SC:wght@400;700&display=swap");
+@import url("https://fonts.font.im/css2?family=Noto%20Sans%20SC:wght@400;700&display=swap");
+@import url('https://rsms.me/inter/inter.css');
 
 body {
 	font-family: "Inter", "Noto Sans SC", "Sans Serif", Arial;
 	font-weight: 400;
 	line-height: 1.4;
 	font-size: 16px;
+}
+
+@supports (font-variation-settings: normal) {
+  body { font-family: 'Inter var', sans-serif; }
 }

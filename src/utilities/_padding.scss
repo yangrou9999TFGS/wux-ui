@@ -2,26 +2,26 @@
 /* WuX-UI Utilities-Padding */
 
 [padding] {
-  --attr-custom-padding: attr(padding px);
+  --attr-custom-padding: attr(padding length);
   padding: var(--attr-custom-padding) !important;
 }
 
   [padding-top] {
-    --attr-custom-padding-top: attr(padding-top px);
+    --attr-custom-padding-top: attr(padding-top length);
     padding-top: var(--attr-custom-padding-top) !important;
   }
   
   [padding-bottom] {
-    --attr-custom-padding-bottom: attr(padding-bottom px);
+    --attr-custom-padding-bottom: attr(padding-bottom length);
     padding-bottom: var(--attr-custom-padding-bottom) !important;
   }
   
   [padding-left] {
-    --attr-custom-padding-left: attr(padding-left px);
+    --attr-custom-padding-left: attr(padding-left length);
     padding-left: var(--attr-custom-padding-left) !important;
   }
   
   [padding-right] {
-    --attr-custom-padding-right: attr(padding-right px);
+    --attr-custom-padding-right: attr(padding-right length);
     padding-right: var(--attr-custom-padding-right) !important;
   }

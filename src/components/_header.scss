@@ -129,9 +129,9 @@
   		  transition: var(--global-animation-speed);
           -webkit-transition: var(--global-animation-speed);
   		  white-space: nowrap;
-
-        + #{$prefix}header-option {
-  	      margin-left: var(--header-option-space);
+        
+        & + .#{$prefix}header-option {
+          margin-left: var(--header-option-space);
         }
         
         a {

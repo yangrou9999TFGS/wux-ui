@@ -13,3 +13,17 @@ $color-success-map: (
 	"800": func-shade-color($color-success, 60%),
 	"900": func-shade-color($color-success, 80%)
 );
+
+// -------------------- CSS Variables --------------------
+
+:root {
+	--color-success-100: #{map.get($color-success-map, "100")};
+	--color-success-200: #{map.get($color-success-map, "200")};
+	--color-success-300: #{map.get($color-success-map, "300")};
+	--color-success-400: #{map.get($color-success-map, "400")};
+	--color-success-500: #{map.get($color-success-map, "500")};
+	--color-success-600: #{map.get($color-success-map, "600")};
+	--color-success-700: #{map.get($color-success-map, "700")};
+	--color-success-800: #{map.get($color-success-map, "800")};
+	--color-success-900: #{map.get($color-success-map, "900")};
+}

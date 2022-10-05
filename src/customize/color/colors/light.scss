@@ -13,3 +13,17 @@ $color-light-map: (
 	"800": func-shade-color($color-light, 60%),
 	"900": func-shade-color($color-light, 80%)
 );
+
+// -------------------- CSS Variables --------------------
+
+:root {
+	--color-light-100: #{map.get($color-light-map, "100")};
+	--color-light-200: #{map.get($color-light-map, "200")};
+	--color-light-300: #{map.get($color-light-map, "300")};
+	--color-light-400: #{map.get($color-light-map, "400")};
+	--color-light-500: #{map.get($color-light-map, "500")};
+	--color-light-600: #{map.get($color-light-map, "600")};
+	--color-light-700: #{map.get($color-light-map, "700")};
+	--color-light-800: #{map.get($color-light-map, "800")};
+	--color-light-900: #{map.get($color-light-map, "900")};
+}

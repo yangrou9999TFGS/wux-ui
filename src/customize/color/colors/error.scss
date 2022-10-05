@@ -13,3 +13,17 @@ $color-error-map: (
 	"800": func-shade-color($color-error, 60%),
 	"900": func-shade-color($color-error, 80%)
 );
+
+// -------------------- CSS Variables --------------------
+
+:root {
+	--color-error-100: #{map.get($color-error-map, "100")};
+	--color-error-200: #{map.get($color-error-map, "200")};
+	--color-error-300: #{map.get($color-error-map, "300")};
+	--color-error-400: #{map.get($color-error-map, "400")};
+	--color-error-500: #{map.get($color-error-map, "500")};
+	--color-error-600: #{map.get($color-error-map, "600")};
+	--color-error-700: #{map.get($color-error-map, "700")};
+	--color-error-800: #{map.get($color-error-map, "800")};
+	--color-error-900: #{map.get($color-error-map, "900")};
+}

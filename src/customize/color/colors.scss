@@ -4,8 +4,7 @@
 // Variable
 $imported-colors: primary, secondary, success, info, warning, error, light;
 $imported-degrees: 100, 200, 300, 400, 500, 600, 700, 800, 900;
-
-@import "theme-dark";   
+  
   @import "colors/primary";
   @import "colors/secondary";
   @import "colors/success";

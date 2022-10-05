@@ -2,26 +2,26 @@
 /* WuX-UI Utilities-Margin */
 
 [margin] {
-  --attr-custom-margin: attr(margin px);
+  --attr-custom-margin: attr(margin length);
   margin: var(--attr-custom-margin) !important;
 }
 
   [margin-top] {
-    --attr-custom-margin-top: attr(margin-top px);
+    --attr-custom-margin-top: attr(margin-top length);
     margin-top: var(--attr-custom-margin-top) !important;
   }
   
   [margin-bottom] {
-    --attr-custom-margin-bottom: attr(margin-bottom px);
+    --attr-custom-margin-bottom: attr(margin-bottom length);
     margin-bottom: var(--attr-custom-margin-bottom) !important;
   }
   
   [margin-left] {
-    --attr-custom-margin-left: attr(margin-left px);
+    --attr-custom-margin-left: attr(margin-left length);
     margin-left: var(--attr-custom-margin-left) !important;
   }
   
   [margin-right] {
-    --attr-custom-margin-right: attr(margin-right px);
+    --attr-custom-margin-right: attr(margin-right length);
     margin-right: var(--attr-custom-margin-right) !important;
   }
