@@ -5,12 +5,15 @@
 
 .#{$prefix}alert {
 	position: relative;
+	box-sizing: border-box;
+		-webkit-box-sizing: border-box;
 	border-radius: var(--alert-border-radius);
 	border-left-width: var(--alert-border-width);
 	border-left-style: solid;
 	font-size: var(--alert-font-size);
 	padding: var(--alert-padding);
 	margin-bottom: var(--alert-margin-bottom);	
+	width: 100%;
 
 	background-color: var(--alert-background-color-primary);
 	color: var(--alert-text-color-primary);
