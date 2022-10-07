@@ -11,7 +11,7 @@
     -webkit-appearance: button;
 	box-shadow: none;
 	cursor: pointer;
-	display: block; // Firefox
+	display: inline-block; // Firefox
 	font-weight: 400;
 	margin: 0;
 	margin-right: var(--button-margin-right);
