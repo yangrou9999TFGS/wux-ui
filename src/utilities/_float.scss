@@ -9,6 +9,14 @@
   float: right !important;
 }
 
+[float=inline-start] {
+  float: inline-start !important;
+}
+
+[float=inline-end] {
+  float: inline-end !important;
+}
+
 float-clear,
 .#{$prefix}float-clear {
   &:before,

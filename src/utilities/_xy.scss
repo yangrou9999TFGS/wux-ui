@@ -1,0 +1,12 @@
+
+/* WuX-UI Utilities-Width/Height */
+
+[width] {
+  --attr-custom-width: attr(width length);
+  width: var(--attr-custom-width) !important;
+}
+
+[height] {
+  --attr-custom-height: attr(height length);
+  height: var(--attr-custom-height) !important;
+}
