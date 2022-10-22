@@ -44,21 +44,7 @@ $card-flat-border-dark: #121212;
   --card-flat-border: #{$card-flat-border};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --card-border-color: #{$card-border-color-dark};
-    --card-background-color: #{$card-background-color-dark};
-    --card-shadow: #{$card-shadow-dark};
-    --card-hover-shadow: #{$card-hover-shadow-dark};
-    --card-text-color: #{$card-text-color-dark};
-    
-    --card-flat-background: #{$card-flat-background-dark};
-    --card-flat-border: #{$card-flat-border-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin card-dark {
   --card-border-color: #{$card-border-color-dark};
   --card-background-color: #{$card-background-color-dark};
   --card-shadow: #{$card-shadow-dark};
@@ -67,4 +53,15 @@ body.#{$prefix}dark-mode {
   
   --card-flat-background: #{$card-flat-background-dark};
   --card-flat-border: #{$card-flat-border-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include card-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include card-dark;
 }

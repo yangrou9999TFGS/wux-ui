@@ -38,21 +38,7 @@ $form-checks-checked-shadow-dark: none;
   --form-checks-checked-shadow: #{$form-checks-checked-shadow};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --form-checks-border-color: #{$form-checks-border-color-dark};
-  
-    --form-checks-hover-background-color: #{$form-checks-hover-background-color-dark};
-    --form-checks-hover-shadow: #{$form-checks-hover-shadow-dark};
-    
-    --form-checks-checked-background-color: #{$form-checks-checked-background-color-dark};
-    --form-checks-checked-border-color: #{$form-checks-checked-border-color-dark};
-    --form-checks-checked-shadow: #{$form-checks-checked-shadow-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin form-checks-dark {
   --form-checks-border-color: #{$form-checks-border-color-dark};
 
   --form-checks-hover-background-color: #{$form-checks-hover-background-color-dark};
@@ -61,4 +47,15 @@ body.#{$prefix}dark-mode {
   --form-checks-checked-background-color: #{$form-checks-checked-background-color-dark};
   --form-checks-checked-border-color: #{$form-checks-checked-border-color-dark};
   --form-checks-checked-shadow: #{$form-checks-checked-shadow-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include form-checks-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include form-checks-dark;
 }

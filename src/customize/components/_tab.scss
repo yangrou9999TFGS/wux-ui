@@ -39,20 +39,7 @@ $tab-item-focus-text-color-dark: map.get($color-primary-map, "300");
   --tab-content-margin: #{$tab-content-margin};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --tab-item-background: #{$tab-item-background-dark};
-    --tab-item-border: #{$tab-item-border-dark};
-    --tab-item-text-color: #{$tab-item-text-color-dark};
-    
-    --tab-item-focus-background: #{$tab-item-focus-background-dark};
-    --tab-item-focus-border-color: #{$tab-item-focus-border-color-dark};
-    --tab-item-focus-text-color: #{$tab-item-focus-text-color-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin tab-dark {
   --tab-item-background: #{$tab-item-background-dark};
   --tab-item-border: #{$tab-item-border-dark};
   --tab-item-text-color: #{$tab-item-text-color-dark};
@@ -60,4 +47,15 @@ body.#{$prefix}dark-mode {
   --tab-item-focus-background: #{$tab-item-focus-background-dark};
   --tab-item-focus-border-color: #{$tab-item-focus-border-color-dark};
   --tab-item-focus-text-color: #{$tab-item-focus-text-color-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include tab-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include tab-dark;
 }

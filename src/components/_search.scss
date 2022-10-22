@@ -4,8 +4,7 @@
 @import "../customize/components/search";
 
 .#{$prefix}search {
-	width: 100%;
-	display: block;
+	display: inline-block;
 
 	appearance: none;
 	  -webkit-appearance: none;
@@ -21,6 +20,7 @@
 	color: var(--search-text-color) !important; // No Global!
 	padding: var(--search-padding);
 	padding-inline-start: 40px;
+	max-width: 100%;
 	transition: var(--global-animation-speed);
 		-webkit-transition: var(--global-animation-speed);
 

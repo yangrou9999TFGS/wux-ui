@@ -140,33 +140,7 @@ $form-input-disabled-opacity-dark: 40%;
 	--form-input-border-radius-xl: #{map.get($form-input-border-map, xl)};
 }
 
-@media (refers-color-scheme: dark) {
-	:root {
-		--form-input-background: #{$form-input-background-dark};
-		--form-input-border-color: #{$form-input-border-color-dark};
-		--form-input-text-color: #{$form-input-text-color-dark};
-		
-		--form-input-hover-background: #{$form-input-hover-background-dark};
-		--form-input-hover-border-color: #{$form-input-hover-border-color-dark};
-		--form-input-hover-shadow: #{$form-input-hover-shadow-dark};
-		--form-input-hover-text-color: #{$form-input-hover-text-color-dark};
-		
-		--form-input-focus-background: #{$form-input-focus-background-dark};
-		--form-input-focus-border-color: #{$form-input-focus-border-color-dark};
-		--form-input-focus-shadow: #{$form-input-focus-shadow-dark};
-		--form-input-focus-text-color: #{$form-input-focus-text-color-dark};
-		
-		--form-input-invalid-background: #{$form-input-invalid-background-dark};
-		--form-input-invalid-border-color: #{$form-input-invalid-border-color-dark};
-		--form-input-invalid-text-color: #{$form-input-invalid-text-color-dark};
-		--form-input-invalid-shadow: #{$form-input-invalid-shadow-dark};
-	
-		--form-input-disabled-opacity: #{$form-input-disabled-opacity-dark};
-	}
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin form-input-dark {
 	--form-input-background: #{$form-input-background-dark};
 	--form-input-border-color: #{$form-input-border-color-dark};
 	--form-input-text-color: #{$form-input-text-color-dark};
@@ -187,4 +161,15 @@ body.#{$prefix}dark-mode {
 	--form-input-invalid-shadow: #{$form-input-invalid-shadow-dark};
 
 	--form-input-disabled-opacity: #{$form-input-disabled-opacity-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		@include form-input-dark;
+	}
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+	@include form-input-dark;
 }

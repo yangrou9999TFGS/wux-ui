@@ -11,6 +11,7 @@ $jumbotron-title-text-color: #121212;
 
 $jumbotron-title-bold-color: map.get($color-primary-map, "500");
 
+$jumbotron-subtitle-color: #666666;
 $jumbotron-subtitle-font-size: 20px;
 $jumbotron-subtitle-margin-y: 8px;
 
@@ -21,6 +22,8 @@ $jumbotron-background-dark: transparent;
 
 $jumbotron-title-bold-color-dark: map.get($color-primary-map, "400");
 $jumbotron-title-text-color-dark: #FCFCFC;
+
+$jumbotron-subtitle-color-dark: #ECECEC;
 
 // -------------------- CSS Variables --------------------
 :root {
@@ -34,27 +37,30 @@ $jumbotron-title-text-color-dark: #FCFCFC;
   
   --jumbotron-title-bold-color: #{$jumbotron-title-bold-color};
   
+  --jumbotron-subtitle-color: #{$jumbotron-subtitle-color};
   --jumbotron-subtitle-font-size: #{$jumbotron-subtitle-font-size};
   --jumbotron-subtitle-margin-y: #{$jumbotron-subtitle-margin-y};
   
   --jumbotron-button-group-margin-y: #{$jumbotron-button-group-margin-y};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --jumbotron-background: #{$jumbotron-background-dark};
-    
-    --jumbotron-title-text-color: #{$jumbotron-title-text-color-dark};
-    
-    --jumbotron-title-bold-color: #{$jumbotron-title-bold-color-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin jumbotron-dark {
   --jumbotron-background: #{$jumbotron-background-dark};
   
   --jumbotron-title-text-color: #{$jumbotron-title-text-color-dark};
   
   --jumbotron-title-bold-color: #{$jumbotron-title-bold-color-dark};
+  
+  --jumbotron-subtitle-color: #{$jumbotron-subtitle-color-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include jumbotron-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include jumbotron-dark;
 }

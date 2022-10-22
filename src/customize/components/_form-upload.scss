@@ -50,24 +50,7 @@ $form-upload-button-hover-color-dark: func-text-color(primary, 500);
   --form-upload-button-hover-color: #{$form-upload-button-hover-color};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --form-upload-border: #{$form-upload-border-dark};
-    --form-upload-hover-shadow: #{$form-upload-hover-shadow-dark};
-    
-    --form-upload-button-background: #{$form-upload-button-background-dark};
-    --form-upload-button-border: #{$form-upload-button-border-dark};
-    --form-upload-button-color: #{$form-upload-button-color-dark};
-    
-    --form-upload-button-hover-background: #{$form-upload-button-hover-background-dark};
-    --form-upload-button-hover-border: #{$form-upload-button-hover-border-dark};
-    --form-upload-button-hover-color: #{$form-upload-button-hover-color-dark};
-  }
-}
-
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin form-upload-dark {
   --form-upload-border: #{$form-upload-border-dark};
   --form-upload-hover-shadow: #{$form-upload-hover-shadow-dark};
   
@@ -78,4 +61,16 @@ body.#{$prefix}dark-mode {
   --form-upload-button-hover-background: #{$form-upload-button-hover-background-dark};
   --form-upload-button-hover-border: #{$form-upload-button-hover-border-dark};
   --form-upload-button-hover-color: #{$form-upload-button-hover-color-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include form-upload-dark;
+  }
+}
+
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include form-upload-dark;
 }

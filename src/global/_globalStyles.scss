@@ -12,8 +12,8 @@ body.#{$prefix}dark-mode {
 	color: #FCFCFC;
 }
 
-@media (refers-color-scheme: dark) {
-	:root {
+@media (prefers-color-scheme: dark) {
+	body {
 		background-color: #121212;
 		color: #FCFCFC;
 	}

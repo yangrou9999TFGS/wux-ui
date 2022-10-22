@@ -51,23 +51,7 @@ $tables-row-item-text-color-dark: #FCFCFC;
   --tables-row-margin: #{$tables-row-margin};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --tables-background-color: #{$tables-background-color-dark};
-    --tables-border: #{$tables-border-dark};
-    --tables-shadow: #{$tables-shadow-dark};
-    
-    --tables-head-background-color: #{$tables-head-background-color-dark};
-    --tables-head-text-color: #{$tables-head-text-color-dark};
-    
-    --tables-row-header-background-color: #{$tables-row-header-background-color-dark};
-    --tables-row-item-border: #{$tables-row-item-border-dark};
-    --tables-row-item-text-color: #{$tables-row-item-text-color};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin tables-dark {
   --tables-background-color: #{$tables-background-color-dark};
   --tables-border: #{$tables-border-dark};
   --tables-shadow: #{$tables-shadow-dark};
@@ -78,4 +62,15 @@ body.#{$prefix}dark-mode {
   --tables-row-header-background-color: #{$tables-row-header-background-color-dark};
   --tables-row-item-border: #{$tables-row-item-border-dark};
   --tables-row-item-text-color: #{$tables-row-item-text-color};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include tables-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include tables-dark;
 }

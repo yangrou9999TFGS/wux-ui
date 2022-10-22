@@ -45,20 +45,7 @@ $dialog-body-text-color-dark: #FFFFFF;
 	--dialog-footer-group-float: #{$dialog-footer-group-float};
 }
 
-@media (refers-color-scheme: dark) {
-	:root {
-		--dialog-background-color: #{$dialog-background-color-dark};
-		--dialog-border: #{$dialog-border-dark};
-		--dialog-shadow: #{$dialog-shadow-dark};
-
-		--dialog-header-text-color: #{$dialog-header-text-color-dark};
-
-		--dialog-body-text-color: #{$dialog-body-text-color-dark};
-	}
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin dialog-dark {
 	--dialog-background-color: #{$dialog-background-color-dark};
 	--dialog-border: #{$dialog-border-dark};
 	--dialog-shadow: #{$dialog-shadow-dark};
@@ -66,4 +53,15 @@ body.#{$prefix}dark-mode {
 	--dialog-header-text-color: #{$dialog-header-text-color-dark};
 
 	--dialog-body-text-color: #{$dialog-body-text-color-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		@include dialog-dark;
+	}
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+	@include dialog-dark;
 }

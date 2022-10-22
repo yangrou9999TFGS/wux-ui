@@ -525,113 +525,7 @@ $button-fab-hover-shadow-dark: 1px 1px 6px 2px #000000;
   --button-font-size-xl: #{map.get($button-size-map, xl)};
 }
 
-@media (refers-color-scheme: dark) {
-	:root {
-		--button-fab-shadow: #{$button-fab-shadow-dark};
-		--button-fab-hover-shadow: #{$button-fab-hover-shadow-dark};
-  
-		--button-solid-background-color-primary: #{map.get($button-solid-background-color-map-dark, primary)};
-		--button-solid-background-color-secondary: #{map.get($button-solid-background-color-map-dark, secondary)};
-		--button-solid-background-color-success: #{map.get($button-solid-background-color-map-dark, success)};
-		--button-solid-background-color-info: #{map.get($button-solid-background-color-map-dark, info)};
-		--button-solid-background-color-warning: #{map.get($button-solid-background-color-map-dark, warning)};
-		--button-solid-background-color-error: #{map.get($button-solid-background-color-map-dark, error)};
-		--button-solid-background-color-light: #{map.get($button-solid-background-color-map-dark, light)};
-  
-		--button-solid-hover-background-color-primary: #{map.get($button-solid-hover-background-color-map-dark, primary)};
-		--button-solid-hover-background-color-secondary: #{map.get($button-solid-hover-background-color-map-dark, secondary)};
-		--button-solid-hover-background-color-success: #{map.get($button-solid-hover-background-color-map-dark, success)};
-		--button-solid-hover-background-color-info: #{map.get($button-solid-hover-background-color-map-dark, info)};
-		--button-solid-hover-background-color-warning: #{map.get($button-solid-hover-background-color-map-dark, warning)};
-		--button-solid-hover-background-color-error: #{map.get($button-solid-hover-background-color-map-dark, error)};
-		--button-solid-hover-background-color-light: #{map.get($button-solid-hover-background-color-map-dark, light)};
-		
-		--button-solid-text-color-primary: #{map.get($button-solid-text-color-map-dark, primary)};
-		--button-solid-text-color-secondary: #{map.get($button-solid-text-color-map-dark, secondary)};
-		--button-solid-text-color-success: #{map.get($button-solid-text-color-map-dark, success)};
-		--button-solid-text-color-info: #{map.get($button-solid-text-color-map-dark, info)};
-		--button-solid-text-color-warning: #{map.get($button-solid-text-color-map-dark, warning)};
-		--button-solid-text-color-error: #{map.get($button-solid-text-color-map-dark, error)};
-		--button-solid-text-color-light: #{map.get($button-solid-text-color-map-dark, light)};
-		
-		--button-solid-hover-text-color-primary: #{map.get($button-solid-hover-text-color-map-dark, primary)};
-		--button-solid-hover-text-color-secondary: #{map.get($button-solid-hover-text-color-map-dark, secondary)};
-		--button-solid-hover-text-color-success: #{map.get($button-solid-hover-text-color-map-dark, success)};
-		--button-solid-hover-text-color-info: #{map.get($button-solid-hover-text-color-map-dark, info)};
-		--button-solid-hover-text-color-warning: #{map.get($button-solid-hover-text-color-map-dark, warning)};
-		--button-solid-hover-text-color-error: #{map.get($button-solid-hover-text-color-map-dark, error)};
-		--button-solid-hover-text-color-light: #{map.get($button-solid-hover-text-color-map-dark, light)};
-		
-		// -Outline
-		--button-outline-border-color-primary: #{map.get($button-outline-border-color-map-dark, primary)};
-		--button-outline-border-color-secondary: #{map.get($button-outline-border-color-map-dark, secondary)};
-		--button-outline-border-color-success: #{map.get($button-outline-border-color-map-dark, success)};
-		--button-outline-border-color-info: #{map.get($button-outline-border-color-map-dark, info)};
-		--button-outline-border-color-warning: #{map.get($button-outline-border-color-map-dark, warning)};
-		--button-outline-border-color-error: #{map.get($button-outline-border-color-map-dark, error)};
-		--button-outline-border-color-light: #{map.get($button-outline-border-color-map-dark, light)};
-  
-		--button-outline-hover-border-color-primary: #{map.get($button-outline-hover-border-color-map-dark, primary)};
-		--button-outline-hover-border-color-secondary: #{map.get($button-outline-hover-border-color-map-dark, secondary)};
-		--button-outline-hover-border-color-success: #{map.get($button-outline-hover-border-color-map-dark, success)};
-		--button-outline-hover-border-color-info: #{map.get($button-outline-hover-border-color-map-dark, info)};
-		--button-outline-hover-border-color-warning: #{map.get($button-outline-hover-border-color-map-dark, warning)};
-		--button-outline-hover-border-color-error: #{map.get($button-outline-hover-border-color-map-dark, error)};
-		--button-outline-hover-border-color-light: #{map.get($button-outline-hover-border-color-map-dark, light)};
-		
-		--button-outline-text-color-primary: #{map.get($button-outline-text-color-map-dark, primary)};
-		--button-outline-text-color-secondary: #{map.get($button-outline-text-color-map-dark, secondary)};
-		--button-outline-text-color-success: #{map.get($button-outline-text-color-map-dark, success)};
-		--button-outline-text-color-info: #{map.get($button-outline-text-color-map-dark, info)};
-		--button-outline-text-color-warning: #{map.get($button-outline-text-color-map-dark, warning)};
-		--button-outline-text-color-error: #{map.get($button-outline-text-color-map-dark, error)};
-		--button-outline-text-color-light: #{map.get($button-outline-text-color-map-dark, light)};
-		
-		--button-outline-hover-text-color-primary: #{map.get($button-outline-hover-text-color-map-dark, primary)};
-		--button-outline-hover-text-color-secondary: #{map.get($button-outline-hover-text-color-map-dark, secondary)};
-		--button-outline-hover-text-color-success: #{map.get($button-outline-hover-text-color-map-dark, success)};
-		--button-outline-hover-text-color-info: #{map.get($button-outline-hover-text-color-map-dark, info)};
-		--button-outline-hover-text-color-warning: #{map.get($button-outline-hover-text-color-map-dark, warning)};
-		--button-outline-hover-text-color-error: #{map.get($button-outline-hover-text-color-map-dark, error)};
-		--button-outline-hover-text-color-light: #{map.get($button-outline-hover-text-color-map-dark, light)};
-		
-		--button-outline-hover-background-color-primary: #{map.get($button-outline-hover-background-color-map-dark, primary)};
-		--button-outline-hover-background-color-secondary: #{map.get($button-outline-hover-background-color-map-dark, secondary)};
-		--button-outline-hover-background-color-success: #{map.get($button-outline-hover-background-color-map-dark, success)};
-		--button-outline-hover-background-color-info: #{map.get($button-outline-hover-background-color-map-dark, info)};
-		--button-outline-hover-background-color-warning: #{map.get($button-outline-hover-background-color-map-dark, warning)};
-		--button-outline-hover-background-color-error: #{map.get($button-outline-hover-background-color-map-dark, error)};
-		--button-outline-hover-background-color-light: #{map.get($button-outline-hover-background-color-map-dark, light)};
-  
-		// -Text
-		--button-text-text-color-primary: #{map.get($button-text-text-color-map-dark, primary)};
-		--button-text-text-color-secondary: #{map.get($button-text-text-color-map-dark, secondary)};
-		--button-text-text-color-success: #{map.get($button-text-text-color-map-dark, success)};
-		--button-text-text-color-info: #{map.get($button-text-text-color-map-dark, info)};
-		--button-text-text-color-warning: #{map.get($button-text-text-color-map-dark, warning)};
-		--button-text-text-color-error: #{map.get($button-text-text-color-map-dark, error)};
-		--button-text-text-color-light: #{map.get($button-text-text-color-map-dark, light)};
-  
-		--button-text-hover-text-color-primary: #{map.get($button-text-hover-text-color-map-dark, primary)};
-		--button-text-hover-text-color-secondary: #{map.get($button-text-hover-text-color-map-dark, secondary)};
-		--button-text-hover-text-color-success: #{map.get($button-text-hover-text-color-map-dark, success)};
-		--button-text-hover-text-color-info: #{map.get($button-text-hover-text-color-map-dark, info)};
-		--button-text-hover-text-color-warning: #{map.get($button-text-hover-text-color-map-dark, warning)};
-		--button-text-hover-text-color-error: #{map.get($button-text-hover-text-color-map-dark, error)};
-		--button-text-hover-text-color-light: #{map.get($button-text-hover-text-color-map-dark, light)};
-		
-		--button-text-hover-background-color-primary: #{map.get($button-text-hover-background-color-map-dark, primary)};
-		--button-text-hover-background-color-secondary: #{map.get($button-text-hover-background-color-map-dark, secondary)};
-		--button-text-hover-background-color-success: #{map.get($button-text-hover-background-color-map-dark, success)};
-		--button-text-hover-background-color-info: #{map.get($button-text-hover-background-color-map-dark, info)};
-		--button-text-hover-background-color-warning: #{map.get($button-text-hover-background-color-map-dark, warning)};
-		--button-text-hover-background-color-error: #{map.get($button-text-hover-background-color-map-dark, error)};
-		--button-text-hover-background-color-light: #{map.get($button-text-hover-background-color-map-dark, light)};
-	}
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin button-dark {
 	--button-fab-shadow: #{$button-fab-shadow-dark};
 	--button-fab-hover-shadow: #{$button-fab-hover-shadow-dark};
   
@@ -732,4 +626,15 @@ body.#{$prefix}dark-mode {
 	--button-text-hover-background-color-warning: #{map.get($button-text-hover-background-color-map-dark, warning)};
 	--button-text-hover-background-color-error: #{map.get($button-text-hover-background-color-map-dark, error)};
 	--button-text-hover-background-color-light: #{map.get($button-text-hover-background-color-map-dark, light)};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		@include button-dark;
+	}
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+	@include button-dark;
 }

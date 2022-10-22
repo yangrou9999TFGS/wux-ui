@@ -18,15 +18,18 @@ $badge-text-color-dark: #FFFFFF;
 	--badge-text-color: #{$badge-text-color};
 }
 
-@media (refers-color-scheme: dark) {
+@mixin badge-dark {
+	--badge-background-color: #{$badge-background-color-dark};
+	--badge-text-color: #{$badge-text-color-dark};
+}
+
+@media (prefers-color-scheme: dark) {
 	:root {
-		--badge-background-color: #{$badge-background-color-dark};
-		--badge-text-color: #{$badge-text-color-dark};
+		@include badge-dark;
 	}
 }
 
 [dark-mode],
 body.#{$prefix}dark-mode {
-	--badge-background-color: #{$badge-background-color-dark};
-	--badge-text-color: #{$badge-text-color-dark};
+	@include badge-dark;
 }

@@ -41,22 +41,7 @@ $form-range-thumb-focus-shadow-dark: 0 0 0 4px map.get($color-primary-map, "400"
   --form-range-thumb-focus-shadow: #{$form-range-thumb-focus-shadow};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --form-range-thumb-background: #{$form-range-thumb-background-dark};
-    --form-range-thumb-border: #{$form-range-thumb-border-dark};
-    --form-range-thumb-shadow: #{$form-range-thumb-shadow-dark};
-    
-    --form-range-track-background: #{$form-range-track-background-dark};
-    --form-range-track-border-radius: #{$form-range-track-border-radius-dark};
-    
-    --form-range-thumb-focus-background: #{$form-range-thumb-focus-background-dark};
-    --form-range-thumb-focus-shadow: #{$form-range-thumb-focus-shadow-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin form-range-dark {
   --form-range-thumb-background: #{$form-range-thumb-background-dark};
   --form-range-thumb-border: #{$form-range-thumb-border-dark};
   --form-range-thumb-shadow: #{$form-range-thumb-shadow-dark};
@@ -66,4 +51,15 @@ body.#{$prefix}dark-mode {
   
   --form-range-thumb-focus-background: #{$form-range-thumb-focus-background-dark};
   --form-range-thumb-focus-shadow: #{$form-range-thumb-focus-shadow-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include form-range-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include form-range-dark;
 }

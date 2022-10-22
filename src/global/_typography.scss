@@ -53,12 +53,12 @@
 
   /* a */
   a:not(.wux-btn) {
-    color: map.get($color-primary-map, "600");
+    color: map.get($color-primary-map, "400");
     text-decoration: none;
     transition: $global-animation-speed;
 
     &:hover {
-      color: map.get($color-primary-map, "700");
+      color: map.get($color-primary-map, "500");
       text-decoration: underline;
     }
   }
@@ -137,12 +137,12 @@
     // background-color: #f7f7f9;
     border-radius: 6px;
   }
-
+  
   /* Pre Code */
   pre code {
     margin: 2px;
     padding: 0 !important;
-    color: inherit;
+    color: #121212;
     font-size: inherit;
     line-height: 1.6;
     background-color: transparent;
@@ -201,6 +201,7 @@
     overflow-wrap: break-word;
     border: 2px solid #F4F4F4;
     background-color: #F4F4F4;
+    color: #121212;
     border-radius: 12px;
     -webkit-overflow-scrolling: touch;
   }

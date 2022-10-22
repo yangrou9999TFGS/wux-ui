@@ -68,25 +68,7 @@ $dropdown-menu-divider-border-dark: 2px solid #222222;
   --dropdown-menu-divider-margin: #{$dropdown-menu-divider-margin};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --dropdown-menu-background: #{$dropdown-menu-background-dark};
-    --dropdown-menu-border: #{$dropdown-menu-border-dark};
-    --dropdown-menu-shadow: #{$dropdown-menu-shadow-dark};
-    
-    --dropdown-item-text-color: #{$dropdown-item-text-color-dark};
-    
-    --dropdown-item-hover-background: #{$dropdown-item-hover-background-dark};
-    --dropdown-item-hover-text-color: #{$dropdown-item-hover-text-color-dark};
-    
-    --dropdown-menu-header-text-color: #{$dropdown-menu-header-text-color-dark};
-    
-    --dropdown-menu-divider-border: #{$dropdown-menu-divider-border-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin dropdown-dark {
   --dropdown-menu-background: #{$dropdown-menu-background-dark};
   --dropdown-menu-border: #{$dropdown-menu-border-dark};
   --dropdown-menu-shadow: #{$dropdown-menu-shadow-dark};
@@ -99,4 +81,15 @@ body.#{$prefix}dark-mode {
   --dropdown-menu-header-text-color: #{$dropdown-menu-header-text-color-dark};
     
   --dropdown-menu-divider-border: #{$dropdown-menu-divider-border-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dropdown-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include dropdown-dark;
 }

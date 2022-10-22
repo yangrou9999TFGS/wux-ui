@@ -57,26 +57,7 @@ $search-focus-shadow-dark: 0 0 2px #DDDDDD;
   --search-focus-shadow: #{$search-focus-shadow};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --search-border-color: #{$search-border-color-dark};
-    --search-background-color: #{$search-background-color-dark};
-    --search-text-color: #{$search-text-color-dark};
-    
-    --search-hover-background-color: #{$search-hover-background-color-dark};
-    --search-hover-border-color: #{$search-hover-border-color-dark};
-    --search-hover-text-color: #{$search-hover-text-color-dark};
-    --search-hover-shadow: #{$search-hover-shadow-dark};
-    
-    --search-focus-background-color: #{$search-focus-background-color-dark};
-    --search-focus-border-color: #{$search-focus-border-color-dark};
-    --search-focus-text-color: #{$search-focus-text-color-dark};
-    --search-focus-shadow: #{$search-focus-shadow-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin search-dark {
   --search-border-color: #{$search-border-color-dark};
   --search-background-color: #{$search-background-color-dark};
   --search-text-color: #{$search-text-color-dark};
@@ -90,4 +71,15 @@ body.#{$prefix}dark-mode {
   --search-focus-border-color: #{$search-focus-border-color-dark};
   --search-focus-text-color: #{$search-focus-text-color-dark};
   --search-focus-shadow: #{$search-focus-shadow-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include search-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include search-dark;
 }

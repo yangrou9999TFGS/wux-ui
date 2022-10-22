@@ -30,15 +30,18 @@ $blankslate-subtitle-text-color-dark: #666666;
 	--blankslate-icon-border-radius: #{$blankslate-icon-border-radius};
 }
 
-@media (refers-color-scheme: dark) {
+@mixin blankslate-dark {
+	--blankslate-title-text-color: #{$blankslate-title-text-color-dark};
+	--blankslate-subtitle-text-color: #{$blankslate-subtitle-text-color-dark};	
+}
+
+@media (prefers-color-scheme: dark) {
 	:root {
-		--blankslate-title-text-color: #{$blankslate-title-text-color-dark};
-		--blankslate-subtitle-text-color: #{$blankslate-subtitle-text-color-dark};	
+		@include blankslate-dark;
 	}
 }
 
 [dark-mode],
 body.#{$prefix}dark-mode {
-	--blankslate-title-text-color: #{$blankslate-title-text-color-dark};
-	--blankslate-subtitle-text-color: #{$blankslate-subtitle-text-color-dark};	
+	@include blankslate-dark;
 }

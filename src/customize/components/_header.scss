@@ -71,28 +71,7 @@ $header-option-bold-text-color-dark: func-text-color(primary, 300);
   --header-option-bold-text-color: #{$header-option-bold-text-color};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --header-background: #{$header-background-dark};
-    --header-text-color: #{$header-text-color-dark};
-    
-    --header-title-text-color: #{$header-title-text-color-dark};
-    
-    --header-fixed-background: #{$header-fixed-background-dark};
-    --header-fixed-shadow: #{$header-fixed-shadow-dark};
-    --header-fixed-text-color: #{$header-fixed-text-color-dark};
-    
-    --header-option-text-color: #{$header-option-text-color-dark};
-    
-    --header-option-hover-background-color: #{$header-option-hover-background-color-dark};
-    
-    --header-option-bold-background-color: #{$header-option-bold-background-color-dark};
-    --header-option-bold-text-color: #{$header-option-bold-text-color-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin header-dark {
   --header-background: #{$header-background-dark};
   --header-text-color: #{$header-text-color-dark};
       
@@ -108,6 +87,17 @@ body.#{$prefix}dark-mode {
   
   --header-option-bold-background-color: #{$header-option-bold-background-color-dark};
   --header-option-bold-text-color: #{$header-option-bold-text-color-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include header-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include header-dark;
 }
 
 .#{$prefix}header-fixed:before {

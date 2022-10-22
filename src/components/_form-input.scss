@@ -5,7 +5,7 @@
 
 .#{$prefix}form-input {
 	position: relative;
-	width: 100%;
+	
 	display: block;
 	
 	appearance: none;
@@ -21,7 +21,7 @@
 	margin: 0;
 	margin-bottom: var(--form-input-margin-bottom);
 	resize: none;
-	max-width: auto;
+	max-width: 100%;
 	transition: var(--global-animation-speed);
 	  -webkit-transition: var(--global-animation-speed);
 
@@ -42,14 +42,14 @@
 		border: var(--form-input-focus-border-width) solid var(--form-input-focus-border-color);
 		color: var(--form-input-focus-text-color);
 		outline: none;
-	}
-
-	&:invalid {
-		box-shadow: var(--form-input-invalid-shadow);
-		background: var(--form-input-invalid-background);
-		border: var(--form-input-invalid-border-width) solid var(--form-input-invalid-border-color);
-		color: var(--form-input-invalid-text-color);
-		outline: none;
+		
+		&:invalid {
+			box-shadow: var(--form-input-invalid-shadow);
+			background: var(--form-input-invalid-background);
+			border: var(--form-input-invalid-border-width) solid var(--form-input-invalid-border-color);
+			color: var(--form-input-invalid-text-color);
+			outline: none;
+		}
 	}
 
 	&:disabled {

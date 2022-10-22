@@ -139,44 +139,7 @@ $alert-icon-color-map-dark: (
 	--alert-icon-color-light: #{map.get($alert-icon-color-map, light)};
 }
 
-@media (refers-color-scheme: dark) {
-	:root {
-		--alert-background-color-primary: #{map.get($alert-background-color-map-dark, primary)};
-		--alert-background-color-secondary: #{map.get($alert-background-color-map-dark, secondary)};
-		--alert-background-color-success: #{map.get($alert-background-color-map-dark, success)};
-		--alert-background-color-info: #{map.get($alert-background-color-map-dark, info)};
-		--alert-background-color-warning: #{map.get($alert-background-color-map-dark, warning)};
-		--alert-background-color-error: #{map.get($alert-background-color-map-dark, error)};
-		--alert-background-color-light: #{map.get($alert-background-color-map-dark, light)};
-
-		--alert-border-color-primary: #{map.get($alert-border-color-map-dark, primary)};
-		--alert-border-color-secondary: #{map.get($alert-border-color-map-dark, secondary)};
-		--alert-border-color-success: #{map.get($alert-border-color-map-dark, success)};
-		--alert-border-color-info: #{map.get($alert-border-color-map-dark, info)};
-		--alert-border-color-warning: #{map.get($alert-border-color-map-dark, warning)};
-		--alert-border-color-error: #{map.get($alert-border-color-map-dark, error)};
-		--alert-border-color-light: #{map.get($alert-border-color-map-dark, light)};
-
-		--alert-text-color-primary: #{map.get($alert-text-color-map-dark, primary)};
-		--alert-text-color-secondary: #{map.get($alert-text-color-map-dark, secondary)};
-		--alert-text-color-success: #{map.get($alert-text-color-map-dark, success)};
-		--alert-text-color-info: #{map.get($alert-text-color-map-dark, info)};
-		--alert-text-color-warning: #{map.get($alert-text-color-map-dark, warning)};
-		--alert-text-color-error: #{map.get($alert-text-color-map-dark, error)};
-		--alert-text-color-light: #{map.get($alert-text-color-map-dark, light)};
-
-		--alert-icon-color-primary: #{map.get($alert-icon-color-map-dark, primary)};
-		--alert-icon-color-secondary: #{map.get($alert-icon-color-map-dark, secondary)};
-		--alert-icon-color-success: #{map.get($alert-icon-color-map-dark, success)};
-		--alert-icon-color-info: #{map.get($alert-icon-color-map-dark, info)};
-		--alert-icon-color-warning: #{map.get($alert-icon-color-map-dark, warning)};
-		--alert-icon-color-error: #{map.get($alert-icon-color-map-dark, error)};
-		--alert-icon-color-light: #{map.get($alert-icon-color-map-dark, light)};
-	}
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin alert-dark {
 	--alert-background-color-primary: #{map.get($alert-background-color-map-dark, primary)};
 	--alert-background-color-secondary: #{map.get($alert-background-color-map-dark, secondary)};
 	--alert-background-color-success: #{map.get($alert-background-color-map-dark, success)};
@@ -208,4 +171,15 @@ body.#{$prefix}dark-mode {
 	--alert-icon-color-warning: #{map.get($alert-icon-color-map-dark, warning)};
 	--alert-icon-color-error: #{map.get($alert-icon-color-map-dark, error)};
 	--alert-icon-color-light: #{map.get($alert-icon-color-map-dark, light)};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		@include alert-dark;
+	}
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+	@include alert-dark;
 }

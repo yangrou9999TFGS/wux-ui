@@ -36,21 +36,21 @@ $breadcrumb-item-link-color-dark: map.get($color-primary-map, "400");
 	--breadcrumb-item-link-color: #{$breadcrumb-item-link-color};
 }
 
-@media (refers-color-scheme: dark) {
-	:root {
-		--breadcrumb-background-color: #{$breadcrumb-background-color-dark};
-		--breadcrumb-border: #{$breadcrumb-border-dark};
-		--breadcrumb-color: #{$breadcrumb-color-dark};
-
-		--breadcrumb-item-link-color: #{$breadcrumb-item-link-color-dark};
-	}
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin breadcrumb-dark {
 	--breadcrumb-background-color: #{$breadcrumb-background-color-dark};
 	--breadcrumb-border: #{$breadcrumb-border-dark};
 	--breadcrumb-color: #{$breadcrumb-color-dark};
 
 	--breadcrumb-item-link-color: #{$breadcrumb-item-link-color-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		@include breadcrumb-dark;
+	}
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+	@include breadcrumb-dark;
 }

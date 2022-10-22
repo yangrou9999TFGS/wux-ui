@@ -47,24 +47,7 @@ $list-item-focus-text-color-dark: func-text-color(primary, 500);
   --list-item-focus-text-color: #{$list-item-focus-text-color};
 }
 
-@media (refers-color-scheme: dark) {
-  :root { 
-    --list-border: #{$list-border-dark};
-    
-    --list-item-background: #{$list-item-background-dark};
-    --list-item-border-color: #{$list-item-border-color-dark};
-    --list-item-text-color: #{$list-item-text-color-dark};
-    
-    --list-item-hover-background: #{$list-item-hover-background-dark};
-    --list-item-hover-text-color: #{$list-item-hover-text-color-dark};
-    
-    --list-item-focus-background: #{$list-item-focus-background-dark};
-    --list-item-focus-text-color: #{$list-item-focus-text-color-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin list-dark {
   --list-border: #{$list-border-dark};
   
   --list-item-background: #{$list-item-background-dark};
@@ -76,4 +59,15 @@ body.#{$prefix}dark-mode {
   
   --list-item-focus-background: #{$list-item-focus-background-dark};
   --list-item-focus-text-color: #{$list-item-focus-text-color-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { 
+    @include list-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include list-dark;
 }

@@ -71,28 +71,7 @@ $tag-text-color-map-dark: (
 	--tag-text-color-light: #{map.get($tag-text-color-map, light)};
 }
 
-@media (refers-color-scheme: dark) {
-	:root {
-		--tag-background-color-primary: #{map.get($tag-background-color-map-dark, primary)};
-		--tag-background-color-secondary: #{map.get($tag-background-color-map-dark, secondary)};
-		--tag-background-color-success: #{map.get($tag-background-color-map-dark, success)};
-		--tag-background-color-info: #{map.get($tag-background-color-map-dark, info)};
-		--tag-background-color-warning: #{map.get($tag-background-color-map-dark, warning)};
-		--tag-background-color-error: #{map.get($tag-background-color-map-dark, error)};
-		--tag-background-color-light: #{map.get($tag-background-color-map-dark, light)};
-
-		--tag-text-color-primary: #{map.get($tag-text-color-map-dark, primary)};
-		--tag-text-color-secondary: #{map.get($tag-text-color-map-dark, secondary)};
-		--tag-text-color-success: #{map.get($tag-text-color-map-dark, success)};
-		--tag-text-color-info: #{map.get($tag-text-color-map-dark, info)};
-		--tag-text-color-warning: #{map.get($tag-text-color-map-dark, warning)};
-		--tag-text-color-error: #{map.get($tag-text-color-map-dark, error)};
-		--tag-text-color-light: #{map.get($tag-text-color-map-dark, light)};
-	}
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin tag-dark {
 	--tag-background-color-primary: #{map.get($tag-background-color-map-dark, primary)};
 	--tag-background-color-secondary: #{map.get($tag-background-color-map-dark, secondary)};
 	--tag-background-color-success: #{map.get($tag-background-color-map-dark, success)};
@@ -108,4 +87,15 @@ body.#{$prefix}dark-mode {
 	--tag-text-color-warning: #{map.get($tag-text-color-map-dark, warning)};
 	--tag-text-color-error: #{map.get($tag-text-color-map-dark, error)};
 	--tag-text-color-light: #{map.get($tag-text-color-map-dark, light)};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		@include tag-dark;
+	}
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+	@include tag-dark;
 }

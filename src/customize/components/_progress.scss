@@ -23,17 +23,19 @@ $progress-line-color-dark: map.get($color-primary-map, "500");
   --progress-line-color: #{$progress-line-color};
 }
 
-@media (refers-color-scheme: dark) {
+@mixin progress-dark {
+  --progress-background-color: #{$progress-background-color-dark};
+  --progress-border-color: #{$progress-border-color-dark};
+  --progress-line-color: #{$progress-line-color-dark};
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
-    --progress-background-color: #{$progress-background-color-dark};
-    --progress-border-color: #{$progress-border-color-dark};
-    --progress-line-color: #{$progress-line-color-dark};
+    @include progress-dark;
   }
 }
 
 [dark-mode],
 body.#{$prefix}dark-mode {
-  --progress-background-color: #{$progress-background-color-dark};
-  --progress-border-color: #{$progress-border-color-dark};
-  --progress-line-color: #{$progress-line-color-dark};
+  @include progress-dark;
 }

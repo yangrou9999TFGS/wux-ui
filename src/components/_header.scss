@@ -34,6 +34,11 @@
     padding-top: var(--header-option-padding-y);
     padding-bottom: var(--header-option-padding-y);
     margin-left: var(--header-padding-x); 
+    
+    a {
+      color: var(--header-title-text-color);
+      text-decoration: none;
+    }
   }
 
   // For Small Device
@@ -157,6 +162,11 @@
   .#{$prefix}header-option-bold {
     background-color: var(--header-option-bold-background-color) !important;
     color: var(--header-option-bold-text-color) !important;
+  }
+  
+  .#{$prefix}search {
+    padding: 8px;
+    padding-inline-start: 40px;
   }
 }
 

@@ -38,21 +38,7 @@ $form-radios-checked-shadow-dark: none;
   --form-radios-checked-shadow: #{$form-radios-checked-shadow};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --form-radios-border-color: #{$form-radios-border-color-dark};
-    
-    --form-radios-hover-background-color: #{$form-radios-hover-background-color-dark};
-    --form-radios-hover-shadow: #{$form-radios-hover-shadow-dark};
-    
-    --form-radios-checked-background-color: #{$form-radios-checked-background-color-dark};
-    --form-radios-checked-border-color: #{$form-radios-checked-border-color-dark};
-    --form-radios-checked-shadow: #{$form-radios-checked-shadow-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin form-radios-dark {
   --form-radios-border-color: #{$form-radios-border-color-dark};
     
   --form-radios-hover-background-color: #{$form-radios-hover-background-color-dark};
@@ -61,4 +47,15 @@ body.#{$prefix}dark-mode {
   --form-radios-checked-background-color: #{$form-radios-checked-background-color-dark};
   --form-radios-checked-border-color: #{$form-radios-checked-border-color-dark};
   --form-radios-checked-shadow: #{$form-radios-checked-shadow-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include form-radios-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include form-radios-dark;
 }

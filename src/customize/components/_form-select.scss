@@ -40,21 +40,7 @@ $form-select-focus-shadow-dark: 0 0 6px #DDDDDD;
   --form-select-focus-shadow: #{$form-select-focus-shadow};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --form-select-background-color: #{$form-select-background-color-dark};
-    --form-select-border-color: #{$form-select-border-color-dark};
-    --form-select-text-color: #{$form-select-text-color-dark};
-    
-    --form-select-hover-shadow: #{$form-select-hover-shadow-dark};
-    
-    --form-select-focus-border: #{$form-select-focus-border-dark};
-    --form-select-focus-shadow: #{$form-select-focus-shadow-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin form-select-dark {
   --form-select-background-color: #{$form-select-background-color-dark};
   --form-select-border-color: #{$form-select-border-color-dark};
   --form-select-text-color: #{$form-select-text-color-dark};
@@ -63,4 +49,15 @@ body.#{$prefix}dark-mode {
   
   --form-select-focus-border: #{$form-select-focus-border-dark};
   --form-select-focus-shadow: #{$form-select-focus-shadow-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include form-select-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include form-select-dark;
 }

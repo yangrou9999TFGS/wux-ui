@@ -39,20 +39,7 @@ $collapse-body-text-color-dark: #FFFFFF;
   --collapse-body-text-color: #{$collapse-body-text-color};
 }
 
-@media (refers-color-scheme: dark) {
-  :root {
-    --collapse-header-background-color: #{$collapse-header-background-color-dark};
-    --collapse-header-border: #{$collapse-header-border-dark};
-    --collapse-header-text-color: #{$collapse-header-text-color-dark};
-    
-    --collapse-body-background-color: #{$collapse-body-background-color-dark};
-    --collapse-body-border: #{$collapse-body-border-dark};
-    --collapse-body-text-color: #{$collapse-body-text-color-dark};
-  }
-}
-
-[dark-mode],
-body.#{$prefix}dark-mode {
+@mixin collapse-dark {
   --collapse-header-background-color: #{$collapse-header-background-color-dark};
   --collapse-header-border: #{$collapse-header-border-dark};
   --collapse-header-text-color: #{$collapse-header-text-color-dark};
@@ -60,4 +47,15 @@ body.#{$prefix}dark-mode {
   --collapse-body-background-color: #{$collapse-body-background-color-dark};
   --collapse-body-border: #{$collapse-body-border-dark};
   --collapse-body-text-color: #{$collapse-body-text-color-dark};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include collapse-dark;
+  }
+}
+
+[dark-mode],
+body.#{$prefix}dark-mode {
+  @include collapse-dark;
 }

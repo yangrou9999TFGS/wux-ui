@@ -38,6 +38,7 @@
 	}
 
 	.#{$prefix}jumbotron-subtitle {
+		color: var(--jumbotron-subtitle-color);
 		font-size: var(--jumbotron-subtitle-font-size);
     margin: var(--jumbotron-subtitle-margin-y) 0;
 	}
