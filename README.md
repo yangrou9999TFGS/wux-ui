@@ -8,7 +8,7 @@
 <h6 align="center">
   <a href="https://wux-ui.tk/">Site</a> /
   <a href="https://docs.wux-ui.tk/">Docs</a> /
-  <a href="https:/debug.wux-ui.tk/">Debug</a> / 
+  <a href="https://debug.wux-ui.tk/">Debug</a> / 
   <a href="https://twitter.com/WuX_UI">Twitter</a> 
 </h6>
 
